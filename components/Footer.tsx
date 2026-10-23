@@ -208,13 +208,6 @@ export default function Footer({ cmsData }: FooterProps) {
             >
               Facebook
             </a>)}
-            <Link
-              href="/admin"
-              className="ml-2 text-xs text-slate-400 hover:text-[#0ea5e9] transition-colors"
-              title="Admin CMS"
-            >
-              Admin
-            </Link>
           </div>
         </div>
       </div>
