@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%" preserveAspectRatio="none" fill="none" role="img" aria-label="Minimal layered cyan swimming pool wave background">
+<defs>
+ <linearGradient id="base" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7FCFD"/><stop offset="1" stop-color="#E8F8FC"/></linearGradient>
+ <linearGradient id="deep" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#087CA8"/><stop offset=".48" stop-color="#03B1D1"/><stop offset="1" stop-color="#66DDE8"/></linearGradient>
+ <linearGradient id="mid" x1="0" y1="0" x2="1" y2=".4"><stop stop-color="#9EEAF0"/><stop offset=".52" stop-color="#41C8DD"/><stop offset="1" stop-color="#079AC4"/></linearGradient>
+ <linearGradient id="light" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#D6F8FA"/><stop offset=".55" stop-color="#B3F0F2"/><stop offset="1" stop-color="#70DDE8"/></linearGradient>
+ <clipPath id="frame"><rect width="1600" height="900"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1600" height="900" fill="url(#base)"/>
+<!-- The main composition deliberately leaves the upper half quiet for content -->
+<path d="M0 524 C240 439 390 601 644 548 C921 490 1025 383 1262 448 C1415 490 1492 493 1600 445 L1600 900 H0Z" fill="url(#light)" opacity=".85"/>
+<path d="M0 601 C232 533 366 666 627 627 C903 585 1039 479 1276 544 C1430 587 1516 561 1600 527 L1600 900 H0Z" fill="url(#mid)"/>
+<path d="M0 690 C239 624 401 763 665 708 C911 657 1045 604 1283 651 C1428 681 1514 656 1600 624 L1600 900 H0Z" fill="url(#deep)"/>
+<!-- Clean editorial contour lines, not random squiggles -->
+<path d="M-18 510 C234 421 391 589 642 535 C925 475 1032 371 1264 434 C1426 478 1498 478 1620 430" stroke="#FFFFFF" stroke-width="5" opacity=".92"/>
+<path d="M-16 591 C232 518 375 650 626 612 C908 569 1039 461 1279 526 C1432 568 1515 549 1620 509" stroke="#FFFFFF" stroke-width="2" opacity=".62"/>
+<path d="M-20 681 C242 612 400 749 663 694 C913 644 1052 588 1287 635 C1432 666 1517 640 1620 609" stroke="#FFFFFF" stroke-width="2.5" opacity=".65"/>
+<!-- Subtle pool-light refractions, contained in the water -->
+<path d="M-40 803 C187 751 330 849 538 801 S951 741 1145 788 S1451 813 1640 758" stroke="#B9F6F7" stroke-width="2" opacity=".35"/>
+<path d="M-30 847 C203 802 331 891 565 843 S982 786 1188 826 S1476 852 1640 815" stroke="#E2FFFF" stroke-width="1.5" opacity=".27"/>
+<path d="M-10 741 C180 709 348 793 530 754 S924 692 1122 736 S1448 759 1610 711" stroke="#D9FFFF" stroke-width="1.5" opacity=".3"/>
+</g>
+</svg>

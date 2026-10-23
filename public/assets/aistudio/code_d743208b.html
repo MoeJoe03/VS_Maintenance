@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Royel Pool — World-Class Aquatic Craftsmanship</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            aquatic: {
+              50: '#EBFBFA',
+              100: '#E0FAFA',
+              200: '#B8F4F5',
+              400: '#35D4DB',
+              500: '#079BC5',
+              600: '#0682A6',
+              800: '#10283F',
+              900: '#0A1A2B',
+            },
+            canvas: '#FAFCFC',
+            slateText: '#172638',
+            mutedText: '#647785',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          boxShadow: {
+            'soft': '0 20px 40px -15px rgba(16, 40, 63, 0.07)',
+            'card': '0 10px 30px -5px rgba(7, 155, 197, 0.08)',
+            'elevated': '0 25px 50px -12px rgba(16, 40, 63, 0.18)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #172638;
+      background-color: #E0FAFA;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+<style data-purpose="decorations">
+    /* Subtle spinning text badge */
+    @keyframes spinClockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .spin-slow {
+      animation: spinClockwise 22s linear infinite;
+    }
+
+    /* Watercolor splash mask effect for middle section */
+    .water-wash-bg {
+      background: radial-gradient(circle at 50% 50%, rgba(53, 212, 219, 0.28) 0%, rgba(224, 250, 250, 0.7) 65%, rgba(250, 252, 252, 0) 100%);
+    }
+
+    .service-gradient {
+      background: linear-gradient(180deg, rgba(235, 251, 250, 0.4) 0%, rgba(53, 212, 219, 0.45) 50%, rgba(7, 155, 197, 0.3) 100%);
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-[#E0FAFA] text-slateText min-h-screen py-6 md:py-12 px-3 sm:px-6 lg:px-10 flex justify-center">
+<!-- BEGIN: Main Page Frame Container -->
+<div class="w-full max-w-[1240px] flex flex-col gap-10 md:gap-14" data-purpose="website-canvas">
+<!-- BEGIN: Hero Section -->
+<header class="relative rounded-[32px] overflow-hidden shadow-elevated bg-white border border-white/80" data-purpose="hero-banner">
+<!-- Background Image with Luxury Villa & Crystal Pool -->
+<div class="relative h-[620px] md:h-[720px] w-full">
+<img alt="Luxury modern tropical villa with crystal blue infinity swimming pool" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaqs11KIDY7FxLvuA0RW1P89XRZhtwNJSjkCSQykjguj5_-3eFX3ti5RcDwxDaZGh7HpT_8iScqY4vstlM2qGGwO_ySxMrqjjmepuf9Iot9b0SjlMsSiC1jOa8cIjABQNv6UzxFUhWyRQKAI4H7nz-bja8MqFFDBYXTinvFiEt7jd4cOGIX9AvEGaTt0uB28K7LgGiAJ3v5MPLwFZ3rX9TE5OBUDYw6VzEmWHp3tc8bbg-HltQqye4Fw"/>
+<!-- Atmospheric soft overlay gradient -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/20 pointer-events-none"></div>
+<!-- Floating Navigation Bar -->
+<nav aria-label="Main Navigation" class="absolute top-0 inset-x-0 z-20 px-6 sm:px-10 py-6 flex items-center justify-between">
+<!-- Brand Logo -->
+<a aria-label="Royel Pool Home" class="flex items-center gap-2 group" href="#">
+<div class="w-9 h-9 rounded-full bg-aquatic-500/20 backdrop-blur-md flex items-center justify-center p-1.5 border border-white/40">
+<svg class="w-full h-full text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M2 12c3-2 6-2 9 0s6 2 9 0 3-2 3-2"></path>
+<path d="M2 17c3-2 6-2 9 0s6 2 9 0 3-2 3-2"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-extrabold tracking-tight text-white drop-shadow-sm font-sans flex items-center gap-1">
+                Royel <span class="text-aquatic-200">Pool</span>
+</span>
+</div>
+</a>
+<!-- Navigation Links -->
+<ul class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide text-white drop-shadow-sm">
+<li><a class="text-aquatic-200 hover:text-white transition-colors duration-200 underline underline-offset-8 decoration-2 decoration-aquatic-400" href="#home">Home</a></li>
+<li><a class="hover:text-aquatic-200 transition-colors duration-200" href="#about">About</a></li>
+<li><a class="hover:text-aquatic-200 transition-colors duration-200" href="#services">Swimming Pools</a></li>
+<li><a class="hover:text-aquatic-200 transition-colors duration-200" href="#dreams">Blog</a></li>
+</ul>
+<!-- Contact CTA Button -->
+<div>
+<a class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wide text-slateText bg-white/95 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 border border-white" href="#contact">
+              Contact Us
+            </a>
+</div>
+</nav>
+<!-- Floating Glass/White Headline Card (Bottom Left) -->
+<div class="absolute bottom-8 left-6 sm:bottom-12 sm:left-10 z-20 max-w-md w-[calc(100%-3rem)] sm:w-auto">
+<div class="bg-white/95 backdrop-blur-md p-7 sm:p-9 rounded-[28px] shadow-2xl border border-white flex flex-col gap-4">
+<h1 class="text-3xl sm:text-4xl font-extrabold text-slateText leading-[1.15] tracking-tight">
+              We builds the <br/>
+              best <span class="text-aquatic-500 inline-flex items-center gap-1">pools.<span class="inline-block transform translate-y-0.5">🏊</span></span>
+</h1>
+<p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+              Owning a pool is a fun part, let us handle the rest. Bespoke architectural engineering and lifelong pristine water quality.
+            </p>
+<div class="pt-1">
+<a class="inline-flex items-center justify-center px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-aquatic-500 hover:bg-aquatic-600 shadow-md hover:shadow-xl transition-all duration-300" href="#contact">
+                Request a Quote
+              </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Rotating Floating Badge at bottom border -->
+<div class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30">
+<a aria-label="Scroll to content" class="relative block w-14 h-14 bg-aquatic-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center text-white hover:scale-105 transition-transform" href="#about">
+<svg class="w-5 h-5 animate-bounce mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+</header>
+<!-- END: Hero Section -->
+<!-- BEGIN: About Section -->
+<section class="relative rounded-[32px] bg-gradient-to-b from-[#EBFBFA] via-[#f2fdfd] to-white p-8 sm:p-14 lg:p-20 text-center shadow-soft border border-white" data-purpose="about-statement" id="about">
+<div class="max-w-3xl mx-auto flex flex-col items-center">
+<!-- Header & Pool Illustration Icon -->
+<h2 class="text-2xl sm:text-3xl font-extrabold text-slateText tracking-tight mb-3">About Pool</h2>
+<!-- Minimal Pool Badge with Ladder -->
+<div class="w-24 h-12 bg-aquatic-400/30 rounded-full flex items-center justify-center relative mb-8 border border-aquatic-400/40">
+<div class="w-16 h-7 bg-aquatic-500 rounded-full shadow-inner relative flex justify-end pr-3 items-center">
+<!-- Small Ladder graphic -->
+<div class="flex gap-1">
+<span class="w-0.5 h-4 bg-white/90 rounded-full"></span>
+<span class="w-0.5 h-4 bg-white/90 rounded-full"></span>
+</div>
+</div>
+</div>
+<!-- Editorial Inline-Photo Paragraph -->
+<p class="text-base sm:text-xl lg:text-[22px] leading-relaxed sm:leading-[2.2] text-slateText/90 font-medium">
+          For over 25 years, 
+          <span class="inline-flex align-middle mx-1 w-12 h-6 sm:w-16 sm:h-7 rounded-full overflow-hidden shadow-sm border border-white">
+<img alt="Crystal pool water" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAozoXfV9-8VlBD6hMz_xUwhENAAcP8vmJ9E9gsXiRfjTcFxLqbNBQZ25n_yN5t-1MqOT_T4Pyc-us3I_KPiRQrUYv6Do-B0PKL7Fv4gKgHsexjlhZGnQlUgRYRijio4x1RTgiw0btn-Uyg1adAKORPI1g722ZeLKC47NBdljMvuA8ku6aD9VYP_j1WrCTPDxO8MUqlIB2E9hnOztcUMABLZIWgmgTGAEbWFH1hOmVef7ZgcX1T8Q1jLw"/>
+</span> 
+          we have been building and designing swimming pools with dedication, professionalism, and integrity. Our journey has 
+          <span class="inline-flex align-middle mx-1 w-12 h-6 sm:w-16 sm:h-7 rounded-full overflow-hidden shadow-sm border border-white">
+<img alt="Luxury pool resort" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwVyK1C1I1JDKlIcWkdrp2_Zc5dEaR4znut5UlC0KFnPCJXt5SEeBdRKl3a1oDVSgVhZ31u8gbgLXcFB3DruK8Pk6Laf6xkf0gZO1xjzuhP3AAPw7Bx1QNrjxhK2WsJNkmKsti6mtifHKkM97KBIzohnq8hKTLEzENQMctQMp5RV37QvJwSJPnuh2rnGnL18cavAQvKeVHaAGM3fU18wJZH88q4t2x3UPF7AdSjcqgR58ImN2Qsq7ipw"/>
+</span> 
+          been driven by a 
+          <span class="inline-flex align-middle mx-1 w-12 h-6 sm:w-16 sm:h-7 rounded-full overflow-hidden shadow-sm border border-white">
+<img alt="Turquoise coastline" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtLibAqUN34Bw5qjp8ucByaVW0wOYBt9UFKIQab7VbnRmAj99v-k3-bqay6hRYdWT5iXDNDvMBL2oNxOZMkEO_kGjdE49E3fgt2FOUzh_CVZ3N5PUuKEQ5mhGg0y3FPP5GA2i9xeDsu5-zBmxj2cTyx5rlOutGTkTjngxqlghYAlq5GJ9_IQXwpELa7YHxmnYB66n5GzBmJx6-_7QXDIrNuu4G_n_R6jq0jpR6KNk8vfxMXimG5kYCmQ"/>
+</span> 
+          commitment to quality, honesty, and customer satisfaction. We don't just build pools — we create relaxing, 
+          <span class="inline-flex align-middle mx-1 w-12 h-6 sm:w-16 sm:h-7 rounded-full overflow-hidden shadow-sm border border-white">
+<img alt="Resort spa pool" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNnvIunsOe3Xc6gMISrOd0nHwNmfI8dZekq8bQ6C2Y4L8njMCDlsRVohdT_-7b-G7YxTFb_gCsRXq2CpLm9h_rFoge5F4bxIzKwGZUMgFFZJa4wvLOeT1t7aSqQwSZhZsH7NSKlNKspvmQ9K2XJPd01KQKYFPVmZAIRqJavnslxiN175rTU8a8B7elmnqAqixt3TtOlsJj6hi2YjyLjbHCBYN144s6FMM-HHLShPpwp4mIvKE9WtfMIg"/>
+</span> 
+          safe, and visually stunning spaces that turn dreams into reality. With a trusted team and years of hands-on experience, we're 
+          <span class="inline-flex align-middle mx-1 w-12 h-6 sm:w-16 sm:h-7 rounded-full overflow-hidden shadow-sm border border-white">
+<img alt="Greek seaside pool" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9X_MhbenlFakfzSXvOUdCOE53rDKf8qbdOWNvcq9hM0t1ud-45PUcd5gv9QLbi95U6Ar-tPU3w7ixzZP_cvmuPc8dnZ_baZFmeJPZyCtgdGefsJAmH9UFhLS1vB-kHc4cFAltKIBvu2CUEvhPpj9Nw6omCs8Tu-hG_7sArhJiaM8qTAlNBgLWaePlNC9jP_2OzDyGZPFJZP69Lc6m7Jyx50KaXidglR9NJgMqn29Z0HTNzC3hg1wsCg"/>
+</span> 
+          here to bring your perfect swimming pool to life.
+        </p>
+<!-- Centered Discover CTA Button -->
+<div class="mt-10">
+<a class="inline-flex items-center justify-center px-8 py-3 rounded-full text-xs font-bold tracking-wide uppercase text-white bg-[#10283F] hover:bg-aquatic-500 transition-all duration-300 shadow-md" href="#services">
+            Explore more
+          </a>
+</div>
+</div>
+</section>
+<!-- END: About Section -->
+<!-- BEGIN: Services Section -->
+<section class="relative rounded-[32px] overflow-hidden bg-gradient-to-b from-aquatic-50 via-aquatic-100 to-aquatic-200/50 p-6 sm:p-10 lg:p-12 border border-white shadow-soft" data-purpose="services-showcase" id="services">
+<!-- Top Grid: Service Description Card + 4 Vertical Photographic Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 items-stretch">
+<!-- Left Headline & Nav Card -->
+<div class="bg-white rounded-[26px] p-6 sm:p-7 flex flex-col justify-between shadow-card border border-white/60">
+<div>
+<h3 class="text-2xl font-extrabold text-slateText tracking-tight mb-2">All our Services.</h3>
+<p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+              Each pool is different. We can customize your service to fit your location's needs.
+            </p>
+</div>
+<div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-100">
+<div class="w-16 h-12 rounded-xl overflow-hidden shadow-sm">
+<img alt="Pool sample" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZRkvbs32JmaeQ-tP1K1z3t6GIZ9xx4ECxmUbSTsLWsozaSZTDeWbT6wHCE9Yblc5rsqpUi81B0h_7gBpVzmC1hSlw-PBmCEJlP1H6ySHW67IfGfEG4EmG4JNlxdFFv3tXgYAMVpLwwAJQ1Xo-gs3LremcQuKfVwmbXeTfOsbrF0F6hXe6oyb0GborgBfNwxRKMm7Tudr8gT5fqgAt6fHUvkR5qUlwTm4dmm0tVpDA5i1VXcADL4AOtg"/>
+</div>
+<button aria-label="Next services" class="w-11 h-11 rounded-full bg-[#10283F] text-white flex items-center justify-center hover:bg-aquatic-500 transition-colors shadow" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Service Card 1: Building New Pools -->
+<div class="group relative rounded-[26px] overflow-hidden shadow-card h-80 lg:h-auto min-h-[300px]">
+<img alt="Building New Custom Swimming Pools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9O_MmdP4LiDzK1VZO52v1QTWaDEop1D-BBUMCeoBDtT60A8B_99HAOIF0kM5hjwUx_LjRJhu1UgkdLVAxEIWw3UbHCiB_qXYVO-GUg-bFuAZ84Tr4WVyXU0KfxJE5KTslCgZk2G09Tc_aakiI0t-f0KIojQRSq8tb8jhepb19GpXD0dRPwSTASqt51mQdj2DQreRKFUfpNiFQQpyvo2ZOI6GGOxu9IL5BZU824sCNB6xMYm_NbCqKJA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 inset-x-3 flex justify-center">
+<span class="bg-white/95 text-slateText px-4 py-2 rounded-full text-xs font-bold shadow-md tracking-tight whitespace-nowrap">
+              Building New Pools.
+            </span>
+</div>
+</div>
+<!-- Service Card 2: Pool Repair -->
+<div class="group relative rounded-[26px] overflow-hidden shadow-card h-80 lg:h-auto min-h-[300px]">
+<img alt="Technician repairing underwater pool surfaces" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC26ojpy7GcTgd6Gse5b0xpfvcav_-sVlODA8nhVcEWAQYerzhUeYMMDIp3TvsrG0sB52JLCN5XeqHO3fV-qTqxkOKuqEeWNR3wq_IKxsN5CQnGTGcaJ1kBRLDolgQPYPqO2Fa2ytx0oLrjCLiN40PEqbd-8G__L3pkXqYo_DszOFMWMdlAskFQWXXr_pqSrKYFWA8IV-2jCpDm7nX0Ma3iqJpGRUVD5Cu-nATodUl6I7SUccPqdcSTsA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 inset-x-3 flex justify-center">
+<span class="bg-white/95 text-slateText px-4 py-2 rounded-full text-xs font-bold shadow-md tracking-tight whitespace-nowrap">
+              Pool Repair
+            </span>
+</div>
+</div>
+<!-- Service Card 3: Pool Maintenance -->
+<div class="group relative rounded-[26px] overflow-hidden shadow-card h-80 lg:h-auto min-h-[300px]">
+<img alt="Certified technician performing chemical pool maintenance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyKUhXRRkdEABiyEjc0p_mV1bIDlRbt8q915tp7jNSqnT5H7iTxRTJTXHuVfrKISwpIr_vg4FuJ-Q4x2hZZxM6z04GiRQDttjYNM8punqj220JwU8-A5TKEiAAyaAhWuko1KIMkjZQFOO-gogDZMWZycZ65lYVUk1TaVbqEMimNKUi28kn8gYWOwrGJLOaqIcGgM3hqcaJi1N-yOjDcuxRlXTDJDHv1b-pza8ghoa-X6mEWLvrbBkXhg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 inset-x-3 flex justify-center">
+<span class="bg-white/95 text-slateText px-4 py-2 rounded-full text-xs font-bold shadow-md tracking-tight whitespace-nowrap">
+              Pool Maintenance
+            </span>
+</div>
+</div>
+<!-- Service Card 4: Equipment Install -->
+<div class="group relative rounded-[26px] overflow-hidden shadow-card h-80 lg:h-auto min-h-[300px]">
+<img alt="High-end pool filtration and heater installation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyrLK5jF1fX3Qhrz8p8g1oYza11jkXHA5I6kAJKCGYCgzgOEPrTevUF0VQyoNuv4qFBs9j7GA5DnSYvhoMhMZJQe9PVbHPgjCR--qD3cGQO-IPHINEie-VRe4temCja0ky-9BdBKJVcdcjW1sJeyN_Ynl-KKJTBdFiaCHln9olxFIA3teMwE4CRlnJ3NCfn27b0QQFPGYWqWhc-rR0ikwwc4xove9H0slFz5BxqRi5mR0J3z5e0ZVl5g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 inset-x-3 flex justify-center">
+<span class="bg-white/95 text-slateText px-4 py-2 rounded-full text-xs font-bold shadow-md tracking-tight whitespace-nowrap">
+              Equipment Install
+            </span>
+</div>
+</div>
+</div>
+<!-- Bottom Aquatic Guarantee Banner -->
+<div class="mt-10 text-center px-4">
+<p class="text-sm sm:text-base md:text-lg font-bold text-aquatic-800 tracking-wide max-w-2xl mx-auto leading-relaxed">
+          With Practic Pool, your dream pool is closer than ever – no stress, no delays, just pure enjoyment!
+        </p>
+</div>
+</section>
+<!-- END: Services Section -->
+<!-- BEGIN: Editorial Story / Diving into Dreams -->
+<section class="rounded-[32px] bg-white p-8 sm:p-14 lg:p-16 shadow-soft border border-white" data-purpose="editorial-story" id="dreams">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+<!-- Left: Layered Photographic Collage -->
+<div class="lg:col-span-6 relative flex items-center justify-center">
+<!-- Main Large Swimmer Photo -->
+<div class="w-full max-w-[420px] h-[340px] sm:h-[400px] rounded-[30px] overflow-hidden shadow-lg border border-slate-100">
+<img alt="Swimmer wading through crystal clear azure water with distant horizon" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9mO-1CYT6MvqAcZ2gGsn0K5xYpDbs0xoyDX1X18gwdISL23CP-zBadvnQmA9UhW4LRLFu3TLqvPOdzzDYvq3YM08Ux4xGZUmTUrOCAQdSmED6Wybn6BBTI7yQQ4nz31vu-lc8dpxhUSdFQAMPBt-jeFo1PfEC7MT-UKnUB2HnmQCFPoRsIgiOExqkXNd9DuGRKw4FWyFZ4EmfxzgE3JHxrb7UuilNPn-WHbC7FkbZMGvFT5VD2ul4Rg"/>
+</div>
+<!-- Overlapping Yellow Float & Hat Photo (Bottom Right) -->
+<div class="absolute -bottom-6 -right-2 sm:-right-4 w-40 h-40 sm:w-48 sm:h-48 rounded-[24px] overflow-hidden shadow-2xl border-4 border-white">
+<img alt="Bright yellow pool mattress float with sun hat in clear pool water" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc4Rl9iEFnN7SgfPBQNzWUTTTd1DA0QFMfh6QtcTeueFNr0s2QMyfYrXZqbB_p7UywUjzgiW6krHkYqy6rHJI5XLxJkGFr5SHQTQHeoKTzCOUldCRebTeKTJrHk0u_0P_-6EP5NboCA2Rgs_ZHXtUYjYOupLEqyrMG4gT-pVpGDBsnP6Viliw6heumeLnbUvHZFrQQhk9gVBz6UUvFxvjr9gr5MsiQyoCL6m_bsmHLBFkuZDu1CvKT3Q"/>
+</div>
+</div>
+<!-- Right: Story Narrative -->
+<div class="lg:col-span-6 flex flex-col items-start gap-5 pt-6 lg:pt-0">
+<!-- Heading with Red/White Aquatic Pinwheel Motif -->
+<div class="flex items-start justify-between w-full">
+<div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slateText leading-tight tracking-tight">
+                Diving into Dreams <br/>
+<span class="text-aquatic-500">Our Aquatic Revolution</span>
+</h2>
+</div>
+<!-- Graphic geometric pinwheel/star motif -->
+<div aria-hidden="true" class="w-10 h-10 flex-shrink-0 ml-3">
+<svg class="w-full h-full text-rose-500" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="#E11D48" r="10"></circle>
+<path d="M50 15 L56 38 L44 38 Z" fill="#E11D48"></path>
+<path d="M50 85 L56 62 L44 62 Z" fill="#E11D48"></path>
+<path d="M15 50 L38 56 L38 44 Z" fill="#E11D48"></path>
+<path d="M85 50 L62 56 L62 44 Z" fill="#E11D48"></path>
+<path d="M25 25 L45 37 L37 45 Z" fill="#E11D48"></path>
+<path d="M75 75 L55 63 L63 55 Z" fill="#E11D48"></path>
+<path d="M75 25 L63 45 L55 37 Z" fill="#E11D48"></path>
+<path d="M25 75 L37 55 L45 63 Z" fill="#E11D48"></path>
+</svg>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+            In the sun-drenched landscapes of Portugal, where azure waters whisper tales of possibility, we emerged in 2019 with a radical vision: to transform the very essence of backyard swimming experiences.
+          </p>
+<p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+            We're not just another pool company – we're aquatic architects of imagination at Practic Pool. Every contour, filter system, and lighting line is sculpted for longevity, safety, and effortless joy.
+          </p>
+<div class="pt-2">
+<a class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-bold tracking-wide text-white bg-aquatic-500 hover:bg-aquatic-600 shadow-md transition-all" href="#about">
+              Learn More
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Editorial Story -->
+<!-- BEGIN: Client Testimonial Section -->
+<section class="p-4 sm:p-8" data-purpose="testimonials">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Side: Title & Info Card -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slateText tracking-tight">
+            Our <span class="text-aquatic-500">Clients</span><br/>
+            Feedback.
+          </h2>
+<!-- Informational Card -->
+<div class="bg-white rounded-[24px] p-6 sm:p-8 shadow-card border border-white max-w-md">
+<p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+              We specialize in providing top-notch pool service and maintenance to ensure your pool remains a safe, clean, and inviting space for relaxation and recreation.
+            </p>
+</div>
+<!-- Carousel Indicators -->
+<div class="flex items-center gap-2 pt-2">
+<span class="w-6 h-2 bg-aquatic-500 rounded-full"></span>
+<span class="w-2 h-2 bg-slate-300 rounded-full"></span>
+<span class="w-2 h-2 bg-slate-300 rounded-full"></span>
+</div>
+</div>
+<!-- Right Side: Testimonial Card with Interlocking Profile -->
+<div class="lg:col-span-7 flex flex-col items-start lg:items-end">
+<div class="w-full max-w-lg">
+<!-- Main Photo & Quote Box -->
+<div class="relative rounded-[30px] overflow-hidden shadow-elevated h-72 sm:h-80">
+<img alt="Modern luxury pool residence" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYk5AJ4gHOmn4vXb0-IZJcMw6qdNdCXG2ql6Ur9m5BmOqLDgiirAQVzp_tJ268FUNdvD9VCuZKnQn0jdgkOwHVPcsUO7x4u-Xw1etXlS3NMWr2N4Yh06rpRVcYmvdf1p8-G0LTid08t5KTDNR4SofaTS8UhAEx3ycA32TLafnrPcjq0ar-yM8S2CZyxrfUKa3lyp-opLPy_YzCzlcIXBOAGZTxdz7MegtzoGfHLtQIQZ7GSJIMYpuYFg"/>
+<!-- Dark gradient overlay for text readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-6 sm:p-8 flex flex-col justify-end text-white">
+<span class="text-3xl sm:text-4xl font-serif text-white/70 leading-none mb-1">“</span>
+<h3 class="text-lg sm:text-xl font-bold tracking-tight mb-2">Nice job. I'm happy!</h3>
+<p class="text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
+                  Friendly, reliable and thorough weekly service. A big change from my previous pool cleaning company.
+                </p>
+</div>
+</div>
+<!-- Interlocking Author Information Badges -->
+<div class="flex items-center gap-3 -mt-5 pl-6 relative z-10">
+<!-- Avatar Card -->
+<div class="w-16 h-16 sm:w-18 sm:h-18 rounded-[20px] overflow-hidden border-2 border-white shadow-xl bg-aquatic-500">
+<img alt="Alishaan Deol" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpadqGj4MkNVc7O3NWvSpw-1K3BypEFIPz77VzKrtjZjiRWLCXYIjscvb1c-VT1ORSb4OgKffN1M6V71z5qKd8zv8b7uIorxzCOxZrIhY_NALIYNQ82qOlbXG1T78KF9m87fEvomOtGlpIQbus9WbNU9jrGNCKt4VC_by7YrNG-2ZlDTTY5--4KoiUHhHWlgO_0IRU7akL3Okh6nigPNFoCOWJJrQnFQFA_uT0qG4BsqXMiYiiZC1aLQ"/>
+</div>
+<!-- Author Name & Title Tag -->
+<div class="bg-black/75 backdrop-blur-md text-white px-5 py-2.5 rounded-[18px] border border-white/20 shadow-lg">
+<p class="text-xs sm:text-sm font-bold tracking-tight">Alishaan Deol</p>
+<p class="text-[10px] text-white/70">Product Manager, Amazon</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Client Testimonial Section -->
+<!-- BEGIN: Final CTA Banner Section -->
+<section class="relative rounded-[32px] overflow-hidden shadow-elevated border-2 border-white" data-purpose="call-to-action" id="contact">
+<div class="relative h-[340px] sm:h-[400px] w-full flex flex-col items-center justify-center text-center px-4">
+<!-- Background Imagery -->
+<img alt="Sunken lounge area inside an azure luxury pool" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqB8sf1_dIxkmruWhd3XLsOLgYrw-MGrPzo8tMYVX0Mk_d5E7LCADTUwTaM2RBq3TG_m5WFRAS03rCyfkpqvvdVK7U7C8YAYu8zC8qnQL3nIQd-tkHZR9J96lAtbj7m52fv9bql0YIa-dI_Gc5NaiuFfMX29cI6qxgeX5Pjhfdfy8UU5kPjUMIQGqhbPhrJuGNa64wuP9sOWXco98jKctWee4IwExCVeMBn_U285h7-1JxXA68uAwR5w"/>
+<!-- Deep cyan ambient overlay -->
+<div class="absolute inset-0 bg-aquatic-600/70 backdrop-blur-[2px]"></div>
+<!-- Banner Content -->
+<div class="relative z-10 max-w-xl mx-auto flex flex-col items-center">
+<span class="text-xs sm:text-sm font-semibold tracking-wider text-white uppercase drop-shadow-sm mb-2">
+            Please Contact Us Today!
+          </span>
+<h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight drop-shadow-sm mb-6">
+            Interested in Realizing Your Dream?
+          </h2>
+<a class="inline-flex items-center justify-center px-8 py-3 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-slateText hover:bg-black transition-all shadow-xl" href="mailto:info@royelpool.com">
+            Start A Pool
+          </a>
+</div>
+</div>
+<!-- Overlapping Centered Stamp Badge at bottom edge -->
+<div class="absolute -bottom-7 left-1/2 -translate-x-1/2 z-20">
+<div class="relative w-16 h-16 rounded-full bg-white shadow-xl flex items-center justify-center border border-slate-100">
+<!-- Central Monogram -->
+<span class="text-aquatic-500 font-extrabold text-lg tracking-tighter">P.</span>
+<!-- SVG Circular Path Text -->
+<svg class="absolute inset-0 w-full h-full spin-slow" viewbox="0 0 100 100">
+<path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" id="circlePath"></path>
+<text fill="#079BC5" font-size="9" font-weight="700" letter-spacing="2">
+<textpath href="#circlePath" startoffset="0%">
+                • BUILD YOUR DREAM POOL •
+              </textpath>
+</text>
+</svg>
+</div>
+</div>
+</section>
+<!-- END: Final CTA Banner Section -->
+<!-- BEGIN: Footer -->
+<footer class="rounded-[30px] bg-white p-8 sm:p-12 shadow-soft border border-white mt-4" data-purpose="site-footer">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start justify-between pb-8 border-b border-slate-100">
+<!-- Left Footer: Brand & Nav Links -->
+<div class="md:col-span-6 flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-aquatic-500/10 flex items-center justify-center p-1.5 border border-aquatic-500/30">
+<svg class="w-full h-full text-aquatic-500" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M2 12c3-2 6-2 9 0s6 2 9 0 3-2 3-2"></path>
+<path d="M2 17c3-2 6-2 9 0s6 2 9 0 3-2 3-2"></path>
+</svg>
+</div>
+<span class="text-xl font-extrabold tracking-tight text-slateText">Royel <span class="text-aquatic-500">Pool</span></span>
+</div>
+<nav aria-label="Footer Navigation">
+<ul class="flex flex-wrap items-center gap-6 text-xs sm:text-sm font-semibold text-slateText">
+<li><a class="hover:text-aquatic-500 transition-colors" href="#home">Home</a></li>
+<li><a class="hover:text-aquatic-500 transition-colors" href="#about">About</a></li>
+<li><a class="hover:text-aquatic-500 transition-colors" href="#services">Pool</a></li>
+<li><a class="hover:text-aquatic-500 transition-colors" href="#dreams">Blog</a></li>
+<li><a class="hover:text-aquatic-500 transition-colors" href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+<!-- Right Footer: Newsletter Subscription -->
+<div class="md:col-span-6 flex flex-col items-start md:items-end">
+<div class="max-w-md w-full">
+<h4 class="text-base sm:text-lg font-bold text-slateText mb-1">
+              Subscribe to out <span class="text-aquatic-500">newsletter.</span>
+</h4>
+<p class="text-xs text-mutedText mb-4">
+              Want to stay up to date with news and updates about our services? Subscribe.
+            </p>
+<!-- Newsletter Input Form with Integrated Send Button -->
+<form class="relative flex items-center w-full" data-purpose="newsletter-form" onsubmit="event.preventDefault();">
+<input class="w-full pl-5 pr-12 py-3 rounded-full text-xs bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-aquatic-500 focus:border-transparent text-slateText" placeholder="Email Address" required="" type="email"/>
+<button aria-label="Submit newsletter subscription" class="absolute right-1.5 w-9 h-9 rounded-full bg-aquatic-500 text-white flex items-center justify-center hover:bg-aquatic-600 transition-colors shadow-sm" type="submit">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</form>
+</div>
+</div>
+</div>
+<!-- Legal & Social Media Links -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-mutedText gap-4">
+<p>Copyright © Practice Pool 2025 - All Rights Reserved.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-aquatic-500 transition-colors" href="#">Facebook</a>
+<a class="hover:text-aquatic-500 transition-colors" href="#">Instagram</a>
+<a class="hover:text-aquatic-500 transition-colors" href="#">Linkedin</a>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</div>
+<!-- END: Main Page Frame Container -->
+<!-- BEGIN: Client Interactivity Scripts -->
+<script data-purpose="smooth-scrolling">
+    // Handle anchor links gracefully
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId !== '#') {
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  </script>
+<!-- END: Client Interactivity Scripts -->
+</body></html>

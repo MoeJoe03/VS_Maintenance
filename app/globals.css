@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+[data-parallax-image] {
+  transform: translate3d(0, var(--parallax-y, 0px), 0) scale(1.1);
+  will-change: transform;
+}
+
+
+
+@theme {
+  --color-aquatic-50: #EBFBFA;
+  --color-aquatic-100: #E0FAFA;
+  --color-aquatic-200: #B8F4F5;
+  --color-aquatic-400: #35D4DB;
+  --color-aquatic-500: #079BC5;
+  --color-aquatic-600: #0682A6;
+  --color-aquatic-800: #10283F;
+  --color-aquatic-900: #0A1A2B;
+  --color-canvas: #FAFCFC;
+  --color-slateText: #172638;
+  --color-mutedText: #647785;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --shadow-soft: 0 20px 40px -15px rgba(16, 40, 63, 0.07);
+  --shadow-card: 0 10px 30px -5px rgba(7, 155, 197, 0.08);
+  --shadow-elevated: 0 25px 50px -12px rgba(16, 40, 63, 0.18);
+}
+
+@keyframes spinClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heroPop {
+  from { opacity: 0; transform: translateY(24px) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-pop {
+  opacity: 0;
+  animation: heroPop 650ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+.hero-pop-delay-1 { animation-delay: 120ms; }
+.hero-pop-delay-2 { animation-delay: 240ms; }
+.hero-pop-delay-3 { animation-delay: 360ms; }
+
+
+
+.spin-slow {
+  animation: spinClockwise 22s linear infinite;
+}
+
+/* Keep every approach card readable when the viewport cannot fit the stack. */
+@media (max-height: 600px) {
+  .approach-stack { gap: 1.5rem; padding-bottom: 0; }
+  .approach-stack-card { position: relative; top: auto !important; }
+}
+
+
+
+.water-wash-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(53, 212, 219, 0.28) 0%, rgba(224, 250, 250, 0.7) 65%, rgba(250, 252, 252, 0) 100%);
+}
+
+.service-gradient {
+  background: linear-gradient(180deg, rgba(235, 251, 250, 0.4) 0%, rgba(53, 212, 219, 0.45) 50%, rgba(7, 155, 197, 0.3) 100%);
+}
+
+main .cms-button {
+  background-color: var(--cms-button-background);
+  color: var(--cms-button-text);
+}
+
+main .cms-button:hover {
+  background-color: var(--cms-button-hover);
+}
+
+main .cms-button-outline {
+  border-color: var(--cms-button-background);
+  color: var(--cms-button-background);
+}
+
+main .cms-button-outline:hover {
+  background-color: var(--cms-button-hover);
+  border-color: var(--cms-button-hover);
+  color: var(--cms-button-text);
+}
+
+main [class~="text-[#079BC5]"],
+main [class~="text-[#0682A6]"],
+main [class~="text-[#0ea5e9]"],
+main [class~="text-[#009bbd]"],
+main [class~="text-[#0284c7]"],
+main [class~="text-[#B8F4F5]"] {
+  color: var(--cms-accent-text) !important;
+}
+
+main [class~="hover:text-[#079BC5]"]:hover,
+main [class~="hover:text-[#0682A6]"]:hover,
+main [class~="hover:text-[#0ea5e9]"]:hover,
+main [class~="hover:text-[#009bbd]"]:hover,
+main [class~="hover:text-[#0284c7]"]:hover,
+main [class~="hover:text-[#B8F4F5]"]:hover {
+  color: var(--cms-accent-text) !important;
+}
+
+/* Hide scrollbars while keeping page scrolling enabled. */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

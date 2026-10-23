@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1512 1024" role="img" aria-label="Isometric swimming pool with deep blue water and ladder">
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1358bd"/>
+      <stop offset=".52" stop-color="#247ce0"/>
+      <stop offset="1" stop-color="#1964ca"/>
+    </linearGradient>
+    <linearGradient id="coping" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f9f9ff"/>
+      <stop offset="1" stop-color="#e9eaff"/>
+    </linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#e4e5ff"/>
+      <stop offset="1" stop-color="#c8cefa"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#eef0ff"/>
+      <stop offset="1" stop-color="#d7dcfc"/>
+    </linearGradient>
+    <clipPath id="surface">
+      <path d="M179 466 843 81 1338 365 671 760Z"/>
+    </clipPath>
+  </defs>
+  <path d="M46 464 843 10 1466 369 661 841Z" fill="url(#coping)"/>
+  <path d="M46 464 661 841 661 962 46 585Z" fill="url(#front)"/>
+  <path d="M661 841 1466 369 1466 488 661 962Z" fill="url(#right)"/>
+  <path d="M179 466 843 81 1338 365 671 760Z" fill="url(#water)"/>
+  <path d="M179 466 843 81 843 177 179 559Z" fill="#3c9df8" opacity=".94"/>
+  <path d="M843 81 1338 365 1338 458 843 177Z" fill="#1478df" opacity=".85"/>
+  <path d="M179 559 843 177 1338 458 671 760Z" fill="url(#water)"/>
+  <path d="M843 177 1338 458 1338 365 843 81Z" fill="#0a62c7" opacity=".18"/>
+  <g clip-path="url(#surface)" fill="none" stroke="#a5d7ff" stroke-linecap="round" opacity=".58">
+    <path d="M505 429 C538 396 579 418 614 376 S691 352 716 312 S790 298 843 230" stroke-width="12"/>
+    <path d="M427 599 C473 553 513 580 555 539 S627 519 667 473 S737 464 773 426" stroke-width="13"/>
+    <path d="M631 684 C658 636 708 645 741 606 S809 583 849 545 S924 535 957 480" stroke-width="12"/>
+    <path d="M772 713 C807 667 850 686 892 639 S973 621 1008 582 S1065 568 1090 523" stroke-width="10"/>
+    <path d="M945 427 C974 397 1011 401 1039 369 S1091 357 1116 325" stroke-width="9"/>
+  </g>
+  <g fill="none" stroke="#182d4d" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M391 543 391 311 Q388 272 360 264 Q340 260 331 284"/>
+    <path d="M472 504 472 264 Q469 226 443 218 Q422 214 412 238"/>
+    <path d="M391 341 472 293 M391 410 472 362 M391 479 472 431"/>
+  </g>
+  <path d="M391 543 391 591 M472 504 472 551" stroke="#133c79" stroke-width="13" stroke-linecap="round" opacity=".25"/>
+</svg>

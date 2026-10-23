@@ -1,0 +1,559 @@
+{
+  "branding": {
+    "companyName": " VS Maintenance Services",
+    "companyNameWordColors": [
+      "#ffffff",
+      "#B8F4F5"
+    ],
+    "companyTagline": "World-Class Aquatic Craftsmanship",
+    "logoUrl": "/uploads/upload_1792686198405_anmcnn.jpg",
+    "footerLogoUrl": "/uploads/upload_1792686201289_c79g5i.jpg",
+    "browserTitle": "Royel Pool â World-Class Aquatic Craftsmanship",
+    "shortDescription": "Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.",
+    "primaryBrandColor": "#079BC5",
+    "secondaryBrandColor": "#10283F",
+    "buttonTextColor": "#ffffff",
+    "buttonHoverColor": "#0682A6",
+    "accentTextColor": "#079BC5",
+    "telephone": " 074 057 1784",
+    "whatsappNumber": "082 854 8977",
+    "emailAddress": "info@poolxsolutions.co.za",
+    "address": "Avenida do Mar 42, Cascais, Portugal",
+    "copyrightText": "Copyright Â© Practice Pool 2025 - All Rights Reserved.",
+    "facebookUrl": "https://facebook.com",
+    "instagramUrl": "https://instagram.com",
+    "linkedinUrl": "https://linkedin.com"
+  },
+  "hero": {
+    "backgroundImage": "/uploads/upload_1792591726278_sbfe57.png",
+    "headlinePrefix": "We build and maintain the",
+    "headlineHighlight": "best pools.",
+    "headlineSuffix": "ð",
+    "supportingText": "Owning a pool is a fun part, let us handle the rest. Bespoke architectural engineering and lifelong pristine water quality.",
+    "ctaLabel": "Request a Quote",
+    "navCtaLabel": "Contact Us"
+  },
+  "about": {
+    "heading": "About Pool",
+    "leadParagraph": {
+      "part1": "We build and service",
+      "inlineImage1": "https://lh3.googleusercontent.com/aida-public/AB6AXuAozoXfV9-8VlBD6hMz_xUwhENAAcP8vmJ9E9gsXiRfjTcFxLqbNBQZ25n_yN5t-1MqOT_T4Pyc-us3I_KPiRQrUYv6Do-B0PKL7Fv4gKgHsexjlhZGnQlUgRYRijio4x1RTgiw0btn-Uyg1adAKORPI1g722ZeLKC47NBdljMvuA8ku6aD9VYP_j1WrCTPDxO8MUqlIB2E9hnOztcUMABLZIWgmgTGAEbWFH1hOmVef7ZgcX1T8Q1jLw",
+      "part2": "swimming pools with dedication, professionalism, and integrity.",
+      "inlineImage2": "https://lh3.googleusercontent.com/aida-public/AB6AXuCwVyK1C1I1JDKlIcWkdrp2_Zc5dEaR4znut5UlC0KFnPCJXt5SEeBdRKl3a1oDVSgVhZ31u8gbgLXcFB3DruK8Pk6Laf6xkf0gZO1xjzuhP3AAPw7Bx1QNrjxhK2WsJNkmKsti6mtifHKkM97KBIzohnq8hKTLEzENQMctQMp5RV37QvJwSJPnuh2rnGnL18cavAQvKeVHaAGM3fU18wJZH88q4t2x3UPF7AdSjcqgR58ImN2Qsq7ipw",
+      "part3": "Our journey is driven by",
+      "inlineImage3": "https://lh3.googleusercontent.com/aida-public/AB6AXuBtLibAqUN34Bw5qjp8ucByaVW0wOYBt9UFKIQab7VbnRmAj99v-k3-bqay6hRYdWT5iXDNDvMBL2oNxOZMkEO_kGjdE49E3fgt2FOUzh_CVZ3N5PUuKEQ5mhGg0y3FPP5GA2i9xeDsu5-zBmxj2cTyx5rlOutGTkTjngxqlghYAlq5GJ9_IQXwpELa7YHxmnYB66n5GzBmJx6-_7QXDIrNuu4G_n_R6jq0jpR6KNk8vfxMXimG5kYCmQ",
+      "part4": "an uncompromised commitment",
+      "inlineImage4": "https://lh3.googleusercontent.com/aida-public/AB6AXuCNnvIunsOe3Xc6gMISrOd0nHwNmfI8dZekq8bQ6C2Y4L8njMCDlsRVohdT_-7b-G7YxTFb_gCsRXq2CpLm9h_rFoge5F4bxIzKwGZUMgFFZJa4wvLOeT1t7aSqQwSZhZsH7NSKlNKspvmQ9K2XJPd01KQKYFPVmZAIRqJavnslxiN175rTU8a8B7elmnqAqixt3TtOlsJj6hi2YjyLjbHCBYN144s6FMM-HHLShPpwp4mIvKE9WtfMIg",
+      "part5": "We don't just build pools",
+      "inlineImage5": "https://lh3.googleusercontent.com/aida-public/AB6AXuD9X_MhbenlFakfzSXvOUdCOE53rDKf8qbdOWNvcq9hM0t1ud-45PUcd5gv9QLbi95U6Ar-tPU3w7ixzZP_cvmuPc8dnZ_baZFmeJPZyCtgdGefsJAmH9UFhLS1vB-kHc4cFAltKIBvu2CUEvhPpj9Nw6omCs8Tu-hG_7sArhJiaM8qTAlNBgLWaePlNC9jP_2OzDyGZPFJZP69Lc6m7Jyx50KaXidglR9NJgMqn29Z0HTNzC3hg1wsCg",
+      "part6": "— we create relaxing, safe, and visually stunning spaces that turn your vision into reality.",
+      "part7": "With a skilled team",
+      "part8": "and a focus on true craftsmanship, we're here to bring your perfect",
+      "part9": "outdoor space",
+      "part10": "to life.",
+      "part11": "to quality, honesty, and complete customer satisfaction."
+    },
+    "ctaLabel": "Explore more"
+  },
+  "services": {
+    "heading": "All our Services.",
+    "description": "Each pool is different. We can customize your service to fit your location's needs.",
+    "thumbnailImage": "/uploads/upload_1792598712339_p8y94j.jpg",
+    "guaranteeBanner": "With Us, your dream pool is closer than ever, no stress, no delays, just pure enjoyment!",
+    "items": [
+      {
+        "id": "service-1",
+        "title": "Building New Pools.",
+        "image": "/uploads/upload_1792759902672_nsoctk.jpeg",
+        "description": "Custom architectural concrete and infinity swimming pools designed and built from ground up with premium finishes."
+      },
+      {
+        "id": "service-2",
+        "title": "Pool Renovation",
+        "image": "/uploads/upload_1792760681423_k23fkt.jpg",
+        "description": "Repair and refresh existing pools through leak investigation, surface restoration, tile repairs and updated finishes.",
+        "included": [
+          "Pool condition and renovation assessment",
+          "Leak investigation and repair recommendations",
+          "Agreed surface, tile and structural repairs",
+          "Updated finishes and handover guidance"
+        ]
+      },
+      {
+        "id": "service-3",
+        "title": "Pool Maintenance",
+        "image": "/uploads/upload_1792760115915_f5vbku.jpg",
+        "description": "Pool cleaning, water balancing, filter care and equipment checks to keep your pool in good condition.",
+        "included": [
+          "Pool cleaning and vacuuming",
+          "Water testing and chemical balancing",
+          "Filter cleaning and backwashing",
+          "Equipment checks and ongoing care advice"
+        ]
+      },
+      {
+        "id": "service-4",
+        "title": "Equipment Install",
+        "image": "/uploads/upload_1792760124327_9pbtl5.jpg",
+        "description": "Installation of high-efficiency pumps, automated salt chlorinators, inverter heat pumps, and underwater LED lights."
+      },
+      {
+        "id": "pump-installation",
+        "title": "Pump Installation",
+        "description": "Install or replace a pool pump suited to the pool and filtration system.",
+        "image": "/uploads/upload_1792760438267_1cu2uc.jpg",
+        "included": [
+          "Pump sizing assessment",
+          "Installation or replacement",
+          "Connection and operation checks",
+          "Operating guidance"
+        ]
+      },
+      {
+        "id": "garden-service",
+        "title": "Garden Service",
+        "description": "Keep outdoor spaces tidy with garden care planned around your property.",
+        "image": "/uploads/upload_1792761561949_ijgohl.jpeg",
+        "included": [
+          "Garden needs assessment",
+          "Lawn and planting care as agreed",
+          "General garden tidying",
+          "Maintenance recommendations"
+        ]
+      },
+      {
+        "id": "paving-installation",
+        "title": "Paving Installation",
+        "description": "Install paving for pool surrounds and outdoor areas with finishes chosen for your space.",
+        "image": "/uploads/upload_1792760505222_ur97pg.jpg",
+        "included": [
+          "Area and access assessment",
+          "Paving material selection",
+          "Ground preparation and laying",
+          "Finishing and care advice"
+        ]
+      },
+      {
+        "id": "pool-light-installation",
+        "title": "Pool Light Installation",
+        "description": "Install or replace pool lighting suited to your pool and existing setup.",
+        "image": "/uploads/upload_1792760156201_jv89g8.jpg",
+        "included": [
+          "Lighting requirements assessment",
+          "Compatible fitting selection",
+          "Installation and operation checks",
+          "Usage and care guidance"
+        ]
+      },
+      {
+        "id": "pool-plastering",
+        "title": "Pool Plastering",
+        "description": "Renew the pool surface with plastering work based on its condition and chosen finish.",
+        "image": "/uploads/upload_1792760171750_voip6i.jpg",
+        "included": [
+          "Surface assessment",
+          "Surface preparation",
+          "Agreed plaster finish",
+          "Curing and water-care guidance"
+        ]
+      },
+      {
+        "id": "pool-painting",
+        "title": "Pool Painting",
+        "description": "Refresh the pool finish using a coating suited to its surface and condition.",
+        "image": "/uploads/upload_1792760176499_g275zr.jpg",
+        "included": [
+          "Surface and coating assessment",
+          "Cleaning and preparation",
+          "Agreed coating application",
+          "Drying and refill guidance"
+        ]
+      },
+      {
+        "id": "pool-draining",
+        "title": "Pool Draining",
+        "description": "Plan and carry out pool draining when required for agreed repairs or maintenance.",
+        "image": "/uploads/upload_1792760202261_qcc88v.jpg",
+        "included": [
+          "Site and pool assessment",
+          "Drainage planning",
+          "Controlled draining as appropriate",
+          "Refill or next-work guidance"
+        ]
+      },
+      {
+        "id": "multiport-valve-installation",
+        "title": "Multiport Valve Installation",
+        "description": "Replace or install a compatible multiport valve to support filter operation.",
+        "image": "/uploads/upload_1792760558685_gh7p10.jpg",
+        "included": [
+          "Filter and valve compatibility check",
+          "Valve installation or replacement",
+          "Connection and function checks",
+          "Valve operation guidance"
+        ]
+      },
+      {
+        "id": "pool-sand-change",
+        "title": "Pool Sand Change",
+        "description": "Replace filter sand to support effective pool filtration.",
+        "image": "/uploads/upload_1792760546725_4s9as7.jpg",
+        "included": [
+          "Filter condition check",
+          "Removal of existing filter media",
+          "Replacement with suitable media",
+          "Backwash and operation checks"
+        ]
+      },
+      {
+        "id": "green-pool-treatments",
+        "title": "Green Pool Treatments",
+        "description": "Assess and treat green pool water with a plan based on water condition and filtration.",
+        "image": "/uploads/upload_1792760566978_u26k5p.jpg",
+        "included": [
+          "Water condition assessment",
+          "Treatment recommendations",
+          "Agreed cleaning and treatment",
+          "Follow-up water-care advice"
+        ],
+        "afterImage": "/uploads/upload_1792761206434_yegjpb.jpeg"
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "GALLERY",
+    "heading": "Our Work in",
+    "headingHighlight": "Action",
+    "description": "Explore a selection of our recent pool projects, repairs and transformations. Quality workmanship you can see for yourself.",
+    "items": [
+      {
+        "id": "gal-1",
+        "title": "Water Conservation and Fiberglass Lining ",
+        "category": "Pool Repairs",
+        "layoutType": "tall",
+        "slideGroup": 1,
+        "imageUrl": "/uploads/upload_1792686207496_k7vatv.webp",
+        "location": "Randburg",
+        "description": "Architectural negative-edge pool cantilevered above the Atlantic with seamless teak lounge and glass guardrail."
+      },
+      {
+        "id": "gal-2",
+        "title": " Pool Transformation ",
+        "category": "Transformations",
+        "layoutType": "tall",
+        "slideGroup": 1,
+        "imageUrl": "/uploads/upload_1792686210125_6fi0z8.webp",
+        "location": "Bryanston",
+        "description": "Hand-chiseled stacked granite sheer descent wall with custom acoustic tuning and hydro-massage return jets."
+      },
+      {
+        "id": "gal-3",
+        "title": "Mosaic Tiling",
+        "category": "Transformations",
+        "layoutType": "stacked-top",
+        "slideGroup": 1,
+        "imageUrl": "/uploads/upload_1792761822039_4ynpk8.jpg",
+        "location": "Bedfordview",
+        "description": "Thermal-treated ash sun terrace with crystal clear mineral-treated water surrounded by lush tropical landscaping."
+      },
+      {
+        "id": "gal-4",
+        "title": " Fiberglass Pool Retrofit & Renovation",
+        "category": "Pool Repairs",
+        "layoutType": "stacked-bottom",
+        "slideGroup": 1,
+        "imageUrl": "/uploads/upload_1792762086440_2w35ca.jpg",
+        "location": "Morningside",
+        "description": "Submerged quartz coping with sparkling ambient sunlit caustics and non-slip textured finish."
+      },
+      {
+        "id": "gal-5",
+        "title": "Pool Renovation",
+        "category": "Transformations",
+        "layoutType": "tall",
+        "slideGroup": 1,
+        "imageUrl": "/uploads/upload_1792686213957_i1z3b9.webp",
+        "location": "Kempton Park",
+        "description": "Sleek monolithic rectangular pool with flush perimeter overflow, automated safety cover, and underwater spotlights."
+      },
+      {
+        "id": "gal-6",
+        "title": "Illuminated Luxury Swimming Pool",
+        "category": "New Pools",
+        "layoutType": "tall",
+        "slideGroup": 2,
+        "imageUrl": "/uploads/upload_1792761890316_n59vg2.jpg",
+        "location": "Midrand",
+        "description": "Integrated elevated perimeter overflow spa with automated linear fire bowls and mood illumination."
+      },
+      {
+        "id": "gal-7",
+        "title": "Marbelite plaster finish",
+        "category": "Transformations",
+        "layoutType": "tall",
+        "slideGroup": 2,
+        "imageUrl": "/uploads/upload_1792762272516_fk2bm3.jpg",
+        "location": "Edenvale",
+        "description": "Resort-style freeform lagoon with natural granite stone coping, deep beach entry, and integrated cave grotto."
+      },
+      {
+        "id": "gal-8",
+        "title": "Smart Pump & Chlorination Hub",
+        "category": "Equipment Installs",
+        "layoutType": "stacked-top",
+        "slideGroup": 2,
+        "imageUrl": "/uploads/upload_1792761925404_p933x0.jpg",
+        "location": "Sandton",
+        "description": "Whisper-quiet variable speed pumps and automated magnesium salt sanitation with smartphone monitoring."
+      },
+      {
+        "id": "gal-9",
+        "title": "Concrete Swimming PooL",
+        "category": "Pool Repairs",
+        "layoutType": "stacked-bottom",
+        "slideGroup": 2,
+        "imageUrl": "/uploads/upload_1792762369326_k8zm5e.jpg",
+        "location": "Germiston",
+        "description": "Hand-laid Italian glass tile waterline restoration with waterproof epoxy grout and frost-proof backing."
+      },
+      {
+        "id": "gal-10",
+        "title": "Lawn Care",
+        "category": "Maintenance",
+        "layoutType": "tall",
+        "slideGroup": 2,
+        "imageUrl": "/uploads/upload_1792762401398_ci70sq.jpeg",
+        "location": "Rosebank",
+        "description": "Private walled sanctuary pool with French-pattern honed travertine paving and custom bench seating."
+      },
+      {
+        "id": "gal-11",
+        "title": "Hillside Vanishing Horizon",
+        "category": "New Pools",
+        "layoutType": "tall",
+        "slideGroup": 3,
+        "imageUrl": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+        "location": "Sunninghill",
+        "description": "Suspended vanishing edge pool framing panoramic vineyard views with continuous recirculating spillway."
+      },
+      {
+        "id": "gal-12",
+        "title": "Resort Geometric Lap Pool",
+        "category": "Maintenance",
+        "layoutType": "tall",
+        "slideGroup": 3,
+        "imageUrl": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=1200&q=80",
+        "location": "Benoni",
+        "description": "Pure water clarity with daily scheduled robotic vacuuming, filtration backwash, and balanced chemical parameters."
+      },
+      {
+        "id": "gal-13",
+        "title": "Pebble Sheen Surface Re-plaster",
+        "category": "Pool Repairs",
+        "layoutType": "stacked-top",
+        "slideGroup": 3,
+        "imageUrl": "/uploads/upload_1792761949343_i6553h.jpg",
+        "location": "Centurion",
+        "description": "Full resurfacing with Pacific Blue polished pebble aggregates and reinforced structural waterproofing."
+      },
+      {
+        "id": "gal-14",
+        "title": "Optical Water Clarity Testing",
+        "category": "Maintenance",
+        "layoutType": "stacked-bottom",
+        "slideGroup": 3,
+        "imageUrl": "/uploads/upload_1792761957527_995d2a.jpg",
+        "location": "Houghton Estate",
+        "description": "Laboratory-grade photometer chemical diagnostics ensuring zero eye irritation and pristine clarity."
+      },
+      {
+        "id": "gal-15",
+        "title": "Inverter Heat Pump Setup",
+        "category": "Transformations",
+        "layoutType": "tall",
+        "slideGroup": 3,
+        "imageUrl": "/uploads/upload_1792762489827_la18q6.jpg",
+        "location": "Kyalami",
+        "description": "Total landscape transformation with integrated pool, recessed sun lounge, and outdoor entertaining pergola."
+      },
+      {
+        "id": "gal-16",
+        "title": "Modern Plunge with Acrylic Window",
+        "category": "Transformations",
+        "layoutType": "tall",
+        "slideGroup": 4,
+        "imageUrl": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80",
+        "location": "Fourways",
+        "description": "Architectural transparent observation window with underwater bench seating and custom coping."
+      },
+      {
+        "id": "gal-17",
+        "title": "Gunite Concrete Pool",
+        "category": "New Pools",
+        "layoutType": "tall",
+        "slideGroup": 4,
+        "imageUrl": "/uploads/upload_1792762675868_c4b1pl.jpg",
+        "location": "Houghton Estate",
+        "description": "Cascading dual-level pool structure with zero-entry sun shelf and infinity drop weir."
+      },
+      {
+        "id": "gal-18",
+        "title": "Public Pool",
+        "category": "Equipment Installs",
+        "layoutType": "stacked-top",
+        "slideGroup": 4,
+        "imageUrl": "/uploads/upload_1792762723238_u6zvwu.jpeg",
+        "location": "Kempton Park",
+        "description": "All-season ultra-quiet inverter heat pump delivering 29Â°C water temperature year-round."
+      },
+      {
+        "id": "gal-19",
+        "title": "Nocturne RGBW LED Illumination",
+        "category": "Equipment Installs",
+        "layoutType": "stacked-bottom",
+        "slideGroup": 4,
+        "imageUrl": "/uploads/upload_1792761977501_qyas0h.jpg",
+        "location": "Fourways",
+        "description": "App-controlled synchronized underwater color lighting with customizable ambient scene presets."
+      },
+      {
+        "id": "gal-20",
+        "title": "Stone Rock Waterfall",
+        "category": "New Pools",
+        "layoutType": "tall",
+        "slideGroup": 4,
+        "imageUrl": "/uploads/upload_1792762832731_1s2l5v.jpeg",
+        "location": "Centurion",
+        "description": "Floating cantilevered granite stepping pavers crossing a crystal glass-clear water expanse."
+      }
+    ]
+  },
+  "editorialStory": {
+    "heading": "Diving into Dreams",
+    "highlightSubtitle": "Our Aquatic Revolution",
+    "mainImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuD9mO-1CYT6MvqAcZ2gGsn0K5xYpDbs0xoyDX1X18gwdISL23CP-zBadvnQmA9UhW4LRLFu3TLqvPOdzzDYvq3YM08Ux4xGZUmTUrOCAQdSmED6Wybn6BBTI7yQQ4nz31vu-lc8dpxhUSdFQAMPBt-jeFo1PfEC7MT-UKnUB2HnmQCFPoRsIgiOExqkXNd9DuGRKw4FWyFZ4EmfxzgE3JHxrb7UuilNPn-WHbC7FkbZMGvFT5VD2ul4Rg",
+    "overlappingImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAc4Rl9iEFnN7SgfPBQNzWUTTTd1DA0QFMfh6QtcTeueFNr0s2QMyfYrXZqbB_p7UywUjzgiW6krHkYqy6rHJI5XLxJkGFr5SHQTQHeoKTzCOUldCRebTeKTJrHk0u_0P_-6EP5NboCA2Rgs_ZHXtUYjYOupLEqyrMG4gT-pVpGDBsnP6Viliw6heumeLnbUvHZFrQQhk9gVBz6UUvFxvjr9gr5MsiQyoCL6m_bsmHLBFkuZDu1CvKT3Q",
+    "paragraph1": "In the sun-drenched landscapes of Portugal, where azure waters whisper tales of possibility, we emerged in 2019 with a radical vision: to transform the very essence of backyard swimming experiences.",
+    "paragraph2": "We're not just another pool company, we're aquatic architects of imagination at Practic Pool. Every contour, filter system, and lighting line is sculpted for longevity, safety, and effortless joy.",
+    "ctaLabel": "Learn More"
+  },
+  "processSection": {
+    "headingLine1": "Our 3 Step Process",
+    "headingLine2": "to Your Dream Pool",
+    "description": "Our expert team handles everything from cleaning and water balancing to equipment maintenance â making pool care effortless and stress-free for you.",
+    "ctaLabel": "Get In Touch",
+    "steps": [
+      {
+        "id": "step-1",
+        "stepNumber": 1,
+        "image": "/uploads/upload_1792763332739_q9yb59.jpg",
+        "iconType": "calendar"
+      },
+      {
+        "id": "step-2",
+        "stepNumber": 2,
+        "image": "/uploads/upload_1792763335643_zbrx0k.jpg",
+        "iconType": "cleaning"
+      },
+      {
+        "id": "step-3",
+        "stepNumber": 3,
+        "image": "/uploads/upload_1792763338517_8blzug.jpg",
+        "iconType": "ladder"
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "What Our",
+    "headingHighlight": "Customers",
+    "headingSuffix": "Say",
+    "infoCardText": "Real reviews and experiences from pool owners who count on Pur Pools for crystal-clear water, emergency repairs, and effortless maintenance.",
+    "items": [
+      {
+        "id": "test-1",
+        "mainImage": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80",
+        "quoteTitle": "Emergency Pool Repair",
+        "quoteBody": "We needed emergency pool repair before our family reunion, and Pur Pools came through! Their licensed team fixed our heating system and completed a full inspection.",
+        "authorName": "MIKE R.",
+        "authorRole": "Welland",
+        "location": "Welland",
+        "stars": 5,
+        "authorAvatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "test-2",
+        "mainImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+        "quoteTitle": "Transformed Backyard Oasis",
+        "quoteBody": "Absolutely amazing work! Pur Pools transformed our old, cracked concrete pool into a beautiful backyard oasis. The Diamond package was worth every penny.",
+        "authorName": "SARAH M.",
+        "authorRole": "St. Catharines",
+        "location": "St. Catharines",
+        "stars": 5,
+        "authorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "test-3",
+        "mainImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+        "quoteTitle": "Weekly Care & Crystal Water",
+        "quoteBody": "Friendly, reliable, and thorough weekly service. Our pool water has never looked so clear, and the opening and closing each season is completely stress-free.",
+        "authorName": "DAVID B.",
+        "authorRole": "Niagara-on-the-Lake",
+        "location": "Niagara-on-the-Lake",
+        "stars": 5,
+        "authorAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "test-4",
+        "mainImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+        "quoteTitle": "Professional & Honest Advice",
+        "quoteBody": "From the very first quote to the finished tile work, their honesty and craftsmanship were second to none. We wouldn't trust anyone else with our pool.",
+        "authorName": "EMILY C.",
+        "authorRole": "Thorold",
+        "location": "Thorold",
+        "stars": 5,
+        "authorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  },
+  "ctaBanner": {
+    "topBadge": "PLEASE CONTACT US TODAY!",
+    "heading": "Interested in Realizing Your Dream?",
+    "buttonLabel": "Start A Pool",
+    "buttonAction": "quote",
+    "backgroundImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCqB8sf1_dIxkmruWhd3XLsOLgYrw-MGrPzo8tMYVX0Mk_d5E7LCADTUwTaM2RBq3TG_m5WFRAS03rCyfkpqvvdVK7U7C8YAYu8zC8qnQL3nIQd-tkHZR9J96lAtbj7m52fv9bql0YIa-dI_Gc5NaiuFfMX29cI6qxgeX5Pjhfdfy8UU5kPjUMIQGqhbPhrJuGNa64wuP9sOWXco98jKctWee4IwExCVeMBn_U285h7-1JxXA68uAwR5w",
+    "stampBadgeMonogram": "P.",
+    "stampBadgeText": "â¢ BUILD YOUR DREAM POOL â¢"
+  },
+  "footer": {
+    "taglineLine1": "Thoughtfully designed pools.",
+    "taglineLine2": "Built for the way you live.",
+    "servicesTagline": "Pool design Â· Construction Â· Care",
+    "phone": "+27 00 000 0000",
+    "email": "hello@royelpool.co.za",
+    "ctaButtonLabel": "Plan your pool",
+    "newsletterHeading": "Subscribe to our",
+    "newsletterHighlight": "newsletter.",
+    "newsletterDescription": "Want to stay up to date with news and updates about our services? Subscribe."
+  },
+  "contactSection": {
+    "eyebrow": "GET IN TOUCH",
+    "headingPrefix": "Let's Talk About",
+    "headingHighlight": "Your Pool Project.",
+    "description": "Have a question, need a quote, or want to discuss your ideas? Get in touch with our team and we'll be happy to help.",
+    "phone": "067 933 0920",
+    "email": "info@vsmaintenanceservices.co.za",
+    "location": "Sandton, South Africa",
+    "hoursMonday": "Monday: 8:00am - 5:00pm",
+    "hoursTuesday": "Tuesday: 8:00am - 5:00pm",
+    "hoursWednesday": "Wednesday: 8:00am - 5:00pm",
+    "hoursThursday": "Thursday: 8:00am - 5:00pm",
+    "hoursFriday": "Friday: 8:00am - 5:00pm",
+    "hoursSaturday": "Saturday: 8:00am - 1:00pm",
+    "hoursSunday": "Sunday: Closed",
+    "hoursWeekday": "Mon- Fri: 8:00am - 5:00pm",
+    "hoursWeekend": "Sat: 8:00am -  1:00pm",
+    "formHeading": "Send Us a Message",
+    "formSubheading": "Fill in the form below and we'll get back to you shortly.",
+    "submitButtonLabel": "SEND MESSAGE"
+  }
+}

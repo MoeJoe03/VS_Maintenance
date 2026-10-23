@@ -1,0 +1,6 @@
+{
+  "name": "Royel Pool — World-Class Aquatic Craftsmanship",
+  "description": "Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

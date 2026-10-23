@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%" preserveAspectRatio="none" role="img" aria-label="Abstract turquoise pool water and layered flowing waves">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#e5faff"/><stop offset=".52" stop-color="#f9feff"/><stop offset="1" stop-color="#e7faff"/></linearGradient>
+ <linearGradient id="water" x1="0" y1=".1" x2="1" y2=".85"><stop stop-color="#007fae"/><stop offset=".35" stop-color="#05add4"/><stop offset=".75" stop-color="#32c8e4"/><stop offset="1" stop-color="#b1f3f6"/></linearGradient>
+ <linearGradient id="waveA" x1="0" y1="0" x2="1" y2=".5"><stop stop-color="#49cdeb" stop-opacity=".58"/><stop offset=".58" stop-color="#c4f7ff" stop-opacity=".55"/><stop offset="1" stop-color="#67d9ed" stop-opacity=".68"/></linearGradient>
+ <linearGradient id="waveB" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#008fc2" stop-opacity=".85"/><stop offset=".5" stop-color="#2cc4e8" stop-opacity=".67"/><stop offset="1" stop-color="#c4faff" stop-opacity=".52"/></linearGradient>
+ <pattern id="caustics" width="370" height="255" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)"><g fill="none" stroke="#eaffff" stroke-linecap="round"><path d="M-35 70 Q32 18 92 64 T205 70 Q279 30 388 70 M-25 72 Q32 125 99 116 T215 107 Q302 133 387 73 M91 -10 Q125 41 92 64 Q60 92 99 116 Q139 161 100 254 M205 -10 Q172 42 205 70 Q242 98 215 107 Q177 162 226 255 M-20 194 Q65 150 100 181 T226 177 Q296 148 390 199" stroke-width="4" opacity=".42"/><path d="M-35 70 Q32 18 92 64 T205 70 Q279 30 388 70 M-25 72 Q32 125 99 116 T215 107 Q302 133 387 73 M91 -10 Q125 41 92 64 Q60 92 99 116 Q139 161 100 254 M205 -10 Q172 42 205 70 Q242 98 215 107 Q177 162 226 255" stroke-width="1.5" opacity=".82"/></g></pattern>
+ <clipPath id="waterclip"><path d="M0 346 C270 321 480 418 716 500 C965 585 1160 522 1600 418 V900 H0Z"/></clipPath>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<!-- Wide translucent ribbons create a quiet architectural wave silhouette -->
+<path d="M0 142 C262 147 452 264 693 339 C1000 435 1196 394 1600 198 L1600 407 C1267 530 1050 541 772 453 C444 350 229 235 0 255Z" fill="url(#waveA)" opacity=".48"/>
+<path d="M0 201 C270 195 446 345 708 420 C1034 515 1245 468 1600 271 L1600 409 C1245 573 1020 573 734 487 C416 391 234 277 0 305Z" fill="#9cebf8" opacity=".44"/>
+<!-- Water basin with a rolling, non-geometric crest -->
+<path d="M0 346 C270 321 480 418 716 500 C965 585 1160 522 1600 418 V900 H0Z" fill="url(#water)"/>
+<g clip-path="url(#waterclip)">
+ <path d="M-30 423 C232 382 459 460 708 532 C980 609 1255 566 1640 460 V900 H-30Z" fill="#19b7dc" opacity=".30"/>
+ <path d="M-30 537 C230 460 490 565 741 613 C1043 673 1325 582 1640 535 V900 H-30Z" fill="#007db2" opacity=".19"/>
+ <path d="M-30 725 C282 650 505 744 754 765 C1042 790 1338 682 1640 701 V900 H-30Z" fill="#69dce9" opacity=".28"/>
+ <rect x="0" y="340" width="1600" height="560" fill="url(#caustics)" opacity=".83"/>
+ <g fill="none" stroke="#d9ffff" stroke-linecap="round" opacity=".58">
+ <path d="M-30 509 C202 473 400 535 610 573 S1000 634 1200 590 S1470 506 1640 522" stroke-width="3"/>
+ <path d="M-20 627 C209 579 382 651 630 679 S1045 700 1270 648 S1465 626 1620 642" stroke-width="2"/>
+ <path d="M-20 797 C247 735 443 824 665 827 S1070 802 1295 769 S1500 759 1620 781" stroke-width="2"/>
+ </g>
+</g>
+<!-- Polished wave edges and layered translucent crests -->
+<path d="M0 291 C254 277 435 402 700 463 C994 533 1201 523 1600 330 L1600 382 C1248 566 1012 579 715 496 C426 415 249 316 0 350Z" fill="url(#waveB)" opacity=".55"/>
+<path d="M0 282 C252 268 453 395 706 464 C1004 545 1227 504 1600 328" fill="none" stroke="#faffff" stroke-width="9" opacity=".87"/>
+<path d="M0 320 C245 305 443 428 707 489 C1009 560 1222 528 1600 362" fill="none" stroke="#e5ffff" stroke-width="2" opacity=".77"/>
+<path d="M0 368 C268 351 473 450 735 521 C1017 597 1240 548 1600 411" fill="none" stroke="#b8f6ff" stroke-width="4" opacity=".66"/>
+</svg>
