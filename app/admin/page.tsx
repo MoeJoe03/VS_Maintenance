@@ -924,7 +924,7 @@ export default function AdminPage() {
 
                 <div>
                   <label className="block text-xs font-bold text-slate-700 mb-1">
-                    WhatsApp Number (International format e.g. +18007665766)
+                    WhatsApp Number (International format e.g. +27679330920)
                   </label>
                   <input
                     type="text"
@@ -2327,7 +2327,7 @@ export default function AdminPage() {
                     <label className="block text-xs font-bold text-slate-700 mb-1">Phone Number</label>
                     <input
                       type="text"
-                      value={formData.contactSection?.phone ?? '082 637 1597'}
+                      value={formData.contactSection?.phone ?? '067 933 0920'}
                       onChange={(e) =>
                         setFormData({
                           ...formData,

@@ -15,7 +15,7 @@ export default function ContactSection({ cmsData }: ContactSectionProps) {
     headingHighlight: 'Your Pool Project.',
     description:
       'Have a question, need a quote, or want to discuss your ideas? Get in touch with our team and we’ll be happy to help.',
-    phone: '082 637 1597',
+    phone: '067 933 0920',
     email: 'info@realvibepools.co.za',
     location: 'Sandton, South Africa',
     hoursWeekday: 'Mon – Fri: 8:00am – 5:00pm',

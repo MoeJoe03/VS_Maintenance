@@ -4,12 +4,13 @@ import ServiceAreas from './ServiceAreas';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, MapPin, Menu, X } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, MapPin } from 'lucide-react';
 import { CMSData } from '@/lib/cms-types';
 import ProcessSection from './ProcessSection';
 import Testimonials from './Testimonials';
 import Footer from './Footer';
 import QuoteModal from './QuoteModal';
+import Navbar from './Navbar';
 import BeforeAfterSlider from './BeforeAfterSlider';
 
 const serviceDetails: Record<string, { eyebrow: string; included: string[] }> = {
@@ -43,7 +44,6 @@ export default function ClientServicesPage({ initialData }: { initialData: CMSDa
   const [cmsData, setCmsData] = useState(initialData);
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [selectedService, setSelectedService] = useState('Building New Pools');
-  const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   useEffect(() => {
@@ -70,22 +70,7 @@ export default function ClientServicesPage({ initialData }: { initialData: CMSDa
         <header className="relative flex h-[calc(100dvh-1rem)] min-h-[640px] flex-col overflow-hidden rounded-[28px] bg-[#10283F] sm:h-[calc(100dvh-1.5rem)] md:rounded-[36px]">
           <Image data-parallax-image src="/assets/hero_service.png" alt="Sunset over a swimming pool with underwater steps" fill priority sizes="100vw" className="object-cover object-center" />
           <div className="absolute inset-0 bg-[#0A1A2B]/45" />
-          <nav className="absolute inset-x-0 top-0 z-20 flex items-center justify-between gap-4 px-6 py-6 sm:px-10" aria-label="Main navigation">
-            <Link href="/" className="flex items-center gap-3 text-white">
-              {cmsData.branding.logoUrl && <span className="relative h-12 w-12 overflow-hidden rounded-full border border-white/50 bg-white/10"><Image src={cmsData.branding.logoUrl} alt="" fill className="object-contain" /></span>}
-              <span className="text-lg font-extrabold tracking-tight sm:text-xl">{cmsData.branding.companyName.trim()}</span>
-            </Link>
-            <div className="hidden items-center gap-8 text-sm font-semibold text-white md:flex">
-              <Link href="/" className="hover:text-[#B8F4F5]">Home</Link>
-              <Link href="/about" className="hover:text-[#B8F4F5]">About</Link>
-              <Link href="/services" aria-current="page" className="text-[#B8F4F5] underline decoration-[#35D4DB] decoration-2 underline-offset-8">Services</Link>
-              <Link href="/gallery" className="hover:text-[#B8F4F5]">Our Work</Link>
-              <Link href="/contact" className="hover:text-[#B8F4F5]">Contact</Link>
-            </div>
-<button type="button" onClick={() => openQuote()} className="cms-button hidden shrink-0 items-center justify-center rounded-full px-6 py-3 text-sm font-bold shadow-md transition-shadow hover:shadow-lg md:inline-flex">Free Quote</button>
-            <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="rounded-full border border-white/40 bg-white/15 p-2 text-white md:hidden" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
-            {menuOpen && <div className="absolute inset-x-4 top-20 flex flex-col gap-4 rounded-2xl bg-white p-6 text-sm font-semibold shadow-xl md:hidden"><Link href="/">Home</Link><Link href="/about">About</Link><Link href="/services" aria-current="page" className="text-[#079BC5]">Services</Link><Link href="/gallery">Our Work</Link><Link href="/contact">Contact</Link></div>}
-          </nav>
+          <Navbar cmsData={cmsData} />
           <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-1 flex-col items-center justify-center px-6 pb-20 pt-8 text-center text-white sm:px-10">
             <span className="hero-pop mb-5 rounded-full border border-white/35 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] backdrop-blur-sm">Crafted for your pool</span>
             <h1 className="hero-pop hero-pop-delay-1 max-w-3xl text-[clamp(2.5rem,5vw,60px)] font-extrabold leading-[1.06] tracking-tight">Everything your pool needs, <span className="text-[#B8F4F5]">beautifully handled.</span></h1>

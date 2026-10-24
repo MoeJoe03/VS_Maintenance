@@ -2,14 +2,14 @@
 import { useState, type CSSProperties } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, ArrowDown, MapPin, ChevronDown, Menu, X } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, MapPin, ChevronDown } from 'lucide-react';
 import { CMSData } from '@/lib/cms-types';
 import Footer from './Footer';
 import QuoteModal from './QuoteModal';
+import Navbar from './Navbar';
 
 export default function ClientGalleryPage({ cmsData }: { cmsData: CMSData }) {
   const [category, setCategory] = useState('All');
-  const [menuOpen, setMenuOpen] = useState(false);
   const [quoteOpen, setQuoteOpen] = useState(false);
   const projects = cmsData.gallery.items.filter(item => item.imageUrl.trim());
   const categories = ['All', ...new Set(projects.map(item => item.category))];
@@ -20,7 +20,7 @@ export default function ClientGalleryPage({ cmsData }: { cmsData: CMSData }) {
     <header className="relative flex h-[calc(100dvh-1rem)] min-h-[640px] flex-col overflow-hidden rounded-[28px] bg-[#10283F] text-white sm:h-[calc(100dvh-1.5rem)] md:rounded-[36px]">
       <Image data-parallax-image src="/assets/gallery-hero.png" alt="Swimming pool with waterfall feature" fill priority sizes="100vw" className="object-cover object-center" />
       <div className="absolute inset-0 bg-[#0A1A2B]/45" />
-      <nav aria-label="Main navigation" className="absolute inset-x-0 top-0 z-20 flex items-center justify-between gap-4 px-6 py-6 sm:px-10"><Link href="/" className="flex items-center gap-3 text-lg font-extrabold text-white sm:text-xl">{cmsData.branding.logoUrl && <span className="relative h-12 w-12 overflow-hidden rounded-full border border-white/50 bg-white/10"><Image src={cmsData.branding.logoUrl} alt="" fill className="object-contain" /></span>}{cmsData.branding.companyName.trim()}</Link><div className="hidden items-center gap-8 text-sm font-semibold md:flex"><Link href="/" className="hover:text-[#B8F4F5]">Home</Link><Link href="/about" className="hover:text-[#B8F4F5]">About</Link><Link href="/services" className="hover:text-[#B8F4F5]">Services</Link><Link href="/gallery" aria-current="page" className="text-[#B8F4F5] underline decoration-[#35D4DB] decoration-2 underline-offset-8">Our Work</Link><Link href="/contact" className="hover:text-[#B8F4F5]">Contact</Link></div><button type="button" onClick={() => setMenuOpen(!menuOpen)} className="shrink-0 rounded-full border border-white/40 bg-white/15 p-2 text-white md:hidden" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="gallery-mobile-menu">{menuOpen ? <X size={22} /> : <Menu size={22} />}</button><button type="button" onClick={() => window.location.assign('/contact#enquiry')} className="cms-button hidden shrink-0 items-center justify-center rounded-full px-6 py-3 text-sm font-bold shadow-md transition-shadow hover:shadow-lg md:inline-flex">Free Quote</button>{menuOpen && <div id="gallery-mobile-menu" className="absolute inset-x-4 top-full flex flex-col gap-4 rounded-2xl bg-white p-6 text-sm font-semibold text-[#172638] shadow-xl md:hidden">{[{href:'/',label:'Home'},{href:'/about',label:'About'},{href:'/services',label:'Services'},{href:'/gallery',label:'Our Work'},{href:'/contact',label:'Contact'}].map(item => <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)} aria-current={item.href === '/gallery' ? 'page' : undefined} className={item.href === '/gallery' ? 'text-[#079BC5]' : ''}>{item.label}</Link>)}<Link href="/contact#enquiry" onClick={() => setMenuOpen(false)} className="cms-button rounded-full px-5 py-3 text-center font-bold">Free Quote</Link></div>}</nav>
+      <Navbar cmsData={cmsData} />
       <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-1 flex-col items-center justify-center px-6 pb-20 pt-8 text-center sm:px-10"><p className="hero-pop mb-5 rounded-full border border-white/35 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] backdrop-blur-sm">The project gallery</p><h1 className="hero-pop hero-pop-delay-1 max-w-3xl text-[clamp(2.5rem,5vw,60px)] font-extrabold leading-[1.06] tracking-tight">Pools with a story.<br /><span className="text-[#B8F4F5]">Work worth a closer look.</span></h1><p className="hero-pop hero-pop-delay-2 mt-6 max-w-2xl text-sm leading-relaxed text-white/85 sm:text-base">Explore pool repairs and transformations featured by {cmsData.branding.companyName.trim()}. We serve Sandton and the surrounding areas, helping property owners bring their pools back to life.</p><a href="#featured-projects" className="hero-pop hero-pop-delay-3 cms-button mt-8 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold shadow-lg">Explore our work <ArrowDown size={17} /></a></div>
     </header>
     </div>

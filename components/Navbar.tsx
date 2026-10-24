@@ -1,194 +1,31 @@
 'use client';
-
-import React, { useState } from 'react';
+import { useId, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Phone, MessageSquare } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { X, Phone, MessageSquare } from 'lucide-react';
 import { CMSData } from '@/lib/cms-types';
 
-interface NavbarProps {
-  cmsData: CMSData;
-  onOpenQuote: () => void;
-}
-
-export default function Navbar({ cmsData, onOpenQuote }: NavbarProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const companyNameWords = cmsData.branding.companyName.trim().split(/\s+/).filter(Boolean);
-  const displayCompanyNameWords = companyNameWords.length ? companyNameWords : ['Royel', 'Pool'];
-
-  return (
-    <nav
-      aria-label="Main Navigation"
-      className="absolute top-0 inset-x-0 z-20 px-6 sm:px-10 py-6 flex items-center justify-between"
-    >
-      {/* Brand Logo */}
-      <Link
-        href="#home"
-        aria-label={`${cmsData.branding.companyName} Home`}
-        className="flex items-center gap-2 group"
-      >
-        {cmsData.branding.logoUrl ? (
-          <div className="relative h-12 w-12 sm:h-14 sm:w-14 rounded-full overflow-hidden border border-white/40 shadow-sm bg-white/10 backdrop-blur-md">
-            <Image
-              src={cmsData.branding.logoUrl}
-              alt={cmsData.branding.companyName}
-              fill
-              className="object-contain p-1"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-        ) : (
-          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#079BC5]/20 backdrop-blur-md flex items-center justify-center p-2 border border-white/40 shadow-sm">
-            <svg
-              className="w-full h-full text-white"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2.5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M2 12c3-2 6-2 9 0s6 2 9 0 3-2 3-2" />
-              <path d="M2 17c3-2 6-2 9 0s6 2 9 0 3-2 3-2" />
-            </svg>
-          </div>
-        )}
-        <div className="flex flex-col">
-          <span className="text-xl font-extrabold tracking-tight drop-shadow-sm font-sans flex items-center gap-1">
-            {displayCompanyNameWords.map((word, index) => (
-              <span
-                key={`${word}-${index}`}
-                style={{
-                  color:
-                    cmsData.branding.companyNameWordColors?.[index] ||
-                    (index === 0 ? '#ffffff' : '#B8F4F5'),
-                }}
-              >
-                {word}
-              </span>
-            ))}
-          </span>
-        </div>
-      </Link>
-
-      {/* Desktop Navigation Links */}
-      <ul className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide text-white drop-shadow-sm">
-        <li>
-          <a
-            href="#home"
-            className="text-[#B8F4F5] hover:text-white transition-colors duration-200 underline underline-offset-8 decoration-2 decoration-[#35D4DB]"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <Link
-            href="/about"
-            className="hover:text-[#B8F4F5] transition-colors duration-200"
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link href="/services" className="hover:text-[#B8F4F5] transition-colors duration-200">
-            Services
-          </Link>
-        </li>
-        <li>
-          <a href="/gallery" className="hover:text-[#B8F4F5] transition-colors duration-200">
-            Our Work
-          </a>
-        </li>
-        <li>
-          <a href="/contact" className="hover:text-[#B8F4F5] transition-colors duration-200">
-            Contact
-          </a>
-        </li>
-      </ul>
-
-
-      {/* Mobile Toggle */}
-      <div className="flex items-center gap-3">
-<button type="button" onClick={onOpenQuote} className="cms-button hidden shrink-0 items-center justify-center rounded-full px-6 py-3 text-sm font-bold shadow-md transition-shadow hover:shadow-lg md:inline-flex">Free Quote</button>
-        <button
-          type="button"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center border border-white/40"
-          aria-label="Toggle navigation menu"
-        >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full inset-x-4 mt-2 p-5 bg-white/95 backdrop-blur-xl rounded-[24px] shadow-2xl border border-white flex flex-col gap-4 text-[#172638] animate-fade-in z-30">
-          <ul className="flex flex-col gap-3 font-semibold text-sm">
-            <li>
-              <a
-                href="#home"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-1 text-[#079BC5]"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-1 hover:text-[#079BC5]"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#079BC5]">
-                Services
-              </Link>
-            </li>
-            <li>
-              <a href="/gallery" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#079BC5]">
-                Our Work
-              </a>
-            </li>
-            <li>
-              <a href="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-1 hover:text-[#079BC5]">
-                Contact
-              </a>
-            </li>
-          </ul>
-
-          <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenQuote();
-              }}
-              className="cms-button w-full py-2.5 rounded-full text-xs font-bold text-center"
-            >
-              Request a Quote
-            </button>
-            <div className="flex items-center justify-around pt-2 text-xs text-[#647785]">
-              <a
-                href={`tel:${cmsData.branding.telephone}`}
-                className="flex items-center gap-1 hover:text-[#079BC5]"
-              >
-                <Phone className="w-3.5 h-3.5" /> Call
-              </a>
-              <a
-                href={`https://wa.me/${cmsData.branding.whatsappNumber.replace(/[^0-9]/g, '')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 hover:text-[#079BC5]"
-              >
-                <MessageSquare className="w-3.5 h-3.5" /> WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-    </nav>
-  );
+const links = [{ href: '/', label: 'Home' }, { href: '/about', label: 'About' }, { href: '/services', label: 'Services' }, { href: '/gallery', label: 'Our Work' }, { href: '/contact', label: 'Contact' }];
+export default function Navbar({ cmsData }: { cmsData: CMSData; onOpenQuote?: () => void }) {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const menuId = useId();
+  const words = cmsData.branding.companyName.trim().split(/\s+/);
+  const phone = cmsData.contactSection?.phone || cmsData.branding.telephone;
+  const rawWhatsapp = cmsData.branding.whatsappNumber.replace(/\D/g, '');
+  const whatsapp = rawWhatsapp.startsWith('0') ? `27${rawWhatsapp.slice(1)}` : rawWhatsapp;
+  return <nav aria-label="Main navigation" onKeyDown={event => { if (event.key === 'Escape') setOpen(false); }} className="absolute inset-x-0 top-0 z-40 flex items-center justify-between gap-4 px-6 py-6 sm:px-10">
+    <Link href="/" aria-label={`${cmsData.branding.companyName.trim()} home`} onClick={() => setOpen(false)} className="flex max-w-[75%] items-center gap-2 lg:max-w-[30%]">
+      {cmsData.branding.logoUrl && <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/40 bg-white/10 sm:h-14 sm:w-14"><Image src={cmsData.branding.logoUrl} alt="" fill className="object-contain p-1" /></span>}
+      <span className="text-lg font-extrabold leading-tight tracking-tight sm:text-xl">{words.map((word,index) => <span key={`${word}-${index}`} style={{ color: cmsData.branding.companyNameWordColors?.[index] || (index === 0 ? '#ffffff' : '#B8F4F5') }}>{word}{index < words.length - 1 ? ' ' : ''}</span>)}</span>
+    </Link>
+    <div className="hidden items-center gap-6 text-sm font-semibold text-white lg:flex">{links.map(link => <Link key={link.href} href={link.href} aria-current={pathname === link.href ? 'page' : undefined} className={pathname === link.href ? 'text-[#B8F4F5] underline decoration-[#35D4DB] decoration-2 underline-offset-8' : 'transition-colors hover:text-[#B8F4F5]'}>{link.label}</Link>)}</div>
+    <Link href="/contact#enquiry" className="cms-button hidden shrink-0 rounded-full px-6 py-3 text-sm font-bold shadow-md lg:inline-flex">Free Quote</Link>
+    <button type="button" onClick={() => setOpen(!open)} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls={menuId} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/20 text-white backdrop-blur-md lg:hidden">{open ? <X size={21} /> : <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="M3 6c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0" /></svg>}</button>
+    {open && <div id={menuId} className="absolute inset-x-4 top-full max-h-[calc(100dvh-8rem)] overflow-y-auto rounded-[24px] border border-white bg-white p-5 text-[#172638] shadow-2xl lg:hidden">
+      <div className="flex flex-col gap-2 text-sm font-semibold">{links.map(link => <Link key={link.href} href={link.href} onClick={() => setOpen(false)} aria-current={pathname === link.href ? 'page' : undefined} className={`rounded-lg px-2 py-2 ${pathname === link.href ? 'bg-[#EBFBFA] text-[#079BC5]' : 'hover:bg-slate-50'}`}>{link.label}</Link>)}</div>
+      <div className="mt-3 border-t border-slate-100 pt-4"><Link href="/contact#enquiry" onClick={() => setOpen(false)} className="cms-button block rounded-full px-5 py-3 text-center text-sm font-bold">Free Quote</Link><div className="mt-4 flex justify-around text-xs font-semibold text-[#647785]"><a href={`tel:${phone.replace(/\s+/g,'')}`} className="flex items-center gap-2 py-2"><Phone size={16} />Call</a><a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 py-2"><MessageSquare size={16} />WhatsApp</a></div></div>
+    </div>}
+  </nav>;
 }
