@@ -13,7 +13,7 @@ interface GalleryProps {
 const CATEGORIES = [
   'All',
   'New Pools',
-  'Pool Repairs',
+  'Pool Repairs', 'Pool Renovation', 'Paving',
   'Maintenance',
   'Equipment Installs',
   'Transformations',
@@ -32,7 +32,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
   };
 
   const allItems: GalleryItem[] = useMemo(() => {
-    return galleryData.items && galleryData.items.length > 0 ? galleryData.items : [];
+    return galleryData.items?.filter(item => item.imageUrl.trim()) || [];
   }, [galleryData.items]);
 
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>('All');
@@ -87,12 +87,12 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxItem, allItems]);
 
-  // Extract columns for the "All" slide layout
-  const col1Item = currentSlideItems.find((i) => i.layoutType === 'tall' && i.id.endsWith('1') || i.layoutType === 'tall') || currentSlideItems[0];
-  const col2Item = currentSlideItems.find((i) => i.id !== col1Item?.id && (i.layoutType === 'tall' || !i.layoutType)) || currentSlideItems[1];
-  const col3TopItem = currentSlideItems.find((i) => i.layoutType === 'stacked-top') || currentSlideItems[2];
-  const col3BottomItem = currentSlideItems.find((i) => i.layoutType === 'stacked-bottom') || currentSlideItems[3];
-  const col4Item = currentSlideItems.find((i) => i.id !== col1Item?.id && i.id !== col2Item?.id && i.id !== col3TopItem?.id && i.id !== col3BottomItem?.id) || currentSlideItems[4] || currentSlideItems[0];
+  // The homepage keeps its fixed composition, independent of gallery card sizing.
+  const col1Item = currentSlideItems[0];
+  const col2Item = currentSlideItems[1];
+  const col3TopItem = currentSlideItems[2];
+  const col3BottomItem = currentSlideItems[3];
+  const col4Item = currentSlideItems[4] || currentSlideItems[0];
 
   return (
     <section

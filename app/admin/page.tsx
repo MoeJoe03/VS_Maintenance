@@ -178,9 +178,9 @@ export default function AdminPage() {
     if (!file || !currentUploadTarget) return;
 
     // Validate type
-    const validTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'];
+    const validTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/avif', 'image/svg+xml'];
     if (!validTypes.includes(file.type)) {
-      alert('Please upload a valid image file (PNG, JPG, WebP, or SVG).');
+      alert('Please upload a valid image file (PNG, JPG, WebP, AVIF, or SVG).');
       return;
     }
 
@@ -330,7 +330,7 @@ export default function AdminPage() {
         type="file"
         ref={fileInputRef}
         onChange={handleFileUpload}
-        accept="image/png,image/jpeg,image/webp,image/svg+xml"
+        accept="image/png,image/jpeg,image/webp,image/avif,image/svg+xml"
         className="hidden"
       />
 
@@ -794,7 +794,7 @@ export default function AdminPage() {
                         </button>
                       )}
                       <span className="text-[10px] text-slate-400">
-                        Supports PNG, JPG, WebP, SVG (Max 5MB)
+                        Supports PNG, JPG, WebP, AVIF, SVG (Max 5MB)
                       </span>
                     </div>
                   </div>
@@ -1454,33 +1454,7 @@ export default function AdminPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const currentGallery = formData.gallery || defaultCMSData.gallery;
-                      const newProject: GalleryItem = {
-                        id: `gallery-${Date.now()}`,
-                        title: 'Custom Architectural Pool Design',
-                        category: 'New Pools',
-                        imageUrl:
-                          'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80',
-                        location: 'Cascais · Private Estate',
-                        layoutType: 'tall',
-                        slideGroup: 1,
-                        description: 'Custom concrete and infinity pool installation with premium coping stone.',
-                      };
-                      setFormData({
-                        ...formData,
-                        gallery: {
-                          ...currentGallery,
-                          items: [newProject, ...(currentGallery.items || [])],
-                        },
-                      });
-                    }}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#079BC5] hover:bg-[#0682A6] transition-all shadow-sm"
-                  >
-                    <Plus className="w-4 h-4" /> Add Project
-                  </button>
+                  
                   <a
                     href="/#gallery"
                     target="_blank"
@@ -1622,7 +1596,7 @@ export default function AdminPage() {
                     {[
                       'All',
                       'New Pools',
-                      'Pool Repairs',
+                      'Pool Repairs', 'Pool Renovation', 'Paving',
                       'Maintenance',
                       'Equipment Installs',
                       'Transformations',
@@ -1649,7 +1623,7 @@ export default function AdminPage() {
                     <LayoutGrid className="w-8 h-8 text-slate-300 mx-auto mb-2" />
                     <p className="text-xs font-bold text-slate-700">No gallery projects found</p>
                     <p className="text-[11px] text-slate-500 mt-1">
-                      Click &quot;Add Project&quot; above to add your first swimming pool showcase.
+                      Click &quot;Add Project&quot; below to add your first swimming pool showcase.
                     </p>
                   </div>
                 ) : (
@@ -1668,13 +1642,13 @@ export default function AdminPage() {
                           {/* Image Column */}
                           <div className="lg:w-64 flex flex-col gap-2 shrink-0">
                             <div className="relative h-44 lg:h-40 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 group">
-                              <Image
+                              {item.imageUrl ? <Image
                                 src={item.imageUrl}
                                 alt={item.title}
                                 fill
                                 className="object-cover"
                                 referrerPolicy="no-referrer"
-                              />
+                              /> : <div className="flex h-full items-center justify-center text-xs text-slate-500">No image uploaded</div>}
                               <div className="absolute top-2 left-2">
                                 <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-white/95 text-[#079BC5] shadow-xs">
                                   #{originalIndex + 1}
@@ -1794,7 +1768,7 @@ export default function AdminPage() {
                                     className="w-full px-3 py-2 rounded-xl text-xs bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#079BC5]/30 focus:border-[#079BC5]"
                                   >
                                     <option value="New Pools">New Pools</option>
-                                    <option value="Pool Repairs">Pool Repairs</option>
+                                    <option value="Pool Repairs">Pool Repairs</option><option value="Pool Renovation">Pool Renovation</option><option value="Paving">Paving</option>
                                     <option value="Maintenance">Maintenance</option>
                                     <option value="Equipment Installs">Equipment Installs</option>
                                     <option value="Transformations">Transformations</option>
@@ -1829,7 +1803,7 @@ export default function AdminPage() {
 
                                 <div>
                                   <label className="block text-xs font-bold text-slate-700 mb-1">
-                                    Layout Card Style
+                                    Gallery Page Card Style
                                   </label>
                                   <select
                                     value={item.layoutType ?? 'tall'}
@@ -1849,10 +1823,11 @@ export default function AdminPage() {
                                     }}
                                     className="w-full px-3 py-2 rounded-xl text-xs bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#079BC5]/30 focus:border-[#079BC5]"
                                   >
-                                    <option value="tall">Tall Card (Full Column)</option>
-                                    <option value="stacked-top">Stacked Card (Top Slot)</option>
-                                    <option value="stacked-bottom">Stacked Card (Bottom Slot)</option>
+                                    <option value="tall">Tall / Portrait</option>
+                                    <option value="stacked-top">Wide / Landscape</option>
+                                    <option value="stacked-bottom">Square</option>
                                   </select>
+                                  <p className="mt-1 text-[10px] text-slate-500">Changes the image shape on the Gallery page only.</p>
                                 </div>
 
                                 <div>
@@ -1969,6 +1944,33 @@ export default function AdminPage() {
                   </div>
                 )}
               </div>
+              <div className="flex justify-end border-t border-slate-200 pt-5"><button
+                    type="button"
+                    onClick={() => {
+                      const currentGallery = formData.gallery || defaultCMSData.gallery;
+                      const newProject: GalleryItem = {
+                        id: `gallery-${Date.now()}`,
+                        title: 'Custom Architectural Pool Design',
+                        category: 'New Pools',
+                        imageUrl: '',
+                        location: 'Cascais · Private Estate',
+                        layoutType: 'tall',
+                        slideGroup: 1,
+                        description: 'Custom concrete and infinity pool installation with premium coping stone.',
+                      };
+                      setFormData({
+                        ...formData,
+                        gallery: {
+                          ...currentGallery,
+                          items: [...(currentGallery.items || []), newProject],
+                        },
+                      });
+                    }}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#079BC5] hover:bg-[#0682A6] transition-all shadow-sm"
+                  >
+                    <Plus className="w-4 h-4" /> Add Project
+                  </button></div>
+
             </div>
           )}
 

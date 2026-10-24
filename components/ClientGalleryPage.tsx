@@ -11,7 +11,7 @@ export default function ClientGalleryPage({ cmsData }: { cmsData: CMSData }) {
   const [category, setCategory] = useState('All');
   const [menuOpen, setMenuOpen] = useState(false);
   const [quoteOpen, setQuoteOpen] = useState(false);
-  const projects = cmsData.gallery.items;
+  const projects = cmsData.gallery.items.filter(item => item.imageUrl.trim());
   const categories = ['All', ...new Set(projects.map(item => item.category))];
   const visible = projects.filter(item => category === 'All' || item.category === category);
   const theme = { '--cms-button-background': cmsData.branding.primaryBrandColor, '--cms-button-text': cmsData.branding.buttonTextColor, '--cms-button-hover': cmsData.branding.buttonHoverColor, '--cms-accent-text': cmsData.branding.accentTextColor } as CSSProperties;
@@ -28,8 +28,8 @@ export default function ClientGalleryPage({ cmsData }: { cmsData: CMSData }) {
       <div className="flex flex-wrap items-end justify-between gap-6"><div><p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#079BC5]">Selected work</p><h2 className="text-3xl font-extrabold tracking-tight sm:text-5xl">Featured projects.</h2></div><p className="max-w-sm text-sm leading-relaxed text-[#647785]">A closer look at the pools, finishes and transformations in our collection.</p></div>
       <div className="my-10"><h2 className="mb-4 text-sm font-bold">Browse by category</h2><div className="flex flex-wrap gap-2">{categories.map(item => <button key={item} onClick={() => setCategory(item)} aria-pressed={category === item} className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${category === item ? 'cms-button border-transparent' : 'border-[#B8F4F5] bg-white text-[#647785] hover:bg-[#EBFBFA]'}`}>{item}</button>)}</div></div>
       <div className="columns-2 gap-1 sm:columns-3 lg:columns-4" aria-live="polite">
-        {visible.map((project, index) => <article key={project.id} className="mb-1 break-inside-avoid">
-          <button type="button" onClick={() => window.location.assign('/contact#enquiry')} aria-label={`Enquire about ${project.title.trim()}${project.location ? ` in ${project.location}` : ''}`} className={`group relative block w-full overflow-hidden bg-[#E0FAFA] text-left focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-[#35D4DB] ${[0, 3, 5, 6].includes(index % 8) ? 'aspect-[2/3]' : 'aspect-[4/3]'}`}>
+        {visible.map((project) => <article key={project.id} className="mb-1 break-inside-avoid">
+          <button type="button" onClick={() => window.location.assign('/contact#enquiry')} aria-label={`Enquire about ${project.title.trim()}${project.location ? ` in ${project.location}` : ''}`} className={`group relative block w-full overflow-hidden bg-[#E0FAFA] text-left focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-[#35D4DB] ${project.layoutType === 'stacked-top' ? 'aspect-[4/3]' : project.layoutType === 'stacked-bottom' ? 'aspect-square' : 'aspect-[2/3]'}`}>
             <Image src={project.imageUrl} alt={project.title.trim()} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#10283F]/85 via-transparent to-transparent opacity-70 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" />
             <div className="absolute inset-x-0 bottom-0 p-3 text-white sm:p-4"><p className="mb-1 text-[9px] font-bold uppercase tracking-wider text-[#B8F4F5] sm:text-[10px]">{project.category}</p><h3 className="text-xs font-extrabold leading-snug sm:text-sm">{project.title.trim()}</h3>{project.location && <p className="mt-1 flex items-center gap-1 text-[10px] text-white/80 sm:text-xs"><MapPin size={11} className="shrink-0" />{project.location}</p>}</div>

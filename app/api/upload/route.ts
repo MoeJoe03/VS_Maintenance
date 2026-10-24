@@ -9,7 +9,7 @@ const ALLOWED_MIME_TYPES = [
   'image/png',
   'image/jpeg',
   'image/jpg',
-  'image/webp',
+  'image/webp', 'image/avif',
   'image/svg+xml',
 ];
 
@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
       const mimeType = matches[1];
       if (!ALLOWED_MIME_TYPES.includes(mimeType)) {
         return NextResponse.json(
-          { success: false, error: 'Unsupported image format. Allowed: PNG, JPG, WebP, SVG.' },
+          { success: false, error: 'Unsupported image format. Allowed: PNG, JPG, WebP, AVIF, SVG.' },
           { status: 400 }
         );
       }
@@ -87,7 +87,7 @@ export async function POST(req: NextRequest) {
 
     if (!ALLOWED_MIME_TYPES.includes(file.type)) {
       return NextResponse.json(
-        { success: false, error: 'Unsupported file format. Please upload PNG, JPG, WebP, or SVG.' },
+        { success: false, error: 'Unsupported file format. Please upload PNG, JPG, WebP, AVIF, or SVG.' },
         { status: 400 }
       );
     }

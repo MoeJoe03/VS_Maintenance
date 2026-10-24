@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import SiteParallax from '@/components/SiteParallax';
+import FloatingContactButtons from '@/components/FloatingContactButtons';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body className="bg-white text-[#172638] antialiased min-h-screen selection:bg-cyan-200 selection:text-cyan-900" suppressHydrationWarning>
         {children}
         <SiteParallax />
+        <FloatingContactButtons />
       </body>
     </html>
   );
