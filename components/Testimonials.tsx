@@ -15,7 +15,7 @@ export default function Testimonials({ cmsData }: TestimonialsProps) {
   const headingSuffix = cmsData.testimonials?.headingSuffix || 'Say';
   const subtitle =
     cmsData.testimonials?.infoCardText ||
-    'Real reviews and experiences from pool owners who count on Pur Pools for crystal-clear water and effortless care.';
+    'Real reviews and experiences from pool owners who count on VS Maintenance Services for crystal-clear water and effortless care.';
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [translateX, setTranslateX] = useState(0);

@@ -1,6 +1,6 @@
 {
   "branding": {
-    "companyName": " VS Maintenance Services",
+    "companyName": "VS Maintenance Services",
     "companyNameWordColors": [
       "#ffffff",
       "#B8F4F5"
@@ -8,7 +8,7 @@
     "companyTagline": "World-Class Aquatic Craftsmanship",
     "logoUrl": "/uploads/upload_1792686198405_anmcnn.jpg",
     "footerLogoUrl": "/uploads/upload_1792686201289_c79g5i.jpg",
-    "browserTitle": "Royel Pool â World-Class Aquatic Craftsmanship",
+    "browserTitle": "VS Maintenance Services | Pool & Property Maintenance",
     "shortDescription": "Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.",
     "primaryBrandColor": "#079BC5",
     "secondaryBrandColor": "#10283F",
@@ -17,9 +17,9 @@
     "accentTextColor": "#079BC5",
     "telephone": "067 933 0920",
     "whatsappNumber": "+27679330920",
-    "emailAddress": "info@poolxsolutions.co.za",
+    "emailAddress": "info@vsmaintenanceservices.co.za",
     "address": "Avenida do Mar 42, Cascais, Portugal",
-    "copyrightText": "Copyright Â© Practice Pool 2025 - All Rights Reserved.",
+    "copyrightText": "Copyright © VS Maintenance Services. All rights reserved.",
     "facebookUrl": "https://facebook.com",
     "instagramUrl": "https://instagram.com",
     "linkedinUrl": "https://linkedin.com"
@@ -233,7 +233,7 @@
         "layoutType": "tall",
         "slideGroup": 1,
         "imageUrl": "/uploads/upload_1792869021188_4hbbya.avif",
-        "location": "Randburg",
+        "location": "Centurion",
         "description": "Architectural negative-edge pool cantilevered above the Atlantic with seamless teak lounge and glass guardrail."
       },
       {
@@ -243,7 +243,7 @@
         "layoutType": "tall",
         "slideGroup": 1,
         "imageUrl": "/uploads/upload_1792869025199_9jep5q.avif",
-        "location": "Bryanston",
+        "location": "Sandton",
         "description": "Hand-chiseled stacked granite sheer descent wall with custom acoustic tuning and hydro-massage return jets."
       },
       {
@@ -263,7 +263,7 @@
         "layoutType": "stacked-bottom",
         "slideGroup": 1,
         "imageUrl": "/uploads/upload_1792869037255_grc79d.avif",
-        "location": "Morningside",
+        "location": "Houghton Estate",
         "description": "Submerged quartz coping with sparkling ambient sunlit caustics and non-slip textured finish."
       },
       {
@@ -273,7 +273,7 @@
         "layoutType": "tall",
         "slideGroup": 1,
         "imageUrl": "/uploads/upload_1792869048723_6gnuae.avif",
-        "location": "Kempton Park",
+        "location": "Bryanston",
         "description": "Sleek monolithic rectangular pool with flush perimeter overflow, automated safety cover, and underwater spotlights."
       },
       {
@@ -283,7 +283,7 @@
         "layoutType": "stacked-bottom",
         "slideGroup": 2,
         "imageUrl": "/uploads/upload_1792869051767_ho5717.avif",
-        "location": "Midrand",
+        "location": "Germiston",
         "description": "Integrated elevated perimeter overflow spa with automated linear fire bowls and mood illumination."
       },
       {
@@ -293,7 +293,7 @@
         "layoutType": "stacked-bottom",
         "slideGroup": 2,
         "imageUrl": "/uploads/upload_1792869056389_imaeqv.avif",
-        "location": "Edenvale",
+        "location": "Fourways",
         "description": "Resort-style freeform lagoon with natural granite stone coping, deep beach entry, and integrated cave grotto."
       },
       {
@@ -303,7 +303,7 @@
         "layoutType": "stacked-top",
         "slideGroup": 2,
         "imageUrl": "/uploads/upload_1792869625133_z6y46g.avif",
-        "location": "Sandton",
+        "location": "Sunninghill",
         "description": "Whisper-quiet variable speed pumps and automated magnesium salt sanitation with smartphone monitoring."
       },
       {
@@ -313,7 +313,7 @@
         "layoutType": "stacked-top",
         "slideGroup": 2,
         "imageUrl": "/uploads/upload_1792869061151_mahaot.avif",
-        "location": "Germiston",
+        "location": "Edenvale",
         "description": "Hand-laid Italian glass tile waterline restoration with waterproof epoxy grout and frost-proof backing."
       },
       {
@@ -323,7 +323,7 @@
         "layoutType": "tall",
         "slideGroup": 2,
         "imageUrl": "/uploads/upload_1792762401398_ci70sq.jpeg",
-        "location": "Rosebank",
+        "location": "Randburg",
         "description": "Private walled sanctuary pool with French-pattern honed travertine paving and custom bench seating."
       },
       {
@@ -333,7 +333,7 @@
         "layoutType": "tall",
         "slideGroup": 3,
         "imageUrl": "/uploads/upload_1792869629542_vhkern.avif",
-        "location": "Sunninghill",
+        "location": "Rosebank",
         "description": "Suspended vanishing edge pool framing panoramic vineyard views with continuous recirculating spillway."
       },
       {
@@ -353,7 +353,7 @@
         "layoutType": "stacked-bottom",
         "slideGroup": 3,
         "imageUrl": "/uploads/upload_1792869066583_j6f9q6.avif",
-        "location": "Centurion",
+        "location": "Kyalami",
         "description": "Full resurfacing with Pacific Blue polished pebble aggregates and reinforced structural waterproofing."
       },
       {
@@ -363,7 +363,7 @@
         "layoutType": "stacked-bottom",
         "slideGroup": 3,
         "imageUrl": "/uploads/upload_1792869652993_is7ap3.jpeg",
-        "location": "Houghton Estate",
+        "location": "Morningside",
         "description": "Laboratory-grade photometer chemical diagnostics ensuring zero eye irritation and pristine clarity."
       },
       {
@@ -373,7 +373,7 @@
         "layoutType": "stacked-top",
         "slideGroup": 3,
         "imageUrl": "/uploads/upload_1792762489827_la18q6.jpg",
-        "location": "Kyalami",
+        "location": "Midrand",
         "description": "Total landscape transformation with integrated pool, recessed sun lounge, and outdoor entertaining pergola."
       },
       {
@@ -383,7 +383,7 @@
         "layoutType": "tall",
         "slideGroup": 4,
         "imageUrl": "/uploads/upload_1792867056358_tudiaq.jpeg",
-        "location": "Fourways",
+        "location": "Kempton Park",
         "description": "Architectural transparent observation window with underwater bench seating and custom coping."
       },
       {
@@ -391,7 +391,7 @@
         "title": "Paving Installation",
         "category": "Paving",
         "imageUrl": "/uploads/upload_1792868868144_38v18v.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Bryanston",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -403,7 +403,7 @@
         "layoutType": "tall",
         "slideGroup": 4,
         "imageUrl": "/uploads/upload_1792869074059_1gwx62.avif",
-        "location": "Houghton Estate",
+        "location": "Kyalami",
         "description": "Cascading dual-level pool structure with zero-entry sun shelf and infinity drop weir."
       },
       {
@@ -423,7 +423,7 @@
         "layoutType": "tall",
         "slideGroup": 4,
         "imageUrl": "/uploads/upload_1792869125034_t0u43b.avif",
-        "location": "Centurion",
+        "location": "Bedfordview",
         "description": "Floating cantilevered granite stepping pavers crossing a crystal glass-clear water expanse."
       },
       {
@@ -431,7 +431,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869127908_qkesjm.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Sunninghill",
         "layoutType": "stacked-bottom",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -441,7 +441,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869130739_44ki97.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Randburg",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -451,7 +451,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869133583_5o21ds.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Fourways",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -461,7 +461,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869136288_01ncg8.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Edenvale",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -471,7 +471,7 @@
         "title": "  Pool Vacumming",
         "category": "Maintenance",
         "imageUrl": "/uploads/upload_1792868425907_zwj6ie.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Rosebank",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -481,7 +481,7 @@
         "title": "  Pool Vacumming",
         "category": "Maintenance",
         "imageUrl": "/uploads/upload_1792868435270_f5i58r.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Sandton",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -491,7 +491,7 @@
         "title": "  Pool Vacumming",
         "category": "Maintenance",
         "imageUrl": "/uploads/upload_1792868439592_p64yjv.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Germiston",
         "layoutType": "stacked-bottom",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -501,7 +501,7 @@
         "title": "Pool Pump Installation",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792868628437_y70lpz.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Midrand",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -511,7 +511,7 @@
         "title": "Pool Pump Installation",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792868632215_6q7y1r.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Centurion",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -521,7 +521,7 @@
         "title": "Pool Pump Installation",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792868637816_ow4brq.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Morningside",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -531,7 +531,7 @@
         "title": "Pool Pump Installation",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792868641658_q2zmku.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Benoni",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -541,7 +541,7 @@
         "title": "Pool Pump Installation",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792868645277_em21n0.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Houghton Estate",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -551,7 +551,7 @@
         "title": "Paving Installation",
         "category": "Paving",
         "imageUrl": "/uploads/upload_1792868850541_dfvgyh.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Sandton",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -561,7 +561,7 @@
         "title": "Paving Installation",
         "category": "Paving",
         "imageUrl": "/uploads/upload_1792868855509_ge6ba9.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Centurion",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -571,7 +571,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869205243_30w3tg.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Fourways",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -581,7 +581,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869494073_y6rh2g.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Morningside",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -591,7 +591,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869506478_pisd67.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Kempton Park",
         "layoutType": "stacked-bottom",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -601,7 +601,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869509358_lq7fwq.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Germiston",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -611,7 +611,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869513456_5d92ae.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Midrand",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -621,7 +621,7 @@
         "title": " Pool Renovation",
         "category": "Pool Renovation",
         "imageUrl": "/uploads/upload_1792869517452_240dg3.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Edenvale",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -631,7 +631,7 @@
         "title": "Multiport Valve Installation",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792869674668_fzlihc.jpeg",
-        "location": "Cascais · Private Estate",
+        "location": "Houghton Estate",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -641,7 +641,7 @@
         "title": "Multiport Valve Installation",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792869679071_ok8gs5.jpeg",
-        "location": "Cascais · Private Estate",
+        "location": "Randburg",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -651,7 +651,7 @@
         "title": "Pool Light Installion",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792869791707_9be369.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Bryanston",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -661,7 +661,7 @@
         "title": "Pool Light Installion",
         "category": "Equipment Installs",
         "imageUrl": "/uploads/upload_1792869798543_vpl93s.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Sunninghill",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -671,7 +671,7 @@
         "title": "Pool Vacuuming Green To Blue",
         "category": "Transformations",
         "imageUrl": "/uploads/upload_1792869911397_z5s1oc.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Rosebank",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -681,7 +681,7 @@
         "title": " Green To Blue",
         "category": "Transformations",
         "imageUrl": "/uploads/upload_1792869955851_npyv3t.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Bedfordview",
         "layoutType": "stacked-bottom",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -691,7 +691,7 @@
         "title": " Green To Blue",
         "category": "Transformations",
         "imageUrl": "/uploads/upload_1792869960064_eonp78.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Kyalami",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -701,7 +701,7 @@
         "title": " Green To Blue",
         "category": "Transformations",
         "imageUrl": "/uploads/upload_1792869964436_83z3s7.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Benoni",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -711,7 +711,7 @@
         "title": " Green To Blue",
         "category": "Transformations",
         "imageUrl": "/uploads/upload_1792869968957_zuat7e.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Centurion",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -721,7 +721,7 @@
         "title": "Green To Blue",
         "category": "Transformations",
         "imageUrl": "/uploads/upload_1792869973776_pgyv8x.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Edenvale",
         "layoutType": "tall",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -731,7 +731,7 @@
         "title": "Green To Blue",
         "category": "Transformations",
         "imageUrl": "/uploads/upload_1792869978196_cwk2gw.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Sunninghill",
         "layoutType": "stacked-bottom",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -741,7 +741,7 @@
         "title": " Green To Blue",
         "category": "Transformations",
         "imageUrl": "/uploads/upload_1792869982067_phnpn0.avif",
-        "location": "Cascais · Private Estate",
+        "location": "Kempton Park",
         "layoutType": "stacked-top",
         "slideGroup": 1,
         "description": "Custom concrete and infinity pool installation with premium coping stone."
@@ -754,7 +754,7 @@
     "mainImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuD9mO-1CYT6MvqAcZ2gGsn0K5xYpDbs0xoyDX1X18gwdISL23CP-zBadvnQmA9UhW4LRLFu3TLqvPOdzzDYvq3YM08Ux4xGZUmTUrOCAQdSmED6Wybn6BBTI7yQQ4nz31vu-lc8dpxhUSdFQAMPBt-jeFo1PfEC7MT-UKnUB2HnmQCFPoRsIgiOExqkXNd9DuGRKw4FWyFZ4EmfxzgE3JHxrb7UuilNPn-WHbC7FkbZMGvFT5VD2ul4Rg",
     "overlappingImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAc4Rl9iEFnN7SgfPBQNzWUTTTd1DA0QFMfh6QtcTeueFNr0s2QMyfYrXZqbB_p7UywUjzgiW6krHkYqy6rHJI5XLxJkGFr5SHQTQHeoKTzCOUldCRebTeKTJrHk0u_0P_-6EP5NboCA2Rgs_ZHXtUYjYOupLEqyrMG4gT-pVpGDBsnP6Viliw6heumeLnbUvHZFrQQhk9gVBz6UUvFxvjr9gr5MsiQyoCL6m_bsmHLBFkuZDu1CvKT3Q",
     "paragraph1": "In the sun-drenched landscapes of Portugal, where azure waters whisper tales of possibility, we emerged in 2019 with a radical vision: to transform the very essence of backyard swimming experiences.",
-    "paragraph2": "We're not just another pool company, we're aquatic architects of imagination at Practic Pool. Every contour, filter system, and lighting line is sculpted for longevity, safety, and effortless joy.",
+    "paragraph2": "We're not just another pool company, we're aquatic architects of imagination at VS Maintenance Services. Every contour, filter system, and lighting line is sculpted for longevity, safety, and effortless joy.",
     "ctaLabel": "Learn More"
   },
   "processSection": {
@@ -787,13 +787,13 @@
     "heading": "What Our",
     "headingHighlight": "Customers",
     "headingSuffix": "Say",
-    "infoCardText": "Real reviews and experiences from pool owners who count on Pur Pools for crystal-clear water, emergency repairs, and effortless maintenance.",
+    "infoCardText": "Real reviews and experiences from pool owners who count on VS Maintenance Services for crystal-clear water, emergency repairs, and effortless maintenance.",
     "items": [
       {
         "id": "test-1",
         "mainImage": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80",
         "quoteTitle": "Emergency Pool Repair",
-        "quoteBody": "We needed emergency pool repair before our family reunion, and Pur Pools came through! Their licensed team fixed our heating system and completed a full inspection.",
+        "quoteBody": "We needed emergency pool repair before our family reunion, and VS Maintenance Services came through! Their licensed team fixed our heating system and completed a full inspection.",
         "authorName": "MIKE R.",
         "authorRole": "Welland",
         "location": "Welland",
@@ -804,7 +804,7 @@
         "id": "test-2",
         "mainImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
         "quoteTitle": "Transformed Backyard Oasis",
-        "quoteBody": "Absolutely amazing work! Pur Pools transformed our old, cracked concrete pool into a beautiful backyard oasis. The Diamond package was worth every penny.",
+        "quoteBody": "Absolutely amazing work! VS Maintenance Services transformed our old, cracked concrete pool into a beautiful backyard oasis. The Diamond package was worth every penny.",
         "authorName": "SARAH M.",
         "authorRole": "St. Catharines",
         "location": "St. Catharines",
@@ -849,7 +849,7 @@
     "taglineLine2": "Built for the way you live.",
     "servicesTagline": "Pool design Â· Construction Â· Care",
     "phone": "067 933 0920",
-    "email": "hello@royelpool.co.za",
+    "email": "info@vsmaintenanceservices.co.za",
     "ctaButtonLabel": "Plan your pool",
     "newsletterHeading": "Subscribe to our",
     "newsletterHighlight": "newsletter.",

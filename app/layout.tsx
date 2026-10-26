@@ -20,18 +20,18 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Royel Pool — World-Class Aquatic Craftsmanship',
+  title: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
   description:
     'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',
   openGraph: {
-    title: 'Royel Pool — World-Class Aquatic Craftsmanship',
+    title: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
     description:
       'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Royel Pool — World-Class Aquatic Craftsmanship',
+    title: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
     description:
       'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',
   },

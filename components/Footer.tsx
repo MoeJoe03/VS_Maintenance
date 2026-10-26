@@ -14,7 +14,7 @@ interface FooterProps {
 export default function Footer({ cmsData }: FooterProps) {
   const currentYear = new Date().getFullYear();
   const phone = cmsData.contactSection?.phone || cmsData.footer?.phone || cmsData.branding?.telephone || '067 933 0920';
-  const email = cmsData.contactSection?.email || cmsData.footer?.email || cmsData.branding?.emailAddress || 'hello@royelpool.co.za';
+  const email = cmsData.contactSection?.email || cmsData.footer?.email || cmsData.branding?.emailAddress || 'info@vsmaintenanceservices.co.za';
   const logoSrc =
     cmsData.branding.footerLogoUrl || cmsData.branding.logoUrl || '/assets/royel-pool-logo.png';
 
@@ -175,7 +175,7 @@ export default function Footer({ cmsData }: FooterProps) {
         <div className="flex flex-col md:flex-row items-center justify-between text-sm text-[#475569] gap-4 py-2">
           {/* Copyright */}
           <p className="font-normal text-center md:text-left">
-            © {currentYear} {cmsData.branding?.companyName || 'Royel Pool'}. All rights reserved.
+            © {currentYear} {cmsData.branding?.companyName || 'VS Maintenance Services'}. All rights reserved.
           </p>
 
           {/* Privacy & Terms */}

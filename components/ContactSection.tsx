@@ -16,7 +16,7 @@ export default function ContactSection({ cmsData }: ContactSectionProps) {
     description:
       'Have a question, need a quote, or want to discuss your ideas? Get in touch with our team and we’ll be happy to help.',
     phone: '067 933 0920',
-    email: 'info@realvibepools.co.za',
+    email: 'info@vsmaintenanceservices.co.za',
     location: 'Sandton, South Africa',
     hoursWeekday: 'Mon – Fri: 8:00am – 5:00pm',
     hoursWeekend: 'Saturday: 8:00am – 1:00pm',

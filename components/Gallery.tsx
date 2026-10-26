@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, ArrowRight, X, Maximize2, Sparkles, MapPin, CheckCircle2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, X, Maximize2, Sparkles, CheckCircle2 } from 'lucide-react';
 import { CMSData, GalleryItem } from '@/lib/cms-types';
 
 interface GalleryProps {
@@ -43,16 +43,18 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
   const totalSlides = 4;
 
   const currentSlideItems = useMemo(() => {
+    const excludedProjectIds = new Set(['gal-2', 'gal-3', 'gal-4']);
+    const keep = (item: GalleryItem) => !excludedProjectIds.has(item.id);
     if (activeCategory !== 'All') {
-      return allItems.filter((item) => item.category === activeCategory);
+      return allItems.filter((item) => item.category === activeCategory && keep(item));
     }
     // Slide group is 1-indexed (1, 2, 3, 4)
     const targetGroup = (currentSlide % totalSlides) + 1;
     const groupItems = allItems.filter((item) => item.slideGroup === targetGroup);
-    if (groupItems.length >= 4) return groupItems;
+    if (groupItems.length >= 4) return groupItems.slice(0, 5).filter(keep);
     // Fallback: take slice of 5 items
     const start = (currentSlide * 5) % Math.max(1, allItems.length);
-    return allItems.slice(start, start + 5);
+    return allItems.slice(start, start + 5).filter(keep);
   }, [allItems, activeCategory, currentSlide]);
 
   const handlePrevSlide = () => {
@@ -92,7 +94,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
   const col2Item = currentSlideItems[1];
   const col3TopItem = currentSlideItems[2];
   const col3BottomItem = currentSlideItems[3];
-  const col4Item = currentSlideItems[4] || currentSlideItems[0];
+  const col4Item = currentSlideItems[4];
 
   return (
     <section
@@ -197,7 +199,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
           {/* Gallery Showcase Content */}
           {activeCategory === 'All' ? (
             /* 4-Column Layout with Column 3 Stacked (Matches mockup image_88afc482.png) */
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 min-h-[460px] lg:h-[480px]">
+            <div className={`grid grid-cols-1 sm:grid-cols-2 ${currentSlideItems.length > 2 ? 'lg:grid-cols-4' : 'lg:grid-cols-2'} gap-4 sm:gap-5 lg:gap-6 min-h-[460px] lg:h-[480px]`}>
               {/* Column 1: Tall Card */}
               {col1Item && (
                 <div
@@ -222,12 +224,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                     <h3 className="font-bold text-base sm:text-lg leading-snug drop-shadow-sm group-hover:text-sky-300 transition-colors">
                       {col1Item.title}
                     </h3>
-                    {col1Item.location && (
-                      <p className="text-xs text-sky-100/90 flex items-center gap-1 mt-1">
-                        <MapPin className="w-3 h-3 text-sky-300" />
-                        {col1Item.location}
-                      </p>
-                    )}
+                    
                   </div>
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
                     <Maximize2 className="w-4 h-4" />
@@ -259,12 +256,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                     <h3 className="font-bold text-base sm:text-lg leading-snug drop-shadow-sm group-hover:text-sky-300 transition-colors">
                       {col2Item.title}
                     </h3>
-                    {col2Item.location && (
-                      <p className="text-xs text-sky-100/90 flex items-center gap-1 mt-1">
-                        <MapPin className="w-3 h-3 text-sky-300" />
-                        {col2Item.location}
-                      </p>
-                    )}
+                    
                   </div>
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
                     <Maximize2 className="w-4 h-4" />
@@ -273,7 +265,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
               )}
 
               {/* Column 3: Stacked Cards (Top & Bottom) */}
-              <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 h-[460px] sm:h-[420px] lg:h-full">
+              {(col3TopItem || col3BottomItem) && <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 h-[460px] sm:h-[420px] lg:h-full">
                 {/* Top Stacked Card */}
                 {col3TopItem && (
                   <div
@@ -298,12 +290,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                       <h4 className="font-bold text-sm leading-snug drop-shadow-sm group-hover:text-sky-300 transition-colors line-clamp-1">
                         {col3TopItem.title}
                       </h4>
-                      {col3TopItem.location && (
-                        <p className="text-[11px] text-sky-100/90 flex items-center gap-1 mt-0.5">
-                          <MapPin className="w-2.5 h-2.5 text-sky-300" />
-                          {col3TopItem.location}
-                        </p>
-                      )}
+                      
                     </div>
                     <div className="absolute top-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity w-7 h-7 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
                       <Maximize2 className="w-3.5 h-3.5" />
@@ -335,19 +322,14 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                       <h4 className="font-bold text-sm leading-snug drop-shadow-sm group-hover:text-sky-300 transition-colors line-clamp-1">
                         {col3BottomItem.title}
                       </h4>
-                      {col3BottomItem.location && (
-                        <p className="text-[11px] text-sky-100/90 flex items-center gap-1 mt-0.5">
-                          <MapPin className="w-2.5 h-2.5 text-sky-300" />
-                          {col3BottomItem.location}
-                        </p>
-                      )}
+                      
                     </div>
                     <div className="absolute top-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity w-7 h-7 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
                       <Maximize2 className="w-3.5 h-3.5" />
                     </div>
                   </div>
                 )}
-              </div>
+              </div>}
 
               {/* Column 4: Tall Card */}
               {col4Item && (
@@ -373,12 +355,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                     <h3 className="font-bold text-base sm:text-lg leading-snug drop-shadow-sm group-hover:text-sky-300 transition-colors">
                       {col4Item.title}
                     </h3>
-                    {col4Item.location && (
-                      <p className="text-xs text-sky-100/90 flex items-center gap-1 mt-1">
-                        <MapPin className="w-3 h-3 text-sky-300" />
-                        {col4Item.location}
-                      </p>
-                    )}
+                    
                   </div>
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
                     <Maximize2 className="w-4 h-4" />
@@ -413,12 +390,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                     <h3 className="font-bold text-base leading-snug drop-shadow-sm group-hover:text-sky-300 transition-colors">
                       {item.title}
                     </h3>
-                    {item.location && (
-                      <p className="text-xs text-sky-100/90 flex items-center gap-1 mt-1">
-                        <MapPin className="w-3 h-3 text-sky-300" />
-                        {item.location}
-                      </p>
-                    )}
+                    
                   </div>
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
                     <Maximize2 className="w-4 h-4" />
@@ -514,12 +486,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                   {lightboxItem.title}
                 </h3>
 
-                {lightboxItem.location && (
-                  <p className="text-xs sm:text-sm text-slate-500 flex items-center gap-1.5 mt-2">
-                    <MapPin className="w-4 h-4 text-sky-500" />
-                    <span>{lightboxItem.location}</span>
-                  </p>
-                )}
+                
 
                 <div className="mt-4 pt-4 border-t border-slate-200">
                   <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">

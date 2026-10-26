@@ -2344,7 +2344,7 @@ export default function AdminPage() {
                     <label className="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
                     <input
                       type="text"
-                      value={formData.contactSection?.email ?? 'info@realvibepools.co.za'}
+                      value={formData.contactSection?.email ?? 'info@vsmaintenanceservices.co.za'}
                       onChange={(e) =>
                         setFormData({
                           ...formData,
@@ -2540,7 +2540,7 @@ export default function AdminPage() {
                       const url = URL.createObjectURL(blob);
                       const a = document.createElement('a');
                       a.href = url;
-                      a.download = `royel-pool-cms-backup-${new Date().toISOString().slice(0, 10)}.json`;
+                      a.download = `vs-maintenance-services-cms-backup-${new Date().toISOString().slice(0, 10)}.json`;
                       a.click();
                       URL.revokeObjectURL(url);
                     }}

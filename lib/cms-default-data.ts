@@ -2,12 +2,12 @@ import { CMSData } from './cms-types';
 
 export const defaultCMSData: CMSData = {
   branding: {
-    companyName: 'Royel Pool',
+    companyName: 'VS Maintenance Services',
     companyNameWordColors: ['#ffffff', '#B8F4F5'],
     companyTagline: 'World-Class Aquatic Craftsmanship',
     logoUrl: '',
     footerLogoUrl: '',
-    browserTitle: 'Royel Pool — World-Class Aquatic Craftsmanship',
+    browserTitle: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
     shortDescription:
       'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',
     primaryBrandColor: '#079BC5',
@@ -17,9 +17,9 @@ export const defaultCMSData: CMSData = {
     accentTextColor: '#079BC5',
     telephone: '067 933 0920',
     whatsappNumber: '+27679330920',
-    emailAddress: 'info@royelpool.com',
+    emailAddress: 'info@vsmaintenanceservices.co.za',
     address: 'Avenida do Mar 42, Cascais, Portugal',
-    copyrightText: 'Copyright © Practice Pool 2025 - All Rights Reserved.',
+    copyrightText: 'Copyright © VS Maintenance Services 2025 - All Rights Reserved.',
     facebookUrl: 'https://facebook.com',
     instagramUrl: 'https://instagram.com',
     linkedinUrl: 'https://linkedin.com',
@@ -70,7 +70,7 @@ export const defaultCMSData: CMSData = {
     thumbnailImage:
       'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80',
     guaranteeBanner:
-      'With Practic Pool, your dream pool is closer than ever – no stress, no delays, just pure enjoyment!',
+      'With VS Maintenance Services, your dream pool is closer than ever – no stress, no delays, just pure enjoyment!',
     items: [
       {
         id: 'service-1',
@@ -365,7 +365,7 @@ export const defaultCMSData: CMSData = {
     paragraph1:
       'In the sun-drenched landscapes of Portugal, where azure waters whisper tales of possibility, we emerged in 2019 with a radical vision: to transform the very essence of backyard swimming experiences.',
     paragraph2:
-      "We're not just another pool company – we're aquatic architects of imagination at Practic Pool. Every contour, filter system, and lighting line is sculpted for longevity, safety, and effortless joy.",
+      "We're not just another pool company – we're aquatic architects of imagination at VS Maintenance Services. Every contour, filter system, and lighting line is sculpted for longevity, safety, and effortless joy.",
     ctaLabel: 'Learn More',
   },
   processSection: {
@@ -408,7 +408,7 @@ export const defaultCMSData: CMSData = {
           'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80',
         quoteTitle: 'Emergency Pool Repair',
         quoteBody:
-          'We needed emergency pool repair before our family reunion, and Pur Pools came through! Their licensed team fixed our heating system and completed a full inspection.',
+          'We needed emergency pool repair before our family reunion, and VS Maintenance Services came through! Their licensed team fixed our heating system and completed a full inspection.',
         authorName: 'MIKE R.',
         authorRole: 'Welland',
         location: 'Welland',
@@ -422,7 +422,7 @@ export const defaultCMSData: CMSData = {
           'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
         quoteTitle: 'Transformed Backyard Oasis',
         quoteBody:
-          'Absolutely amazing work! Pur Pools transformed our old, cracked concrete pool into a beautiful backyard oasis. The Diamond package was worth every penny.',
+          'Absolutely amazing work! VS Maintenance Services transformed our old, cracked concrete pool into a beautiful backyard oasis. The Diamond package was worth every penny.',
         authorName: 'SARAH M.',
         authorRole: 'St. Catharines',
         location: 'St. Catharines',
@@ -475,7 +475,7 @@ export const defaultCMSData: CMSData = {
     taglineLine2: 'Built for the way you live.',
     servicesTagline: 'Pool design · Construction · Care',
     phone: '067 933 0920',
-    email: 'hello@royelpool.co.za',
+    email: 'info@vsmaintenanceservices.co.za',
     ctaButtonLabel: 'Plan your pool',
     newsletterHeading: 'Subscribe to our',
     newsletterHighlight: 'newsletter.',
@@ -489,7 +489,7 @@ export const defaultCMSData: CMSData = {
     description:
       'Have a question, need a quote, or want to discuss your ideas? Get in touch with our team and we’ll be happy to help.',
     phone: '067 933 0920',
-    email: 'info@realvibepools.co.za',
+    email: 'info@vsmaintenanceservices.co.za',
     location: 'Sandton, South Africa',
     hoursWeekday: 'Mon – Fri: 8:00am – 5:00pm',
     hoursWeekend: 'Saturday: 8:00am – 1:00pm',
