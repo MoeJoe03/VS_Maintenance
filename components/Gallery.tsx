@@ -4,20 +4,14 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, ArrowRight, X, Maximize2, Sparkles, CheckCircle2 } from 'lucide-react';
 import { CMSData, GalleryItem } from '@/lib/cms-types';
+import { GALLERY_CATEGORIES } from '@/lib/gallery-categories';
 
 interface GalleryProps {
   cmsData: CMSData;
   onOpenQuote: (serviceName?: string) => void;
 }
 
-const CATEGORIES = [
-  'All',
-  'New Pools',
-  'Pool Repairs', 'Pool Renovation', 'Paving',
-  'Maintenance',
-  'Equipment Installs',
-  'Transformations',
-] as const;
+const CATEGORIES = ['All', ...GALLERY_CATEGORIES] as const;
 
 type CategoryFilter = (typeof CATEGORIES)[number];
 
@@ -224,6 +218,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                     <h3 className="font-bold text-base sm:text-lg leading-snug drop-shadow-sm group-hover:text-sky-300 transition-colors">
                       {col1Item.title}
                     </h3>
+                    {col1Item.description && <p className="mt-2 max-w-md text-sm leading-relaxed text-white/90">{col1Item.description}</p>}
                     
                   </div>
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
@@ -256,6 +251,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                     <h3 className="font-bold text-base sm:text-lg leading-snug drop-shadow-sm group-hover:text-sky-300 transition-colors">
                       {col2Item.title}
                     </h3>
+                    {col2Item.description && <p className="mt-2 max-w-md text-sm leading-relaxed text-white/90">{col2Item.description}</p>}
                     
                   </div>
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">

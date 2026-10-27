@@ -7,12 +7,13 @@ import { CMSData } from '@/lib/cms-types';
 import Footer from './Footer';
 import QuoteModal from './QuoteModal';
 import Navbar from './Navbar';
+import { GALLERY_CATEGORIES } from '@/lib/gallery-categories';
 
 export default function ClientGalleryPage({ cmsData }: { cmsData: CMSData }) {
   const [category, setCategory] = useState('All');
   const [quoteOpen, setQuoteOpen] = useState(false);
   const projects = cmsData.gallery.items.filter(item => item.imageUrl.trim());
-  const categories = ['All', ...new Set(projects.map(item => item.category))];
+  const categories = ['All', ...GALLERY_CATEGORIES];
   const visible = projects.filter(item => category === 'All' || item.category === category);
   const theme = { '--cms-button-background': cmsData.branding.primaryBrandColor, '--cms-button-text': cmsData.branding.buttonTextColor, '--cms-button-hover': cmsData.branding.buttonHoverColor, '--cms-accent-text': cmsData.branding.accentTextColor } as CSSProperties;
   return <main style={theme} className="min-h-screen overflow-x-clip bg-white text-[#172638]">

@@ -1,3 +1,5 @@
+import { GALLERY_CATEGORIES } from './gallery-categories';
+
 export interface ServiceItem {
   afterImage?: string;
   included?: string[];
@@ -22,7 +24,7 @@ export interface TestimonialItem {
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'New Pools' | 'Pool Renovation' | 'Paving' | 'Pool Repairs' | 'Maintenance' | 'Equipment Installs' | 'Transformations';
+  category: (typeof GALLERY_CATEGORIES)[number];
   imageUrl: string;
   layoutType?: 'tall' | 'stacked-top' | 'stacked-bottom';
   slideGroup?: number; // 1, 2, 3, 4

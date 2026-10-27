@@ -30,6 +30,7 @@ import {
   LayoutGrid,
 } from 'lucide-react';
 import { CMSData, ServiceItem, TestimonialItem, LeadSubmission, GalleryItem } from '@/lib/cms-types';
+import { GALLERY_CATEGORIES } from '@/lib/gallery-categories';
 import { defaultCMSData } from '@/lib/cms-default-data';
 
 const tradingHourFields = [
@@ -1593,14 +1594,7 @@ export default function AdminPage() {
 
                   {/* Filter Pills */}
                   <div className="flex items-center gap-1.5 flex-wrap">
-                    {[
-                      'All',
-                      'New Pools',
-                      'Pool Repairs', 'Pool Renovation', 'Paving',
-                      'Maintenance',
-                      'Equipment Installs',
-                      'Transformations',
-                    ].map((cat) => (
+                    {['All', ...GALLERY_CATEGORIES].map((cat) => (
                       <button
                         key={cat}
                         type="button"
@@ -1767,11 +1761,7 @@ export default function AdminPage() {
                                     }}
                                     className="w-full px-3 py-2 rounded-xl text-xs bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#079BC5]/30 focus:border-[#079BC5]"
                                   >
-                                    <option value="New Pools">New Pools</option>
-                                    <option value="Pool Repairs">Pool Repairs</option><option value="Pool Renovation">Pool Renovation</option><option value="Paving">Paving</option>
-                                    <option value="Maintenance">Maintenance</option>
-                                    <option value="Equipment Installs">Equipment Installs</option>
-                                    <option value="Transformations">Transformations</option>
+                                    {GALLERY_CATEGORIES.map(category => <option key={category} value={category}>{category}</option>)}
                                   </select>
                                 </div>
 
@@ -1951,7 +1941,7 @@ export default function AdminPage() {
                       const newProject: GalleryItem = {
                         id: `gallery-${Date.now()}`,
                         title: 'Custom Architectural Pool Design',
-                        category: 'New Pools',
+                        category: 'New Builds',
                         imageUrl: '',
                         location: 'Cascais · Private Estate',
                         layoutType: 'tall',

@@ -116,7 +116,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-1',
         title: 'Coastal Horizon Infinity Pool',
-        category: 'New Pools',
+        category: 'New Builds',
         layoutType: 'tall',
         slideGroup: 1,
         imageUrl:
@@ -128,7 +128,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-2',
         title: 'Granite Cascade Waterfall',
-        category: 'New Pools',
+        category: 'New Builds',
         layoutType: 'tall',
         slideGroup: 1,
         imageUrl:
@@ -152,7 +152,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-4',
         title: 'Mineral Sparkle Shallow Steps',
-        category: 'Pool Repairs',
+        category: 'Repairs',
         layoutType: 'stacked-bottom',
         slideGroup: 1,
         imageUrl:
@@ -176,7 +176,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-6',
         title: 'Twilight Spa & Fire Basin',
-        category: 'New Pools',
+        category: 'New Builds',
         layoutType: 'tall',
         slideGroup: 2,
         imageUrl:
@@ -212,7 +212,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-9',
         title: 'Waterline Iridescent Mosaics',
-        category: 'Pool Repairs',
+        category: 'Repairs',
         layoutType: 'stacked-bottom',
         slideGroup: 2,
         imageUrl:
@@ -224,7 +224,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-10',
         title: 'Courtyard Travertine Oasis',
-        category: 'New Pools',
+        category: 'New Builds',
         layoutType: 'tall',
         slideGroup: 2,
         imageUrl:
@@ -236,7 +236,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-11',
         title: 'Hillside Vanishing Horizon',
-        category: 'New Pools',
+        category: 'New Builds',
         layoutType: 'tall',
         slideGroup: 3,
         imageUrl:
@@ -260,7 +260,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-13',
         title: 'Pebble Sheen Surface Re-plaster',
-        category: 'Pool Repairs',
+        category: 'Repairs',
         layoutType: 'stacked-top',
         slideGroup: 3,
         imageUrl:
@@ -308,7 +308,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-17',
         title: 'Multi-Tier Horizon Terraces',
-        category: 'New Pools',
+        category: 'New Builds',
         layoutType: 'tall',
         slideGroup: 4,
         imageUrl:
@@ -344,7 +344,7 @@ export const defaultCMSData: CMSData = {
       {
         id: 'gal-20',
         title: 'Stepping Stones Horizon Pool',
-        category: 'New Pools',
+        category: 'New Builds',
         layoutType: 'tall',
         slideGroup: 4,
         imageUrl:
