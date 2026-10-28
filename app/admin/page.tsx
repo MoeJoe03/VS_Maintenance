@@ -555,7 +555,8 @@ export default function AdminPage() {
         {/* Content Workspace */}
         <main className="flex-1 bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-slate-200 min-h-[600px]">
           {/* TAB 1: OVERVIEW */}
-          {activeTab === 'overview' && (
+          <div className="mb-4 flex justify-end"><button type="button" onClick={async () => { await fetch('/api/admin/logout', { method: 'POST' }); window.location.assign('/admin/login'); }} className="rounded-full border border-slate-300 px-4 py-2 text-xs font-bold text-slate-600">Log out</button></div>
+{activeTab === 'overview' && (
             <div className="space-y-6">
               <div>
                 <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">
@@ -2551,7 +2552,7 @@ export default function AdminPage() {
 
               {/* No-Auth Security Disclosure */}
               <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-800 leading-relaxed">
-                <strong>No-Authentication Mode Note:</strong> This CMS is operating in demo/no-auth mode as specified in the requirements. Anyone with the URL <code className="font-mono bg-white/60 px-1 py-0.5 rounded">/admin</code> can modify content. For production, role-based authentication (e.g. Firebase Auth or NextAuth) can be added to protect this route.
+                <strong>Temporary password protection:</strong> CMS access requires a login. Sessions expire after eight hours.
               </div>
             </div>
           )}
