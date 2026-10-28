@@ -524,6 +524,7 @@ export default function AdminPage() {
 
             <button
               type="button"
+              hidden style={{ display: 'none' }}
               onClick={() => setActiveTab('settings')}
               className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-colors whitespace-nowrap text-left ${
                 activeTab === 'settings'
@@ -1355,65 +1356,7 @@ export default function AdminPage() {
                 </div>
               </div>
 
-              {/* 4. Editorial Story Images */}
-              <div className="p-5 rounded-2xl border border-slate-200 bg-slate-50/50 space-y-4">
-                <div>
-                  <h3 className="text-xs font-bold text-slate-900">
-                    Editorial Story Collage Photography
-                  </h3>
-                  <p className="text-[11px] text-slate-500">
-                    Main large swimmer photo + overlapping floating yellow mattress
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="p-3 bg-white rounded-xl border border-slate-200 flex flex-col gap-2">
-                    <span className="text-xs font-bold text-slate-800">
-                      Main Swimmer Photography
-                    </span>
-                    <div className="relative h-36 rounded-lg overflow-hidden border border-slate-200">
-                      <Image
-                        src={formData.editorialStory.mainImage}
-                        alt="Main swimmer photo"
-                        fill
-                        className="object-cover"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => triggerImageUpload('editorialStory.mainImage')}
-                      className="py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold"
-                    >
-                      Replace Main Photo
-                    </button>
-                  </div>
-
-                  <div className="p-3 bg-white rounded-xl border border-slate-200 flex flex-col gap-2">
-                    <span className="text-xs font-bold text-slate-800">
-                      Overlapping Float & Straw Hat Photo
-                    </span>
-                    <div className="relative h-36 rounded-lg overflow-hidden border border-slate-200">
-                      <Image
-                        src={formData.editorialStory.overlappingImage}
-                        alt="Overlap photo"
-                        fill
-                        className="object-cover"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => triggerImageUpload('editorialStory.overlappingImage')}
-                      className="py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold"
-                    >
-                      Replace Overlap Photo
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* 5. Final CTA Background */}
+              {/* 4. Final CTA Background */}
               <div className="p-5 rounded-2xl border border-slate-200 bg-slate-50/50 space-y-3">
                 <div className="flex items-center justify-between">
                   <div>
@@ -2480,7 +2423,7 @@ export default function AdminPage() {
           )}
 
           {/* TAB 6: SETTINGS & STORAGE */}
-          {activeTab === 'settings' && (
+          {false && activeTab === 'settings' && (
             <div className="space-y-6">
               <div>
                 <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">
