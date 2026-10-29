@@ -14,7 +14,7 @@ interface FooterProps {
 export default function Footer({ cmsData }: FooterProps) {
   const currentYear = new Date().getFullYear();
   const phone = cmsData.contactSection?.phone || cmsData.footer?.phone || cmsData.branding?.telephone || '067 933 0920';
-  const email = cmsData.contactSection?.email || cmsData.footer?.email || cmsData.branding?.emailAddress || 'info@vsmaintenanceservices.co.za';
+  const email = cmsData.contactSection?.email || cmsData.footer?.email || cmsData.branding?.emailAddress || 'admin@vsmaintenanceservices.co.za';
   const logoSrc =
     cmsData.branding.footerLogoUrl || cmsData.branding.logoUrl || '/assets/royel-pool-logo.png';
 

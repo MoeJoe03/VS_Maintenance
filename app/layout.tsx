@@ -20,6 +20,10 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    'https://vsmaintenanceservices.co.za'
+  ),
   title: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
   description:
     'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',

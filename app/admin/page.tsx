@@ -2278,7 +2278,7 @@ export default function AdminPage() {
                     <label className="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
                     <input
                       type="text"
-                      value={formData.contactSection?.email ?? 'info@vsmaintenanceservices.co.za'}
+                      value={formData.contactSection?.email ?? 'admin@vsmaintenanceservices.co.za'}
                       onChange={(e) =>
                         setFormData({
                           ...formData,
