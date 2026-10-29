@@ -1730,7 +1730,7 @@ export default function AdminPage() {
                                         },
                                       });
                                     }}
-                                    placeholder="e.g. Cascais · Private Residence"
+                                    placeholder="e.g. Sandton"
                                     className="w-full px-3 py-2 rounded-xl text-xs bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#079BC5]/30 focus:border-[#079BC5]"
                                   />
                                 </div>
@@ -1887,7 +1887,7 @@ export default function AdminPage() {
                         title: 'Custom Architectural Pool Design',
                         category: 'New Builds',
                         imageUrl: '',
-                        location: 'Cascais · Private Estate',
+                        location: '',
                         layoutType: 'tall',
                         slideGroup: 1,
                         description: 'Custom concrete and infinity pool installation with premium coping stone.',

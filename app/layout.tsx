@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import SiteParallax from '@/components/SiteParallax';
 import FloatingContactButtons from '@/components/FloatingContactButtons';
+import { SITE_URL } from '@/lib/site-metadata';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -20,22 +21,21 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    'https://vsmaintenanceservices.co.za'
-  ),
-  title: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
+  metadataBase: new URL(SITE_URL),
+  title: 'Pool Maintenance & Repairs in Sandton | VS Maintenance Services',
   description:
     'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',
   openGraph: {
-    title: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
+    title: 'Pool Maintenance & Repairs in Sandton | VS Maintenance Services',
+    url: SITE_URL,
+    siteName: 'VS Maintenance Services',
     description:
       'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
+    title: 'Pool Maintenance & Repairs in Sandton | VS Maintenance Services',
     description:
       'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',
   },

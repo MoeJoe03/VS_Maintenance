@@ -121,7 +121,7 @@ export const defaultCMSData: CMSData = {
         slideGroup: 1,
         imageUrl:
           'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
-        location: 'Cascais Coastline',
+        location: '',
         description:
           'Architectural negative-edge pool cantilevered above the Atlantic with seamless teak lounge and glass guardrail.',
       },
@@ -205,7 +205,7 @@ export const defaultCMSData: CMSData = {
         slideGroup: 2,
         imageUrl:
           'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80',
-        location: 'Cascais Marina',
+        location: '',
         description:
           'Whisper-quiet variable speed pumps and automated magnesium salt sanitation with smartphone monitoring.',
       },
@@ -277,7 +277,7 @@ export const defaultCMSData: CMSData = {
         slideGroup: 3,
         imageUrl:
           'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80',
-        location: 'Cascais',
+        location: '',
         description:
           'Laboratory-grade photometer chemical diagnostics ensuring zero eye irritation and pristine clarity.',
       },
@@ -301,7 +301,7 @@ export const defaultCMSData: CMSData = {
         slideGroup: 4,
         imageUrl:
           'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80',
-        location: 'Cascais Coast',
+        location: '',
         description:
           'Architectural transparent observation window with underwater bench seating and custom coping.',
       },
@@ -349,7 +349,7 @@ export const defaultCMSData: CMSData = {
         slideGroup: 4,
         imageUrl:
           'https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80',
-        location: 'Cascais',
+        location: '',
         description:
           'Floating cantilevered granite stepping pavers crossing a crystal glass-clear water expanse.',
       },
@@ -363,7 +363,7 @@ export const defaultCMSData: CMSData = {
     overlappingImage:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuAc4Rl9iEFnN7SgfPBQNzWUTTTd1DA0QFMfh6QtcTeueFNr0s2QMyfYrXZqbB_p7UywUjzgiW6krHkYqy6rHJI5XLxJkGFr5SHQTQHeoKTzCOUldCRebTeKTJrHk0u_0P_-6EP5NboCA2Rgs_ZHXtUYjYOupLEqyrMG4gT-pVpGDBsnP6Viliw6heumeLnbUvHZFrQQhk9gVBz6UUvFxvjr9gr5MsiQyoCL6m_bsmHLBFkuZDu1CvKT3Q',
     paragraph1:
-      'In the sun-drenched landscapes of Portugal, where azure waters whisper tales of possibility, we emerged in 2019 with a radical vision: to transform the very essence of backyard swimming experiences.',
+      'VS Maintenance Services began as a two-person plumbing team and grew through word of mouth, expanding into pool care, garden upkeep and property maintenance.',
     paragraph2:
       "We're not just another pool company – we're aquatic architects of imagination at VS Maintenance Services. Every contour, filter system, and lighting line is sculpted for longevity, safety, and effortless joy.",
     ctaLabel: 'Learn More',

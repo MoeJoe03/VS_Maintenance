@@ -7,7 +7,7 @@ export function routeMetadata(data: CMSData, path: string, title: string, descri
   return {
     title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: new URL(path, SITE_URL).href },
     openGraph: {
       title,
       description,
