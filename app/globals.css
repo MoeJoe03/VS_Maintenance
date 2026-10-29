@@ -127,12 +127,3 @@ main [class~="hover:text-[#B8F4F5]"]:hover {
   color: var(--cms-accent-text) !important;
 }
 
-/* Hide scrollbars while keeping page scrolling enabled. */
-html {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
