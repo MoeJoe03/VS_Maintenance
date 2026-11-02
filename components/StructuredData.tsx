@@ -3,6 +3,8 @@ import type { CMSData } from '@/lib/cms-types';
 import { SITE_URL } from '@/lib/site-metadata';
 import { serviceFaqs } from '@/lib/service-faqs';
 import { getBusinessDetails } from '@/lib/business-details';
+import { areaFaqs } from '@/lib/area-faqs';
+import { sandtonFaqs } from '@/lib/sandton-faqs';
 
 export default function StructuredData({ data, path, title }: { data: CMSData; path: string; title: string }) {
   const businessId = `${SITE_URL}/#business`;
@@ -46,6 +48,47 @@ export default function StructuredData({ data, path, title }: { data: CMSData; p
       url: `${SITE_URL}/services#${service.id}`, provider: { '@id': businessId },
       areaServed: serviceAreas.map(name => ({ '@type': 'Place', name: `${name}, South Africa` })),
     })));
+  }
+  if (path === '/areas') {
+    const areaServiceId = `${url}#pool-services`;
+    const page = graph.find(node => node['@id'] === `${url}#webpage`);
+    if (page) page.mainEntity = { '@id': areaServiceId };
+    graph.push({
+      '@type': 'Service', '@id': areaServiceId,
+      name: 'Swimming Pool Services in Sandton and Johannesburg',
+      description: 'Pool maintenance, repairs, renovations, equipment installation and property care in Sandton and surrounding Johannesburg service areas.',
+      url, provider: { '@id': businessId }, mainEntityOfPage: { '@id': `${url}#webpage` },
+      areaServed: serviceAreas.map(name => ({ '@type': 'Place', name: `${name}, South Africa` })),
+    });
+    graph.push({
+      '@type': 'FAQPage', '@id': `${url}#faq`, url: `${url}#faq`,
+      isPartOf: { '@id': `${url}#webpage` },
+      mainEntity: areaFaqs.map(({ question, answer }) => ({
+        '@type': 'Question', name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer },
+      })),
+    });
+  }
+  if (path === '/areas/sandton') {
+    const serviceId = `${url}#service`;
+    const page = graph.find(node => node['@id'] === `${url}#webpage`);
+    if (page) page.mainEntity = { '@id': serviceId };
+    graph.push({
+      '@type': 'Service', '@id': serviceId,
+      name: 'Pool Maintenance and Renovations in Sandton',
+      serviceType: ['Swimming pool maintenance', 'Swimming pool repairs', 'Swimming pool renovation', 'Pool equipment installation'],
+      description: 'Pool maintenance, repairs, renovations and equipment installation in Sandton. Availability depends on the address and work required.',
+      url, provider: { '@id': businessId }, mainEntityOfPage: { '@id': `${url}#webpage` },
+      areaServed: { '@type': 'Place', name: 'Sandton, Johannesburg, South Africa' },
+    });
+    graph.push({
+      '@type': 'FAQPage', '@id': `${url}#faq`, url: `${url}#faq`,
+      isPartOf: { '@id': `${url}#webpage` },
+      mainEntity: sandtonFaqs.map(({ question, answer }) => ({
+        '@type': 'Question', name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer },
+      })),
+    });
   }
   if (path === '/services') {
     graph.push({

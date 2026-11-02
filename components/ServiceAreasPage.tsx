@@ -3,29 +3,19 @@ import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, ChevronDown, MapPin, Phone } from 'lucide-react';
 import type { CSSProperties } from 'react';
 import type { CMSData, GalleryItem } from '@/lib/cms-types';
-import { serviceAreas } from './ServiceAreas';
+import { otherServiceAreas } from './ServiceAreas';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { getBusinessDetails } from '@/lib/business-details';
+import { areaFaqs } from '@/lib/area-faqs';
 
-const additionalAreas = [
-  'Bryanston', 'Fourways', 'Morningside', 'Randburg', 'Bedfordview',
-  'Germiston', 'Midrand', 'Benoni', 'Sunninghill', 'Centurion',
-  'Edenvale', 'Rosebank', 'Houghton Estate', 'Kempton Park', 'Kyalami',
-].filter(area => serviceAreas.includes(area));
+const additionalAreas = [...otherServiceAreas].sort((a, b) => a.localeCompare(b));
 
 const serviceGroups = [
   { number: '01', title: 'Pool care', ids: ['service-3', 'pool-service', 'green-pool-treatments'], extras: ['Pool cleaning and vacuuming', 'Water testing and balancing', 'Filter cleaning and backwashing'] },
   { number: '02', title: 'Pool repairs and renovation', ids: ['service-2', 'leaking-pipe-repair', 'pool-plastering', 'pool-painting', 'pool-draining', 'pool-sand-change', 'multiport-valve-installation'], extras: [] },
   { number: '03', title: 'Equipment installation', ids: ['pump-installation', 'filter-tank-installation', 'pool-light-installation', 'service-4'], extras: [] },
   { number: '04', title: 'Property maintenance', ids: ['garden-service', 'paving-installation'], extras: [] },
-];
-
-const faqs = [
-  { question: 'Do you provide pool maintenance in Sandton?', answer: 'Yes. Sandton is our primary service area. Our pool maintenance service includes cleaning, water testing and balancing, filter care and equipment checks. Contact us with your address to confirm availability.' },
-  { question: 'Do you also serve Bryanston and Fourways?', answer: 'Yes, Bryanston and Fourways are listed service areas. Availability depends on your exact address, the work required and our current schedule, so please confirm with our team before arranging a visit.' },
-  { question: 'Do you have offices in every listed suburb?', answer: 'No. These are service areas rather than separate branches. We operate from our Johannesburg base and visit customers by arrangement.' },
-  { question: 'Do you cover my suburb if it is not listed?', answer: 'Send us your address or suburb and a short description of the work. We will check whether we can assist.' },
 ];
 
 const featuredProjectIds = ['gal-2', 'gal-5', 'gal-7', 'gal-20', 'gal-6', 'gal-8'];
@@ -79,7 +69,7 @@ export default function ServiceAreasPage({ cmsData }: { cmsData: CMSData }) {
 
     {projects.length > 0 && <section className="mx-auto max-w-[1360px] px-6 pb-20 sm:px-10 sm:pb-24"><div className="mb-9 flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="mb-3 text-xs font-extrabold uppercase tracking-[0.2em] text-[#079BC5]">Work you can see</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Recent work across Johannesburg.</h2></div><Link href="/gallery" className="inline-flex items-center gap-2 text-sm font-bold text-[#079BC5] hover:underline">View the gallery <ArrowUpRight size={17} /></Link></div><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{projects.map(project => <article key={project.id} className="overflow-hidden rounded-[26px] border border-[#B8F4F5]/60 bg-white shadow-card"><div className="relative aspect-[4/3] bg-[#E0FAFA]"><Image src={project.imageUrl} alt={project.title.trim()} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" /></div><div className="p-6"><p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#079BC5]"><MapPin size={14} />{project.location}</p><h3 className="mt-2 text-xl font-extrabold">{project.title.trim()}</h3><p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[#647785]">{project.description?.trim() || `A ${project.title.trim().toLowerCase()} project featured in our gallery.`}</p><Link href="/gallery" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#079BC5] hover:underline">See more projects <ArrowUpRight size={16} /></Link></div></article>)}</div></section>}
 
-    <section className="mx-auto grid max-w-[1360px] gap-12 px-6 pb-20 sm:px-10 sm:pb-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"><div><p className="mb-3 text-xs font-extrabold uppercase tracking-[0.2em] text-[#079BC5]">Good to know</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Service area <span className="text-[#079BC5]">questions.</span></h2><p className="mt-5 max-w-sm text-sm leading-relaxed text-[#647785]">If you are unsure about coverage, send your suburb and a brief description of the work.</p></div><div className="divide-y divide-[#B8F4F5] border-y border-[#B8F4F5]">{faqs.map(({ question, answer }) => <details key={question} className="group"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-left text-base font-bold marker:content-none sm:text-lg"><span>{question}</span><ChevronDown size={21} className="shrink-0 text-[#079BC5] transition-transform group-open:rotate-180" /></summary><p className="max-w-2xl pb-6 pr-10 text-sm leading-relaxed text-[#647785]">{answer}</p></details>)}</div></section>
+    <section className="mx-auto grid max-w-[1360px] gap-12 px-6 pb-20 sm:px-10 sm:pb-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"><div><p className="mb-3 text-xs font-extrabold uppercase tracking-[0.2em] text-[#079BC5]">Good to know</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Service area <span className="text-[#079BC5]">questions.</span></h2><p className="mt-5 max-w-sm text-sm leading-relaxed text-[#647785]">If you are unsure about coverage, send your suburb and a brief description of the work.</p></div><div className="divide-y divide-[#B8F4F5] border-y border-[#B8F4F5]">{areaFaqs.map(({ question, answer }) => <details key={question} className="group"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-left text-base font-bold marker:content-none sm:text-lg"><span>{question}</span><ChevronDown size={21} className="shrink-0 text-[#079BC5] transition-transform group-open:rotate-180" /></summary><p className="max-w-2xl pb-6 pr-10 text-sm leading-relaxed text-[#647785]">{answer}</p></details>)}</div></section>
 
     <section className="mx-auto max-w-[900px] px-6 pb-16 text-center"><p className="mb-3 text-xs font-extrabold uppercase tracking-[0.2em] text-[#079BC5]">Let us come to you</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Not sure whether we cover your address?</h2><p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-[#647785] sm:text-base">Send us your suburb and a short description of the pool or property work you need. We will confirm current coverage and help you decide the right next step.</p><div className="mt-8 flex flex-wrap justify-center gap-3"><Link href="/contact?area=check#enquiry" className="cms-button inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold">Check my area <ArrowUpRight size={17} /></Link>{telephone && <a href={`tel:${telephone}`} className="cms-button-outline inline-flex items-center gap-2 rounded-full border px-7 py-3.5 text-sm font-bold"><Phone size={17} />Call {phone}</a>}</div></section>
     <Footer cmsData={cmsData} />

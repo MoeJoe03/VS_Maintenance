@@ -3,7 +3,8 @@ import ServiceAreasPage from '@/components/ServiceAreasPage';
 import { getCMSData } from '@/lib/cms-storage';
 import { routeMetadata } from '@/lib/site-metadata';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
+export const revalidate = 300;
 
 const PAGE_TITLE = 'Pool Service Areas in Johannesburg | VS Maintenance Services';
 const DESCRIPTION = 'See where VS Maintenance Services provides pool maintenance, repairs, renovations, equipment installation and property care across Sandton and surrounding Johannesburg areas.';
