@@ -30,7 +30,7 @@ export default async function SandtonPage() {
     '--cms-accent-text': data.branding.accentTextColor,
   } as CSSProperties;
   const sandtonProjects = data.gallery.items.filter(item => item.imageUrl.trim() && item.location?.trim().toLowerCase() === 'sandton').slice(0, 3);
-  const featuredServices = ['service-3', 'leaking-pipe-repair', 'service-2', 'service-4', 'garden-service', 'paving-installation'].map(id => data.services.items.find(item => item.id === id)).filter(item => item !== undefined);
+  const featuredServices = data.services.items;
   const nearbyAreas = otherServiceAreas.filter(area => ['Bryanston', 'Morningside', 'Sunninghill', 'Fourways'].includes(area));
 
   return <><StructuredData data={data} path="/areas/sandton" title={TITLE} /><main style={theme} className="min-h-screen overflow-x-clip bg-white text-[#172638]">

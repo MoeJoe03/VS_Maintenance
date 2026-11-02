@@ -5,6 +5,7 @@ import { serviceFaqs } from '@/lib/service-faqs';
 import { getBusinessDetails } from '@/lib/business-details';
 import { areaFaqs } from '@/lib/area-faqs';
 import { sandtonFaqs } from '@/lib/sandton-faqs';
+import { getLocalAreaPage } from '@/lib/local-area-pages';
 
 export default function StructuredData({ data, path, title }: { data: CMSData; path: string; title: string }) {
   const businessId = `${SITE_URL}/#business`;
@@ -34,7 +35,7 @@ export default function StructuredData({ data, path, title }: { data: CMSData; p
     },
     { '@type': 'WebSite', '@id': websiteId, url: SITE_URL, name: data.branding.companyName.trim(), publisher: { '@id': businessId }, inLanguage: 'en-ZA' },
     { '@type': path === '/contact' ? 'ContactPage' : path === '/about' ? 'AboutPage' : path === '/gallery' ? 'CollectionPage' : 'WebPage', '@id': `${url}#webpage`, url, name: title, isPartOf: { '@id': websiteId }, about: { '@id': businessId }, breadcrumb: { '@id': `${url}#breadcrumb` } },
-    { '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` }, ...(path === '/' ? [] : [{ '@type': 'ListItem', position: 2, name: title, item: url }])] },
+    { '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` }, ...(path.startsWith('/areas/') ? [{ '@type': 'ListItem', position: 2, name: 'Areas We Serve', item: `${SITE_URL}/areas` }, { '@type': 'ListItem', position: 3, name: path === '/areas/sandton' ? 'Sandton' : getLocalAreaPage(path.split('/')[2])?.name || title, item: url }] : path === '/' ? [] : [{ '@type': 'ListItem', position: 2, name: title, item: url }])] },
   ];
   graph.push({ '@type': 'ContactPoint', '@id': `${SITE_URL}/#contact-point`, contactType: 'customer enquiries', url: `${SITE_URL}/contact`, ...(telephone ? { telephone } : {}), ...(business.email ? { email: business.email } : {}) });
   if (path === '/contact') {
@@ -89,6 +90,30 @@ export default function StructuredData({ data, path, title }: { data: CMSData; p
         acceptedAnswer: { '@type': 'Answer', text: answer },
       })),
     });
+  }
+  if (path.startsWith('/areas/') && path !== '/areas/sandton') {
+    const config = getLocalAreaPage(path.split('/')[2]);
+    if (config) {
+      const serviceId = `${url}#service`;
+      const page = graph.find(node => node['@id'] === `${url}#webpage`);
+      if (page) page.mainEntity = { '@id': serviceId };
+      graph.push({
+        '@type': 'Service', '@id': serviceId,
+        name: `Swimming Pool Services in ${config.name}`,
+        serviceType: config.serviceTypes,
+        description: config.description,
+        url, provider: { '@id': businessId }, mainEntityOfPage: { '@id': `${url}#webpage` },
+        areaServed: { '@type': 'Place', name: `${config.name}, Johannesburg, South Africa` },
+      });
+      graph.push({
+        '@type': 'FAQPage', '@id': `${url}#faq`, url: `${url}#faq`,
+        isPartOf: { '@id': `${url}#webpage` },
+        mainEntity: config.faqs.map(({ question, answer }) => ({
+          '@type': 'Question', name: question,
+          acceptedAnswer: { '@type': 'Answer', text: answer },
+        })),
+      });
+    }
   }
   if (path === '/services') {
     graph.push({

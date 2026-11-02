@@ -2,7 +2,8 @@ import StructuredData from '@/components/StructuredData';
 import { routeMetadata } from '@/lib/site-metadata';
 import { getCMSData } from '@/lib/cms-storage';
 import ClientGalleryPage from '@/components/ClientGalleryPage';
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
+export const revalidate = 300;
 const PAGE_TITLE = 'Swimming Pool Projects in Sandton | VS Maintenance Services';
 export async function generateMetadata() {
   const data = await getCMSData();

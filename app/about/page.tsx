@@ -4,7 +4,8 @@ import { routeMetadata } from '@/lib/site-metadata';
 import { getCMSData } from '@/lib/cms-storage';
 import ClientAboutPage from '@/components/ClientAboutPage';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
+export const revalidate = 300;
 const PAGE_TITLE = 'About VS Maintenance Services | Sandton';
 
 export async function generateMetadata() {

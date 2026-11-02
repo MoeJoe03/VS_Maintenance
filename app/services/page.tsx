@@ -4,7 +4,8 @@ import { routeMetadata } from '@/lib/site-metadata';
 import { getCMSData } from '@/lib/cms-storage';
 import ClientServicesPage from '@/components/ClientServicesPage';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
+export const revalidate = 300;
 
 export async function generateMetadata() {
   const data = await getCMSData();

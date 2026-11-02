@@ -5,7 +5,8 @@ import { getCMSData } from '@/lib/cms-storage';
 import ClientHomePage from '@/components/ClientHomePage';
 
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
+export const revalidate = 300;
 
 export async function generateMetadata() {
   const data = await getCMSData();
