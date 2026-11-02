@@ -1,7 +1,22 @@
 import fs from 'fs';
 import path from 'path';
+import { randomUUID } from 'crypto';
 import { CMSData, LeadSubmission, NewsletterSubscriber } from './cms-types';
 import { defaultCMSData } from './cms-default-data';
+import { createClient } from '@supabase/supabase-js';
+import bundledCMSData from '../data/cms-data.json';
+
+export const SITE_ID = process.env.NEXT_PUBLIC_SITE_ID || 'vs-maintenance-services';
+
+export function isSupabaseConfigured() {
+  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY);
+}
+
+export function supabaseClient(privileged = false) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = privileged ? process.env.SUPABASE_SECRET_KEY : process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+  return url && key ? createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } }) : null;
+}
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const CMS_FILE = path.join(DATA_DIR, 'cms-data.json');
@@ -14,7 +29,7 @@ function ensureDataDir() {
   }
 }
 
-export function getCMSData(): CMSData {
+function getLocalCMSData(): CMSData {
   try {
     ensureDataDir();
     if (!fs.existsSync(CMS_FILE)) {
@@ -71,12 +86,12 @@ export function getCMSData(): CMSData {
       },
     };
   } catch (error) {
-    console.error('Error reading CMS data, falling back to defaults:', error);
-    return defaultCMSData;
+    console.error('Error reading CMS data, falling back to bundled content:', error);
+    return bundledCMSData as CMSData;
   }
 }
 
-export function saveCMSData(data: CMSData): boolean {
+function saveLocalCMSData(data: CMSData): boolean {
   try {
     ensureDataDir();
     fs.writeFileSync(CMS_FILE, JSON.stringify(data, null, 2), 'utf-8');
@@ -87,18 +102,63 @@ export function saveCMSData(data: CMSData): boolean {
   }
 }
 
-export function resetCMSData(): CMSData {
+export async function getCMSData(strict = false): Promise<CMSData> {
+  const supabase = supabaseClient();
+  if (!supabase) return getLocalCMSData();
+  let response;
   try {
-    ensureDataDir();
-    fs.writeFileSync(CMS_FILE, JSON.stringify(defaultCMSData, null, 2), 'utf-8');
-    return defaultCMSData;
+    response = await supabase.from('site_settings').select('content').eq('site_id', SITE_ID).abortSignal(AbortSignal.timeout(5000)).maybeSingle();
   } catch (error) {
-    console.error('Error resetting CMS data:', error);
-    return defaultCMSData;
+    if (strict) throw error;
+    console.error('Supabase CMS read failed:', error);
+    return getLocalCMSData();
   }
+  const { data, error } = response;
+  if (error) {
+    if (strict) throw new Error(`Supabase CMS read failed: ${error.message}`);
+    console.error('Supabase CMS read failed:', error.message);
+    return getLocalCMSData();
+  }
+  if (!data?.content || Object.keys(data.content).length === 0) {
+    if (strict && isSupabaseConfigured()) throw new Error('The Supabase CMS has not been imported yet.');
+    return getLocalCMSData();
+  }
+  const content = data.content as CMSData;
+  return {
+    ...getLocalCMSData(), ...content,
+    branding: { ...defaultCMSData.branding, ...content.branding },
+    services: { ...defaultCMSData.services, ...content.services, items: content.services?.items ?? [] },
+    gallery: { ...defaultCMSData.gallery, ...content.gallery, items: content.gallery?.items ?? [] },
+  };
 }
 
-export function getLeads(): LeadSubmission[] {
+export async function saveCMSData(data: CMSData): Promise<boolean> {
+  if (isSupabaseConfigured()) {
+    const supabase = supabaseClient(true);
+    if (!supabase) throw new Error('SUPABASE_SECRET_KEY is required for CMS writes.');
+    const { error } = await supabase.from('site_settings').upsert({
+      site_id: SITE_ID, content: data, updated_at: new Date().toISOString(),
+    }, { onConflict: 'site_id' });
+    if (error) throw new Error(`Supabase save failed: ${error.message}`);
+    return true;
+  }
+  if (process.env.NODE_ENV === 'production') throw new Error('Supabase is required for production CMS writes.');
+  return saveLocalCMSData(data);
+}
+
+export async function resetCMSData(): Promise<CMSData> {
+  if (!await saveCMSData(defaultCMSData)) throw new Error('Could not reset content.');
+  return defaultCMSData;
+}
+
+export async function getLeads(): Promise<LeadSubmission[]> {
+  const supabase = supabaseClient(true);
+  if (supabase) {
+    const { data, error } = await supabase.from('site_leads').select('id,payload,created_at').eq('site_id', SITE_ID).order('created_at', { ascending: false });
+    if (error) throw new Error(error.message);
+    return (data ?? []).map((row) => ({ ...row.payload, id: row.id, createdAt: row.created_at }));
+  }
+  if (process.env.NODE_ENV === 'production') throw new Error('Supabase is required to load enquiries.');
   try {
     ensureDataDir();
     if (!fs.existsSync(LEADS_FILE)) {
@@ -111,9 +171,18 @@ export function getLeads(): LeadSubmission[] {
   }
 }
 
-export function addLead(lead: Omit<LeadSubmission, 'id' | 'createdAt'>): LeadSubmission {
+export async function addLead(lead: Omit<LeadSubmission, 'id' | 'createdAt'>): Promise<LeadSubmission> {
+  const supabase = supabaseClient(true) ?? supabaseClient();
+  if (supabase) {
+    const id = randomUUID();
+    const createdAt = new Date().toISOString();
+    const { error } = await supabase.from('site_leads').insert({ id, site_id: SITE_ID, payload: lead, created_at: createdAt });
+    if (error) throw new Error(error.message);
+    return { ...lead, id, createdAt };
+  }
+  if (process.env.NODE_ENV === 'production') throw new Error('Supabase is required to save enquiries.');
   ensureDataDir();
-  const leads = getLeads();
+  const leads = await getLeads();
   const newLead: LeadSubmission = {
     ...lead,
     id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
@@ -124,7 +193,14 @@ export function addLead(lead: Omit<LeadSubmission, 'id' | 'createdAt'>): LeadSub
   return newLead;
 }
 
-export function getSubscribers(): NewsletterSubscriber[] {
+export async function getSubscribers(): Promise<NewsletterSubscriber[]> {
+  const supabase = supabaseClient(true);
+  if (supabase) {
+    const { data, error } = await supabase.from('site_subscribers').select('id,email,created_at').eq('site_id', SITE_ID).order('created_at', { ascending: false });
+    if (error) throw new Error(error.message);
+    return (data ?? []).map((row) => ({ id: row.id, email: row.email, subscribedAt: row.created_at }));
+  }
+  if (process.env.NODE_ENV === 'production') throw new Error('Supabase is required to load subscribers.');
   try {
     ensureDataDir();
     if (!fs.existsSync(NEWSLETTER_FILE)) {
@@ -137,9 +213,18 @@ export function getSubscribers(): NewsletterSubscriber[] {
   }
 }
 
-export function addSubscriber(email: string): NewsletterSubscriber {
+export async function addSubscriber(email: string): Promise<NewsletterSubscriber> {
+  const supabase = supabaseClient(true) ?? supabaseClient();
+  if (supabase) {
+    const id = randomUUID();
+    const subscribedAt = new Date().toISOString();
+    const { error } = await supabase.from('site_subscribers').insert({ id, site_id: SITE_ID, email, created_at: subscribedAt });
+    if (error && error.code !== '23505') throw new Error(error.message);
+    return { id, email, subscribedAt };
+  }
+  if (process.env.NODE_ENV === 'production') throw new Error('Supabase is required to save subscribers.');
   ensureDataDir();
-  const subscribers = getSubscribers();
+  const subscribers = await getSubscribers();
   const existing = subscribers.find((s) => s.email.toLowerCase() === email.toLowerCase());
   if (existing) return existing;
 

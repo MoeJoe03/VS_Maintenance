@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight, X, Maximize2, Sparkles, CheckCircle2 } from 'lucide-react';
 import { CMSData, GalleryItem } from '@/lib/cms-types';
 import { GALLERY_CATEGORIES } from '@/lib/gallery-categories';
@@ -93,7 +94,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
   return (
     <section
       id="gallery"
-      className="relative w-full overflow-hidden bg-white py-14 sm:py-20 lg:py-24 select-none"
+      className="relative w-full overflow-x-clip bg-white py-14 sm:py-20 lg:py-24 select-none"
       data-purpose="gallery-showcase"
     >
 
@@ -123,7 +124,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 flex flex-col">
         {/* Top Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-          {/* Eyebrow: —— GALLERY —— */}
+          {/* Gallery eyebrow */}
           <div className="inline-flex items-center justify-center gap-3 mb-2">
             <span className="w-8 sm:w-12 h-[1.5px] bg-sky-300 rounded-full" />
             <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-sky-600 uppercase">
@@ -145,7 +146,7 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
         </div>
 
         {/* Category Filter Pills */}
-        <div className="flex items-center justify-center gap-2 sm:gap-2.5 flex-wrap mb-10 sm:mb-12">
+        <div role="group" aria-label="Filter gallery by category" className="sticky top-0 z-30 mb-10 flex flex-nowrap items-stretch gap-1 overflow-x-auto bg-white overscroll-x-contain sm:static sm:mb-12 sm:flex-wrap sm:items-center sm:justify-center sm:gap-2.5 sm:overflow-visible">
           {CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat;
             return (
@@ -155,13 +156,14 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
                   setActiveCategory(cat);
                   setCurrentSlide(0);
                 }}
-                className={`relative px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+                aria-pressed={isActive}
+                className={`relative flex w-[calc((100%-1rem)/5)] shrink-0 items-center justify-center px-1 py-1.5 text-center text-[10px] leading-[1.1] rounded-full font-medium transition-all duration-200 cursor-pointer sm:w-auto sm:px-5 sm:py-2.5 sm:text-sm ${
                   isActive
                     ? 'bg-sky-600 text-white shadow-md shadow-sky-600/25 scale-[1.02]'
                     : 'bg-slate-100/80 hover:bg-slate-200/80 text-slate-700 hover:text-slate-900 border border-slate-200/50'
                 }`}
               >
-                <span className="flex items-center gap-1.5">
+                <span className="flex items-center justify-center gap-1.5">
                   <span>{cat}</span>
                   {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" />}
                 </span>
@@ -418,17 +420,13 @@ export default function Gallery({ cmsData, onOpenQuote }: GalleryProps) {
           </div>
 
           {/* VIEW FULL GALLERY Link CTA */}
-          <button
-            onClick={() => {
-              if (allItems.length > 0) {
-                setLightboxItem(allItems[0]);
-              }
-            }}
+          <Link
+            href="/gallery"
             className="group flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider text-slate-800 hover:text-sky-600 transition-colors uppercase"
           >
             <span>VIEW FULL GALLERY</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-sky-600" />
-          </button>
+          </Link>
         </div>
       </div>
 

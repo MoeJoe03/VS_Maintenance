@@ -7,13 +7,13 @@ import ClientHomePage from '@/components/ClientHomePage';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata() {
-  const data = getCMSData();
-  return routeMetadata(data, '/', 'Pool Maintenance & Repairs in Sandton | VS Maintenance Services', 'Pool care, renovations, equipment installation, garden services and property maintenance in Sandton and surrounding service areas.', data.hero.backgroundImage);
+export async function generateMetadata() {
+  const data = await getCMSData();
+  return routeMetadata(data, '/', data.branding.browserTitle || 'Pool Maintenance & Repairs in Sandton | VS Maintenance Services', data.branding.shortDescription || 'Pool care, renovations, equipment installation, garden services and property maintenance in Sandton and surrounding service areas.', data.hero.backgroundImage);
 }
 
-export default function HomePage() {
-  const cmsData = getCMSData();
+export default async function HomePage() {
+  const cmsData = await getCMSData();
 
   return <><StructuredData data={cmsData} path="/" title="Home" /><ClientHomePage initialData={cmsData} /></>;
 }

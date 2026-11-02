@@ -1,4 +1,5 @@
 'use client';
+import { getBusinessDetails } from '@/lib/business-details';
 
 import React from 'react';
 import Image from 'next/image';
@@ -8,13 +9,12 @@ import { CMSData } from '@/lib/cms-types';
 
 interface FooterProps {
   cmsData: CMSData;
-  onOpenQuote: () => void;
+  onOpenQuote?: () => void;
 }
 
 export default function Footer({ cmsData }: FooterProps) {
   const currentYear = new Date().getFullYear();
-  const phone = cmsData.contactSection?.phone || cmsData.footer?.phone || cmsData.branding?.telephone || '067 933 0920';
-  const email = cmsData.contactSection?.email || cmsData.footer?.email || cmsData.branding?.emailAddress || 'admin@vsmaintenanceservices.co.za';
+  const { phone, email } = getBusinessDetails(cmsData);
   const logoSrc =
     cmsData.branding.footerLogoUrl || cmsData.branding.logoUrl || '/assets/royel-pool-logo.png';
 
@@ -80,6 +80,11 @@ export default function Footer({ cmsData }: FooterProps) {
               <li>
                 <Link href="/gallery" className="hover:text-[#0ea5e9] transition-colors">
                   Our work
+                </Link>
+              </li>
+              <li>
+                <Link href="/areas" className="hover:text-[#0ea5e9] transition-colors">
+                  Service areas
                 </Link>
               </li>
               <li>

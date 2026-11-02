@@ -5,9 +5,9 @@ export const defaultCMSData: CMSData = {
     companyName: 'VS Maintenance Services',
     companyNameWordColors: ['#ffffff', '#B8F4F5'],
     companyTagline: 'World-Class Aquatic Craftsmanship',
-    logoUrl: '',
-    footerLogoUrl: '',
-    browserTitle: 'VS Maintenance Services — World-Class Aquatic Craftsmanship',
+    logoUrl: '/assets/vs-maintenance-logo.png',
+    footerLogoUrl: '/assets/vs-maintenance-logo.png',
+    browserTitle: 'VS Maintenance Services | World-Class Aquatic Craftsmanship',
     shortDescription:
       'Bespoke architectural swimming pool engineering, maintenance, repair, and lifelong pristine water quality.',
     primaryBrandColor: '#079BC5',
@@ -50,11 +50,11 @@ export const defaultCMSData: CMSData = {
       part4: 'an uncompromised commitment',
       inlineImage4:
         'https://lh3.googleusercontent.com/aida-public/AB6AXuCNnvIunsOe3Xc6gMISrOd0nHwNmfI8dZekq8bQ6C2Y4L8njMCDlsRVohdT_-7b-G7YxTFb_gCsRXq2CpLm9h_rFoge5F4bxIzKwGZUMgFFZJa4wvLOeT1t7aSqQwSZhZsH7NSKlNKspvmQ9K2XJPd01KQKYFPVmZAIRqJavnslxiN175rTU8a8B7elmnqAqixt3TtOlsJj6hi2YjyLjbHCBYN144s6FMM-HHLShPpwp4mIvKE9WtfMIg',
-      part5: "We don't just build pools",
+      part5: "We don't just build pools.",
       inlineImage5:
         'https://lh3.googleusercontent.com/aida-public/AB6AXuD9X_MhbenlFakfzSXvOUdCOE53rDKf8qbdOWNvcq9hM0t1ud-45PUcd5gv9QLbi95U6Ar-tPU3w7ixzZP_cvmuPc8dnZ_baZFmeJPZyCtgdGefsJAmH9UFhLS1vB-kHc4cFAltKIBvu2CUEvhPpj9Nw6omCs8Tu-hG_7sArhJiaM8qTAlNBgLWaePlNC9jP_2OzDyGZPFJZP69Lc6m7Jyx50KaXidglR9NJgMqn29Z0HTNzC3hg1wsCg',
       part6:
-        '— we create relaxing, safe, and visually stunning spaces that turn your vision into reality.',
+        'We create relaxing, safe, and visually stunning spaces that turn your vision into reality.',
       part7: 'With a skilled team',
       part8: "and a focus on true craftsmanship, we're here to bring your perfect",
       part9: 'outdoor space',
@@ -372,7 +372,7 @@ export const defaultCMSData: CMSData = {
     headingLine1: 'Our 3 Step Process',
     headingLine2: 'to Your Dream Pool',
     description:
-      'Our expert team handles everything from cleaning and water balancing to equipment maintenance — making pool care effortless and stress-free for you.',
+      'Our expert team handles everything from cleaning and water balancing to equipment maintenance, making pool care effortless and stress-free for you.',
     ctaLabel: 'Get In Touch',
     steps: [
       {

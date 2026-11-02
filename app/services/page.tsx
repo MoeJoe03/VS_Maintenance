@@ -6,11 +6,11 @@ import ClientServicesPage from '@/components/ClientServicesPage';
 
 export const dynamic = 'force-dynamic';
 
-export function generateMetadata() {
-  const data = getCMSData();
+export async function generateMetadata() {
+  const data = await getCMSData();
   return routeMetadata(data, '/services', 'Swimming Pool Construction, Repairs & Maintenance | VS Maintenance', 'Explore pool maintenance, renovations, equipment installation, garden care and paving services in Sandton and surrounding areas.', '/assets/hero_service.png');
 }
 
-export default function ServicesPage() {
-  const data = getCMSData(); return <><StructuredData data={data} path="/services" title="Services" /><ClientServicesPage initialData={data} /></>;
+export default async function ServicesPage() {
+  const data = await getCMSData(); return <><StructuredData data={data} path="/services" title="Services" /><ClientServicesPage initialData={data} /></>;
 }

@@ -48,6 +48,7 @@ export default function AdminPage() {
   const [formData, setFormData] = useState<CMSData>(defaultCMSData);
   const [leads, setLeads] = useState<LeadSubmission[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [cmsLoaded, setCmsLoaded] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [saveToast, setSaveToast] = useState<{ type: 'success' | 'error'; message: string } | null>(
     null
@@ -73,12 +74,16 @@ export default function AdminPage() {
         if (cmsJson.success && cmsJson.data) {
           setSavedData(cmsJson.data);
           setFormData(cmsJson.data);
+          setCmsLoaded(true);
+        } else {
+          setSaveToast({ type: 'error', message: cmsJson.error || 'CMS data could not be loaded. Saving is disabled.' });
         }
         if (leadsJson.success && leadsJson.leads) {
           setLeads(leadsJson.leads);
         }
       } catch (err) {
         console.error('Failed to load CMS data:', err);
+        setSaveToast({ type: 'error', message: 'CMS data could not be loaded. Saving is disabled.' });
       } finally {
         setIsLoading(false);
       }
@@ -90,6 +95,10 @@ export default function AdminPage() {
 
   // Handle saving to server API
   const handleSave = async () => {
+    if (!cmsLoaded) {
+      setSaveToast({ type: 'error', message: 'CMS data must load successfully before you can save.' });
+      return;
+    }
     try {
       setIsSaving(true);
       setSaveToast(null);
@@ -136,6 +145,10 @@ export default function AdminPage() {
 
   // Reset entire website to Stitch factory defaults
   const handleResetToDefaults = async () => {
+    if (!cmsLoaded) {
+      setSaveToast({ type: 'error', message: 'CMS data must load successfully before reset is available.' });
+      return;
+    }
     if (
       !confirm(
         'Are you sure you want to restore the original Google Stitch design presets? All custom edits will be reset.'
@@ -175,6 +188,10 @@ export default function AdminPage() {
 
   // Process file upload
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!cmsLoaded) {
+      setSaveToast({ type: 'error', message: 'CMS data must load successfully before uploads are available.' });
+      return;
+    }
     const file = e.target.files?.[0];
     if (!file || !currentUploadTarget) return;
 
@@ -195,6 +212,7 @@ export default function AdminPage() {
       setUploadingField(currentUploadTarget);
       const dataForm = new FormData();
       dataForm.append('file', file);
+      dataForm.append('target', currentUploadTarget);
 
       const res = await fetch('/api/upload', {
         method: 'POST',

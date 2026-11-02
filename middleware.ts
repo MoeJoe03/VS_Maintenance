@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
+  if (path.startsWith('/admin') && process.env.NODE_ENV === 'production') {
+    const expected = process.env.CMS_EDITOR_SECRET;
+    if (!expected || request.cookies.get('cms_editor')?.value !== expected) {
+      return new NextResponse('CMS editor access is not configured.', { status: 403 });
+    }
+  }
   const protectedRequest = path.startsWith('/admin') || path.startsWith('/api/upload') || (path === '/api/cms' && request.method !== 'GET') || ((path === '/api/leads' || path === '/api/newsletter') && request.method !== 'POST');
   if (!protectedRequest) return NextResponse.next();
   if (request.method !== 'GET' && request.method !== 'HEAD' && request.headers.get('origin') !== request.nextUrl.origin) return NextResponse.json({ success: false, error: 'Invalid request origin.' }, { status: 403 });

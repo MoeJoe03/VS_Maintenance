@@ -76,7 +76,7 @@ export default function Hero({ cmsData, onOpenQuote }: HeroProps) {
         </svg>
         <a
           href="#about"
-          aria-label="Your dream pool — scroll to about content"
+          aria-label="Your dream pool. Scroll to about content"
           className="cms-button relative flex h-11 w-11 items-center justify-center rounded-full border-4 border-white shadow-md transition-transform hover:scale-105 sm:h-16 sm:w-16"
         >
           <svg

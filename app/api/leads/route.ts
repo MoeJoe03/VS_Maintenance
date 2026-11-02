@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLeads, addLead } from '@/lib/cms-storage';
+import { canEditCMS } from '@/lib/cms-editor-access';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
-  const leads = getLeads();
+export async function GET(req: NextRequest) {
+  if (!canEditCMS(req)) return NextResponse.json({ success: false, error: 'Not authorised.' }, { status: 403 });
+  const leads = await getLeads();
   return NextResponse.json({ success: true, leads });
 }
 
@@ -20,7 +22,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const saved = addLead({
+    const saved = await addLead({
       name: String(name).trim(),
       email: String(email).trim(),
       phone: String(phone || '').trim(),

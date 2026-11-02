@@ -11,6 +11,7 @@ import Testimonials from './Testimonials';
 import Footer from './Footer';
 import QuoteModal from './QuoteModal';
 import Navbar from './Navbar';
+import { serviceFaqs } from '@/lib/service-faqs';
 import BeforeAfterSlider from './BeforeAfterSlider';
 
 const serviceDetails: Record<string, { eyebrow: string; included: string[] }> = {
@@ -32,19 +33,12 @@ const serviceDetails: Record<string, { eyebrow: string; included: string[] }> = 
   },
 };
 
-const faqs = [
-  { q: 'How do I know which service my pool needs?', a: 'Tell us what you are planning or what is going wrong. We will discuss the pool, arrange an assessment where needed, and recommend the right scope before work begins.' },
-  { q: 'Can you tailor a maintenance plan to my pool?', a: 'Yes. The visit frequency and tasks depend on your pool size, equipment, water condition and usage. Contact us for a plan suited to your pool.' },
-  { q: 'Do you repair existing pools as well as build new ones?', a: 'Yes. We work on new pool projects and existing pools, including repairs, restoration, ongoing care and equipment installation.' },
-  { q: 'Will I receive a quote before work starts?', a: 'Yes. After we understand the project and any site conditions, we can outline the recommended work and provide a quote for your review.' },
-  { q: 'Do you service my area?', a: 'Sandton is our primary service area. We also serve Fourways, Germiston, Morningside, Midrand, Bedfordview, Benoni, Sunninghill, Centurion, Edenvale, Rosebank, Bryanston, Houghton Estate, Kempton Park, Randburg and Kyalami.' },
-];
+
 
 export default function ClientServicesPage({ initialData }: { initialData: CMSData }) {
   const [cmsData, setCmsData] = useState(initialData);
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [selectedService, setSelectedService] = useState('Building New Pools');
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   useEffect(() => {
     fetch('/api/cms').then((res) => res.json()).then((payload) => {
@@ -105,7 +99,7 @@ export default function ClientServicesPage({ initialData }: { initialData: CMSDa
 
       <Testimonials cmsData={cmsData} />
 
-      <section id="faq" className="mx-auto grid max-w-[1360px] gap-12 px-6 py-16 sm:px-10 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"><div><p className="mb-3 text-xs font-extrabold uppercase tracking-[0.2em] text-[#079BC5]">Good to know</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Frequently asked <span className="text-[#079BC5]">questions.</span></h2><p className="mt-5 max-w-sm text-sm leading-relaxed text-[#647785]">Have something else in mind? Tell us about your pool and we&apos;ll help you find the right next step.</p><button onClick={() => openQuote()} className="cms-button mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold">Ask us a question <ArrowUpRight size={16} /></button></div><div className="divide-y divide-[#B8F4F5] border-y border-[#B8F4F5]">{faqs.map((faq, index) => <div key={faq.q}><button type="button" className="flex w-full items-center justify-between gap-6 py-6 text-left text-base font-bold text-[#172638] sm:text-lg" onClick={() => setOpenFaq(openFaq === index ? null : index)} aria-expanded={openFaq === index}><span>{faq.q}</span><ChevronDown size={21} className={`shrink-0 text-[#079BC5] transition-transform ${openFaq === index ? 'rotate-180' : ''}`} /></button>{openFaq === index && <p className="max-w-2xl pb-6 pr-10 text-sm leading-relaxed text-[#647785]">{faq.a}</p>}</div>)}</div></section>
+      <section id="faq" className="mx-auto grid max-w-[1360px] gap-12 px-6 py-16 sm:px-10 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"><div><p className="mb-3 text-xs font-extrabold uppercase tracking-[0.2em] text-[#079BC5]">Good to know</p><h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Frequently asked <span className="text-[#079BC5]">questions.</span></h2><p className="mt-5 max-w-sm text-sm leading-relaxed text-[#647785]">Have something else in mind? Tell us about your pool and we&apos;ll help you find the right next step.</p><button onClick={() => openQuote()} className="cms-button mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold">Ask us a question <ArrowUpRight size={16} /></button></div><div className="divide-y divide-[#B8F4F5] border-y border-[#B8F4F5]">{serviceFaqs.map(faq => <details key={faq.q} className="group"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-left text-base font-bold text-[#172638] marker:content-none sm:text-lg"><span>{faq.q}</span><ChevronDown size={21} className="shrink-0 text-[#079BC5] transition-transform group-open:rotate-180" /></summary><p className="max-w-2xl pb-6 pr-10 text-sm leading-relaxed text-[#647785]">{faq.a}</p></details>)}</div></section>
 
       <section id="areas" className="px-3 pb-4 sm:px-6 lg:px-8 xl:px-12"><div className="relative mx-auto max-w-[1360px] overflow-hidden rounded-[32px] bg-[#10283F] px-7 py-12 text-white sm:px-12 sm:py-16 lg:px-16"><div className="absolute -right-16 -top-20 h-80 w-80 rounded-full bg-[#35D4DB]/15 blur-3xl" /><div className="relative grid items-center gap-10 lg:grid-cols-[1fr_0.85fr]"><div><p className="mb-4 text-xs font-extrabold uppercase tracking-[0.2em] text-[#B8F4F5]">Where we work</p><h2 className="max-w-xl text-4xl font-extrabold tracking-tight sm:text-5xl">Pool care close to home.</h2><p className="mt-5 max-w-xl text-sm leading-relaxed text-white/75 sm:text-base">Sandton is our primary service area. We also serve the locations listed below. Service availability depends on your address and the work required.</p><button onClick={() => openQuote()} className="cms-button mt-8 inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-bold">Check your area <ArrowUpRight size={16} /></button></div><div className="rounded-[26px] border border-white/20 bg-white/10 p-7 backdrop-blur-sm sm:p-9"><div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#35D4DB]/20 text-[#B8F4F5]"><MapPin size={25} /></div><p className="text-xs font-bold uppercase tracking-widest text-[#B8F4F5]">Primary service area</p><p className="mt-2 text-2xl font-extrabold">Sandton</p><div className="my-6 border-t border-white/20" /><p className="text-xs font-bold uppercase tracking-widest text-[#B8F4F5]">Also serving</p><ServiceAreas dark /><p className="mt-4 text-sm leading-relaxed text-white/70">Share your suburb or address when you enquire and we&apos;ll confirm whether we can come to you.</p></div></div></div></section>
 

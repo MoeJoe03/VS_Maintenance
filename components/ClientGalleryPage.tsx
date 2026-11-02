@@ -27,7 +27,15 @@ export default function ClientGalleryPage({ cmsData }: { cmsData: CMSData }) {
     </div>
     <section id="featured-projects" className="mx-auto max-w-[1400px] px-6 py-16 sm:px-10 sm:py-20 lg:px-16">
       <div className="flex flex-wrap items-end justify-between gap-6"><div><p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#079BC5]">Selected work</p><h2 className="text-3xl font-extrabold tracking-tight sm:text-5xl">Featured projects.</h2></div><p className="max-w-sm text-sm leading-relaxed text-[#647785]">A closer look at the pools, finishes and transformations in our collection.</p></div>
-      <div className="my-10"><h2 className="mb-4 text-sm font-bold">Browse by category</h2><div className="flex flex-wrap gap-2">{categories.map(item => <button key={item} onClick={() => setCategory(item)} aria-pressed={category === item} className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${category === item ? 'cms-button border-transparent' : 'border-[#B8F4F5] bg-white text-[#647785] hover:bg-[#EBFBFA]'}`}>{item}</button>)}</div></div>
+      <div className="sticky top-0 z-30 my-10 bg-white py-2 sm:static sm:py-0">
+        <h2 className="sr-only">Browse by category</h2>
+        <div role="group" aria-label="Browse by category" className="flex flex-nowrap items-stretch gap-1 overflow-x-auto overscroll-x-contain sm:flex-wrap sm:items-center sm:justify-center sm:gap-2.5 sm:overflow-visible">
+          {categories.map(item => {
+            const isActive = category === item;
+            return <button key={item} type="button" onClick={() => setCategory(item)} aria-pressed={isActive} className={`relative flex w-[calc((100%-1rem)/5)] shrink-0 cursor-pointer items-center justify-center rounded-full px-1 py-1.5 text-center text-[10px] font-medium leading-[1.1] transition-all duration-200 sm:w-auto sm:px-5 sm:py-2.5 sm:text-sm ${isActive ? 'scale-[1.02] bg-sky-600 text-white shadow-md shadow-sky-600/25' : 'border border-slate-200/50 bg-slate-100/80 text-slate-700 hover:bg-slate-200/80 hover:text-slate-900'}`}><span className="flex items-center justify-center gap-1"><span>{item}</span>{isActive && <span className="inline-block h-1 w-1 rounded-full bg-white" />}</span></button>;
+          })}
+        </div>
+      </div>
       <div className="columns-2 gap-1 sm:columns-3 lg:columns-4" aria-live="polite">
         {visible.map((project) => <article key={project.id} className="mb-1 break-inside-avoid">
           <button type="button" onClick={() => window.location.assign('/contact#enquiry')} aria-label={`Enquire about ${project.title.trim()}${project.location ? ` in ${project.location}` : ''}`} className={`group relative block w-full overflow-hidden bg-[#E0FAFA] text-left focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-[#35D4DB] ${project.layoutType === 'stacked-top' ? 'aspect-[4/3]' : project.layoutType === 'stacked-bottom' ? 'aspect-square' : 'aspect-[2/3]'}`}>

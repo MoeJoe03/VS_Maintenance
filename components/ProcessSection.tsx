@@ -105,7 +105,7 @@ export default function ProcessSection({ cmsData, onOpenQuote }: ProcessSectionP
   const headingLine2 = pData?.headingLine2 || 'to Your Dream Pool';
   const description =
     pData?.description ||
-    'Our expert team handles everything from cleaning and water balancing to equipment maintenance — making pool care effortless and stress-free for you.';
+    'Our expert team handles everything from cleaning and water balancing to equipment maintenance, making pool care effortless and stress-free for you.';
   const ctaLabel = pData?.ctaLabel || 'Get In Touch';
 
   const defaultSteps = [

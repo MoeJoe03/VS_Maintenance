@@ -3,13 +3,15 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
 import { CMSData } from '@/lib/cms-types';
+import { getBusinessDetails } from '@/lib/business-details';
 
 interface ContactSectionProps {
   cmsData: CMSData;
+  checkingArea?: boolean;
 }
 
-export default function ContactSection({ cmsData }: ContactSectionProps) {
-  const contact = cmsData.contactSection || {
+export default function ContactSection({ cmsData, checkingArea = false }: ContactSectionProps) {
+  const baseContact = cmsData.contactSection || {
     eyebrow: 'GET IN TOUCH',
     headingPrefix: "Let's Talk About",
     headingHighlight: 'Your Pool Project.',
@@ -26,10 +28,12 @@ export default function ContactSection({ cmsData }: ContactSectionProps) {
     submitButtonLabel: 'SEND MESSAGE',
   };
 
+  const business = getBusinessDetails(cmsData);
+  const contact = { ...baseContact, phone: business.phone, email: business.email, location: business.address };
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
-  const [serviceHelp, setServiceHelp] = useState('');
+  const [serviceHelp, setServiceHelp] = useState(checkingArea ? 'General Question' : '');
   const [message, setMessage] = useState('');
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -268,9 +272,10 @@ export default function ContactSection({ cmsData }: ContactSectionProps) {
                 <div>
                   <textarea
                     rows={6}
+                    required={checkingArea}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Your Message (optional)"
+                    placeholder={checkingArea ? 'Your suburb, property type and work required *' : 'Your Message (optional)'}
                     className="w-full rounded-2xl border border-slate-200/90 bg-[#f9fafb] px-4 py-3.5 text-sm text-[#172638] placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#009bbd]/30 focus:border-[#009bbd] transition-all resize-none"
                   />
                 </div>

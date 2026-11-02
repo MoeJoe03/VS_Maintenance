@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSubscribers, addSubscriber } from '@/lib/cms-storage';
+import { canEditCMS } from '@/lib/cms-editor-access';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
-  const subscribers = getSubscribers();
+export async function GET(req: NextRequest) {
+  if (!canEditCMS(req)) return NextResponse.json({ success: false, error: 'Not authorised.' }, { status: 403 });
+  const subscribers = await getSubscribers();
   return NextResponse.json({ success: true, subscribers });
 }
 
@@ -19,7 +21,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const sub = addSubscriber(String(email).trim().toLowerCase());
+    const sub = await addSubscriber(String(email).trim().toLowerCase());
     return NextResponse.json({
       success: true,
       message: 'You have been successfully subscribed to our newsletter!',
