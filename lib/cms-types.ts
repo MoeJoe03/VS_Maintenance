@@ -17,6 +17,7 @@ export interface TestimonialItem {
   authorName: string;
   authorRole: string;
   authorAvatar: string;
+  sourceUrl?: string;
   location?: string;
   stars?: number;
 }

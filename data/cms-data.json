@@ -826,48 +826,59 @@
     "infoCardText": "Real reviews and experiences from pool owners who count on VS Maintenance Services for crystal-clear water, emergency repairs, and effortless maintenance.",
     "items": [
       {
-        "id": "test-1",
-        "mainImage": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80",
-        "quoteTitle": "Emergency Pool Repair",
-        "quoteBody": "We needed emergency pool repair before our family reunion, and VS Maintenance Services came through! Their licensed team fixed our heating system and completed a full inspection.",
-        "authorName": "MIKE R.",
-        "authorRole": "Welland",
-        "location": "Welland",
+        "id": "review-kira-penton",
+        "mainImage": "",
+        "quoteTitle": "Above and beyond",
+        "quoteBody": "Blessing is an absolute super star\nWent over and beyond to help us at last minute even worked overtime\nHis prices are very generous and he has such a lovely work ethic\nI couldn’t recommend him enough",
+        "authorName": "Kira Penton",
+        "authorRole": "",
+        "authorAvatar": "",
         "stars": 5,
-        "authorAvatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80"
+        "sourceUrl": "https://www.google.com/maps/contrib/110410675343900281041/reviews?hl=en-GB"
       },
       {
-        "id": "test-2",
-        "mainImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
-        "quoteTitle": "Transformed Backyard Oasis",
-        "quoteBody": "Absolutely amazing work! VS Maintenance Services transformed our old, cracked concrete pool into a beautiful backyard oasis. The Diamond package was worth every penny.",
-        "authorName": "SARAH M.",
-        "authorRole": "St. Catharines",
-        "location": "St. Catharines",
+        "id": "review-tania-otto",
+        "mainImage": "",
+        "quoteTitle": "Urgent pool cleaning",
+        "quoteBody": "Great pool cleaning service received. They came out for an urgent job. Friendly and helpful.",
+        "authorName": "Tania Otto",
+        "authorRole": "",
+        "authorAvatar": "",
         "stars": 5,
-        "authorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+        "sourceUrl": "https://www.google.com/maps/contrib/111662022032385283090/reviews?hl=en-GB"
       },
       {
-        "id": "test-3",
-        "mainImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
-        "quoteTitle": "Weekly Care & Crystal Water",
-        "quoteBody": "Friendly, reliable, and thorough weekly service. Our pool water has never looked so clear, and the opening and closing each season is completely stress-free.",
-        "authorName": "DAVID B.",
-        "authorRole": "Niagara-on-the-Lake",
-        "location": "Niagara-on-the-Lake",
+        "id": "review-theo-hertz",
+        "mainImage": "",
+        "quoteTitle": "Pool pump and cleaning",
+        "quoteBody": "These guys are very nice to work with, they know there stuff and am willing to go the extra mile. They replaced my pool pum and clean my pool. Very good service.",
+        "authorName": "Theo Hertz",
+        "authorRole": "",
+        "authorAvatar": "",
         "stars": 5,
-        "authorAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
+        "sourceUrl": "https://www.google.com/maps/contrib/115340305573670455259/reviews?hl=en-GB"
       },
       {
-        "id": "test-4",
-        "mainImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-        "quoteTitle": "Professional & Honest Advice",
-        "quoteBody": "From the very first quote to the finished tile work, their honesty and craftsmanship were second to none. We wouldn't trust anyone else with our pool.",
-        "authorName": "EMILY C.",
-        "authorRole": "Thorold",
-        "location": "Thorold",
+        "id": "review-mxolisi-mkhwananzi",
+        "mainImage": "",
+        "quoteTitle": "Multiport valve repair",
+        "quoteBody": "My pump was licking through multiport valve\nThey came and Chang it . My pool is now perfect\n\nIm really happy with the service",
+        "authorName": "Mxolisi Mkhwananzi",
+        "authorRole": "",
+        "authorAvatar": "",
         "stars": 5,
-        "authorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+        "sourceUrl": "https://www.google.com/maps/contrib/101566110979805429882/reviews?hl=en-GB"
+      },
+      {
+        "id": "review-learnmore-dube",
+        "mainImage": "",
+        "quoteTitle": "Green pool treatment",
+        "quoteBody": "The pool was green they make it sparkling blue now , very happy with their service",
+        "authorName": "Learnmore Dube",
+        "authorRole": "",
+        "authorAvatar": "",
+        "stars": 5,
+        "sourceUrl": "https://www.google.com/maps/contrib/112251148168357488688/reviews?hl=en-GB"
       }
     ]
   },

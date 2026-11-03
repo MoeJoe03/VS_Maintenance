@@ -1,4 +1,5 @@
 import { CMSData } from './cms-types';
+import { customerReviews } from './customer-reviews';
 
 export const defaultCMSData: CMSData = {
   branding: {
@@ -401,64 +402,7 @@ export const defaultCMSData: CMSData = {
     headingSuffix: 'Say',
     infoCardText:
       'We specialize in providing top-notch pool service and maintenance to ensure your pool remains a safe, clean, and inviting space for relaxation and recreation.',
-    items: [
-      {
-        id: 'test-1',
-        mainImage:
-          'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80',
-        quoteTitle: 'Emergency Pool Repair',
-        quoteBody:
-          'We needed emergency pool repair before our family reunion, and VS Maintenance Services came through! Their licensed team fixed our heating system and completed a full inspection.',
-        authorName: 'MIKE R.',
-        authorRole: 'Welland',
-        location: 'Welland',
-        stars: 5,
-        authorAvatar:
-          'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80',
-      },
-      {
-        id: 'test-2',
-        mainImage:
-          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
-        quoteTitle: 'Transformed Backyard Oasis',
-        quoteBody:
-          'Absolutely amazing work! VS Maintenance Services transformed our old, cracked concrete pool into a beautiful backyard oasis. The Diamond package was worth every penny.',
-        authorName: 'SARAH M.',
-        authorRole: 'St. Catharines',
-        location: 'St. Catharines',
-        stars: 5,
-        authorAvatar:
-          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
-      },
-      {
-        id: 'test-3',
-        mainImage:
-          'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80',
-        quoteTitle: 'Impeccable Water Clarity',
-        quoteBody:
-          'From weekly chemical balancing to opening and closing each season, their technicians are courteous, punctual, and keep our pool water crystal clear all summer.',
-        authorName: 'EMILY C.',
-        authorRole: 'Fonthill',
-        location: 'Fonthill',
-        stars: 5,
-        authorAvatar:
-          'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80',
-      },
-      {
-        id: 'test-4',
-        mainImage:
-          'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
-        quoteTitle: 'Zero hassle, 100% crystal clear water',
-        quoteBody:
-          'Their rapid pump replacement and weekly maintenance ensures our pool is always inviting and balanced for family weekends. Best pool service in Niagara!',
-        authorName: 'DAVID B.',
-        authorRole: 'Niagara Falls',
-        location: 'Niagara Falls',
-        stars: 5,
-        authorAvatar:
-          'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
-      },
-    ],
+    items: customerReviews,
   },
   ctaBanner: {
     topBadge: 'PLEASE CONTACT US TODAY!',

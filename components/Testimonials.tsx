@@ -252,7 +252,7 @@ export default function Testimonials({ cmsData }: TestimonialsProps) {
 
                       {/* Quote & Right Blue Vertical Accent Line */}
                       <div className="flex items-start justify-between gap-4">
-                        <p className="text-slate-700 text-sm sm:text-[15px] font-normal leading-relaxed line-clamp-4">
+                        <p className="whitespace-pre-line text-slate-700 text-sm sm:text-[15px] font-normal leading-relaxed">
                           &ldquo;{item.quoteBody}&rdquo;
                         </p>
                         {/* Distinct vertical blue bar on right edge */}
@@ -260,15 +260,12 @@ export default function Testimonials({ cmsData }: TestimonialsProps) {
                       </div>
                     </div>
 
-                    {/* Author Name & Location */}
+                    {/* Reviewer */}
                     <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                       <div>
                         <h4 className="text-base sm:text-lg font-black text-[#172638] tracking-wider uppercase leading-tight font-sans">
                           {item.authorName}
                         </h4>
-                        <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-                          {item.location || item.authorRole}
-                        </p>
                       </div>
                     </div>
                   </div>
