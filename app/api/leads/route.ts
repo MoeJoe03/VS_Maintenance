@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLeads, addLead } from '@/lib/cms-storage';
 import { canEditCMS } from '@/lib/cms-editor-access';
+import { emailLead } from '@/lib/lead-email';
 
 export const dynamic = 'force-dynamic';
 
@@ -31,8 +32,16 @@ export async function POST(req: NextRequest) {
       message: String(message).trim(),
     });
 
+    let emailSent = false;
+    try {
+      emailSent = await emailLead(saved);
+    } catch (error) {
+      console.error('Lead notification error', error);
+    }
+
     return NextResponse.json({
       success: true,
+      emailSent,
       message: 'Thank you! Your quote request has been received. Our master pool engineer will contact you shortly.',
       lead: saved,
     });

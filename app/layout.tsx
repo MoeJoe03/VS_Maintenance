@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import SiteParallax from '@/components/SiteParallax';
@@ -61,6 +62,13 @@ export default function RootLayout({
         {children}
         <SiteParallax />
         <FloatingContactButtons />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-18251440604" strategy="afterInteractive" />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18251440604');`}
+        </Script>
       </body>
     </html>
   );
