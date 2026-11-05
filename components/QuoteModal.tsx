@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { X, CheckCircle, Send, Phone, MessageSquare, Mail, Sparkles, Loader2 } from 'lucide-react';
 import { CMSData } from '@/lib/cms-types';
+import { trackEnquiryConversion } from '@/lib/google-ads';
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -46,6 +47,7 @@ export default function QuoteModal({
       if (!res.ok || !data.success) {
         throw new Error(data.error || 'Failed to submit quote request');
       }
+      trackEnquiryConversion();
       setSubmitted(true);
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'An error occurred while submitting.');

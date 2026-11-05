@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
 import { CMSData } from '@/lib/cms-types';
 import { getBusinessDetails } from '@/lib/business-details';
+import { trackEnquiryConversion } from '@/lib/google-ads';
 
 interface ContactSectionProps {
   cmsData: CMSData;
@@ -68,6 +69,7 @@ export default function ContactSection({ cmsData, checkingArea = false }: Contac
         throw new Error(data.error || 'Failed to send message');
       }
 
+      trackEnquiryConversion();
       setSubmitted(true);
       setFullName('');
       setPhoneNumber('');
