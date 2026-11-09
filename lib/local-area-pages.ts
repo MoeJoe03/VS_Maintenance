@@ -11,6 +11,23 @@ export interface LocalAreaPageConfig {
 }
 
 export const localAreaPages: Record<string, LocalAreaPageConfig> = {
+  'kempton-park': {
+    slug: 'kempton-park',
+    name: 'Kempton Park',
+    title: 'Pool Services in Kempton Park | VS Maintenance Services',
+    description: 'Pool maintenance, renovations, green pool treatments and outdoor property work in Kempton Park. See local projects and check availability with VS Maintenance Services.',
+    intro: 'VS Maintenance Services visits Kempton Park properties by arrangement for pool care, repairs, renovations, equipment installation and outdoor work. Tell us your address and what needs attention so we can confirm availability.',
+    focus: 'Our Kempton Park gallery includes pool renovation, green pool treatment and paving work. These projects show the kinds of existing pools and outdoor areas we can assess. We will discuss the condition, access and scope before arranging a visit or quote.',
+    serviceTypes: ['Swimming pool maintenance', 'Swimming pool repairs', 'Swimming pool renovation', 'Green pool treatment', 'Pool equipment installation', 'Garden service', 'Paving installation'],
+    projectIds: ['gal-18', 'gallery-1792869495435', 'gallery-1792869979314', 'gal-16'],
+    faqs: [
+      { question: 'Do you provide pool maintenance in Kempton Park?', answer: 'Yes. We offer pool maintenance, including cleaning, water testing and balancing, filter care and equipment checks. Share your Kempton Park address and pool details so we can confirm a suitable plan and availability.' },
+      { question: 'Can you renovate an existing pool in Kempton Park?', answer: 'Yes. Our Kempton Park gallery includes pool renovation work. Tell us about the pool surface, leaks or equipment concerns so we can discuss the scope and whether an assessment is needed.' },
+      { question: 'Can you treat a green pool in Kempton Park?', answer: 'Yes. We assess the water condition and filtration before recommending cleaning and treatment. The gallery includes a green water treatment project in Kempton Park.' },
+      { question: 'Do you also offer paving in Kempton Park?', answer: 'Yes. Paving installation is part of our outdoor property work, and the gallery includes a Kempton Park paving project. Send us the area and work required so we can confirm availability.' },
+      { question: 'How do I arrange a visit in Kempton Park?', answer: 'Send your suburb or address, property type and a short description of the pool or outdoor work. We will check coverage and current availability, then explain the assessment and quotation process.' },
+    ],
+  },
   bryanston: {
     slug: 'bryanston',
     name: 'Bryanston',

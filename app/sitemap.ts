@@ -12,6 +12,7 @@ const publicPaths = [
   '/areas/bryanston',
   '/areas/morningside',
   '/areas/sunninghill',
+  '/areas/kempton-park',
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
