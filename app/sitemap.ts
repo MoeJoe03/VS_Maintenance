@@ -14,6 +14,10 @@ const publicPaths = [
   '/areas/sunninghill',
   '/areas/kempton-park',
   '/areas/centurion',
+  '/areas/bedfordview',
+  '/areas/fourways',
+  '/areas/germiston',
+  '/areas/randburg',
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
