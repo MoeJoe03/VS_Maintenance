@@ -11,6 +11,22 @@ export interface LocalAreaPageConfig {
 }
 
 export const localAreaPages: Record<string, LocalAreaPageConfig> = {
+  centurion: {
+    slug: 'centurion', name: 'Centurion',
+    title: 'Pool Services in Centurion | VS Maintenance Services',
+    description: 'Pool maintenance, pump installation, green pool treatments and paving in Centurion. View local projects and check availability with VS Maintenance Services.',
+    intro: 'VS Maintenance Services visits Centurion properties by arrangement for pool maintenance, repairs, renovations, equipment installation and outdoor work. Share your address and project details so we can confirm availability.',
+    focus: 'Our Centurion gallery includes pool maintenance, pump installation, paving and green water treatment. We discuss the condition of your pool or outdoor area and agree on the scope before arranging an assessment or quote.',
+    serviceTypes: ['Swimming pool maintenance', 'Swimming pool repairs', 'Swimming pool renovation', 'Green pool treatment', 'Pool equipment installation', 'Garden service', 'Paving installation'],
+    projectIds: ['gal-1', 'gallery-1792868629615', 'gallery-1792868852392', 'gallery-1792869965506'],
+    faqs: [
+      { question: 'Do you provide pool maintenance in Centurion?', answer: 'Yes. We offer cleaning, water testing and balancing, filter care and equipment checks. Send your address and pool details so we can confirm availability.' },
+      { question: 'Can you install a pool pump in Centurion?', answer: 'Yes. Pump installation is part of our equipment work, and our gallery includes a Centurion example. Tell us about the current pump and filtration setup.' },
+      { question: 'Can you treat green pool water in Centurion?', answer: 'Yes. We assess the water and filtration before recommending cleaning and treatment. Share the current condition when you enquire.' },
+      { question: 'Do you offer paving in Centurion?', answer: 'Yes. Paving installation is part of our outdoor work, and our gallery includes a Centurion project. Send us the area and work required.' },
+      { question: 'How do I arrange a Centurion visit?', answer: 'Send your address, property type and a short description of the work. We will check coverage and availability, then explain the assessment and quotation process.' },
+    ],
+  },
   'kempton-park': {
     slug: 'kempton-park',
     name: 'Kempton Park',
