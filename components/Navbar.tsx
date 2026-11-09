@@ -7,7 +7,7 @@ import { X, Phone, MessageSquare, ChevronDown, MapPin } from 'lucide-react';
 import { CMSData } from '@/lib/cms-types';
 
 const links = [{ href: '/', label: 'Home' }, { href: '/about', label: 'About' }, { href: '/services', label: 'Services' }, { href: '/areas', label: 'Areas We Serve' }, { href: '/gallery', label: 'Our Work' }, { href: '/contact', label: 'Contact' }];
-const areaLinks = [{ href: '/areas', label: 'All areas we serve' }, { href: '/areas/sandton', label: 'Sandton' }, { href: '/areas/bryanston', label: 'Bryanston' }, { href: '/areas/morningside', label: 'Morningside' }, { href: '/areas/sunninghill', label: 'Sunninghill' }, { href: '/areas/kempton-park', label: 'Kempton Park' }, { href: '/areas/centurion', label: 'Centurion' }];
+const areaLinks = [{ href: '/areas', label: 'All areas we serve' }, { href: '/areas/bryanston', label: 'Bryanston' }, { href: '/areas/centurion', label: 'Centurion' }, { href: '/areas/kempton-park', label: 'Kempton Park' }, { href: '/areas/morningside', label: 'Morningside' }, { href: '/areas/sandton', label: 'Sandton' }, { href: '/areas/sunninghill', label: 'Sunninghill' }];
 export default function Navbar({ cmsData }: { cmsData: CMSData; onOpenQuote?: () => void }) {
   const [open, setOpen] = useState(false);
   const [areasOpen, setAreasOpen] = useState(false);
