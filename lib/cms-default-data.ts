@@ -29,7 +29,7 @@ export const defaultCMSData: CMSData = {
     backgroundImage:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuCaqs11KIDY7FxLvuA0RW1P89XRZhtwNJSjkCSQykjguj5_-3eFX3ti5RcDwxDaZGh7HpT_8iScqY4vstlM2qGGwO_ySxMrqjjmepuf9Iot9b0SjlMsSiC1jOa8cIjABQNv6UzxFUhWyRQKAI4H7nz-bja8MqFFDBYXTinvFiEt7jd4cOGIX9AvEGaTt0uB28K7LgGiAJ3v5MPLwFZ3rX9TE5OBUDYw6VzEmWHp3tc8bbg-HltQqye4Fw',
     headlinePrefix: 'Swimming pool renovation &',
-    headlineHighlight: 'maintenance services Sandton',
+    headlineHighlight: 'maintenance services',
     headlineSuffix: '',
     supportingText:
       'Owning a pool is a fun part, let us handle the rest. Bespoke architectural engineering and lifelong pristine water quality.',
